@@ -6,7 +6,7 @@ Este repositorio contiene varios ejemplos de servidores web simples ene Python.
 
 ### 1. Simple Web Server (http.server)
 
-Con python instalado, ejecutamos el servidor web que viene predeterminado con el código:
+Con python instalado en nuestra máquina, ejecutamos el servidor web predeterminado de python usando el siguiente código:
 ```
 python -m http.server 8000
 ```
