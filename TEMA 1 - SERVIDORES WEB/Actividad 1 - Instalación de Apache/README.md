@@ -5,16 +5,16 @@ La pila “LAMP” se refiere al conjunto de aplicaciones software que se instal
 El término en realidad se refiere al Sistema Operativo Linux junto al servidor web Apache, almacenando los datos en una base de datos MySQL y procesando el contenido dinámico mediante PHP.
 
 ## Pasos de Instalación
-1. **Instalar Apache y actualizar el firewall**  
+**1. Instalar Apache y actualizar el firewall**  
    ------------------------------------------------------
 
-3. **Instalar MySQL**  
+**2. Instalar MySQL**  
    ----------------------------------------------
-4. **Instalar PHP**  
+**3. Instalar PHP**  
    -------------------------------------------
 
-5. **Crear host virtual para nuestro sitio web**
+**4. Crear host virtual para nuestro sitio web**
    ---------------------------------------
 
-7. **Probar procesamiento PHP en el servidor web**
+**5. Probar procesamiento PHP en el servidor web**
    -------------------------------
