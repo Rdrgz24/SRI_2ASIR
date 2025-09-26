@@ -1,4 +1,4 @@
-# Actividad 1- Instalación de Apache
+# Actividad 1 - Instalación de Apache
 
 ## Preguntas
 
