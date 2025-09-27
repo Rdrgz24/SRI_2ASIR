@@ -12,18 +12,25 @@ Con la ayuda de Robert Cailliau creó la World Wide Web desarrollado con NEXTSTE
 ### ¿Qué es pila de protocolos usados por http?
 
 HTTP trabaja en la capa de aplicación, está basada en la pila TCP/IP.
+
 TCP -> Garantiza la entrega confiable de los datos (cliente/servidor).
+
 IP -> Encamina los paquetes entre redes.
 
 ### ¿Componentes de una URL?
 
 Una URL se compone de:
 · Protocolo o esquema -> Usa http:// o https://
+
 · Nombre de dominio -> Como (www.ejemplo1.com) o (www.ejemplo2.es)
+
 · Puerto -> 80 para HTTP, 443 para HTTPS o se puede usar otros como el 8080.
-· Ruta  o recurso -> Camino hacia el archivo o recurso dentro del servidor (/compras/index.html)
-· Parámetros de consulta (opcional) -> Distingue la consulta en el sitio web (/compras/index.html?id=5&orden=desc)
-· ID de fragmento (opcional) -> Distingue la sección en el sitio web (/compras/index.html#seccion3)
+
+· Ruta  o recurso -> Camino hacia el archivo o recurso dentro del servidor (/compras/index.html).
+
+· Parámetros de consulta (opcional) -> Distingue la consulta en el sitio web (/compras/index.html?id=5&orden=desc).
+
+· ID de fragmento (opcional) -> Distingue la sección en el sitio web (/compras/index.html#seccion3).
 
 <img width="1707" height="185" alt="image" src="https://github.com/user-attachments/assets/496793ca-e5c8-4c69-8df7-a2755a5d9b1a" />
 
@@ -32,11 +39,17 @@ Una URL se compone de:
 Conexión cliente/servidor en HTTP:
 
 · El cliente resuelve de nombre de dominio a dirección IP (DNS).
+
 · El cliente inicia una conexión TCP hacia el servidor (:80 HTTP o :443 HTTPS).
+
 · El cliente envía una "Request" (petición HTTP) con un método "GET" y la ruta del recurso.
+
 · El servidor, recibe la solicitud y procesa la petición.
+
 · El servidor envía una "Response" (respuesta HTTP) que incluye: código de estado, cabeceras (headers), y el contenido.
+
 · El cliente recibe la respuesta y la interpreta: analiza cabeceras, tipo de contenido, muestra el contenido, solicita recursos adicionales (imágenes, CSS, JS) si es necesario.
+
 · La conexión se cierra o se mantiene para futuras peticiones:
 
 ### Diferencia entre páginas dinámicas y estáticas
