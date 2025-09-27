@@ -64,10 +64,15 @@ GET /configurador/index.html/1.1
 	
 Los métodos más usados en HTTP incluyen:
 · GET: solicitar la lectura de un recurso.
+
 · POST: enviar datos al servidor (como formularios) para crear o procesar datos.
+
 · PUT: reemplazar el recurso existente con los datos enviados.
+
 · DELETE: eliminar un recurso.
+
 · HEAD: igual que GET pero solo pide la cabecera, sin el cuerpo del contenido.
+
 · OPTIONS: pregunta al servidor qué métodos admite para ese recurso.
 
 ### Response. Códigos
@@ -75,17 +80,25 @@ Los métodos más usados en HTTP incluyen:
 Los códigos de Respuesta HTTP se componen de tres dígitos e indican el resultado de la petición, se dividen en:
 
 · 100–199 -> Informativo, para mensajes provisionales.
+
 · 200-299 -> Petición procesada correctamente (200 OK).
-· 300-399 -> Redirección (301 Moved Permanently)
-· 400-499 -> Error del cliente / problema con la petición (404 Not Found)
-· 500-599 -> Fallo del servidor / problema al procesar peticion (500 Internal Server Error)
+
+· 300-399 -> Redirección (301 Moved Permanently).
+
+· 400-499 -> Error del cliente / problema con la petición (404 Not Found).
+
+· 500-599 -> Fallo del servidor / problema al procesar peticion (500 Internal Server Error).
 
 ### Content type. Tipos principales
 
 Indica el tipo de datos que se envían en el cuerpo de la respuesta. Entre los más comunes:
 
 · text/html → Contenido HTML
+
 · image/png o image/jpeg → Imágenes
+
 · application/javascript → Scripts JS
+
 · text/css → Hojas de estilo CSS
+
 · application/xml o text/xml → XML
