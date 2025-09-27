@@ -8,7 +8,7 @@ Investigar posibles comandos en -> https://curl.se/docs/manual.html
 ```
 curl https://www.ejemplo.com/
 ```
-Muestra de uso:
+· Muestra de uso:
 
 <img width="600" height="380" alt="image" src="https://github.com/user-attachments/assets/afa339b9-e0fc-4703-848c-840b2b6ea2c1" />
 
@@ -17,7 +17,7 @@ Muestra de uso:
 ```
 curl -o nombrearchivo.html https://www.ejemplo.com/
 ```
-Muestra de uso:
+· Muestra de uso:
 
 <img width="700" height="520" alt="image" src="https://github.com/user-attachments/assets/7e7c8603-30a4-4efd-abe9-2d8433bb4bdb" />
 
@@ -37,7 +37,7 @@ curl -r 100-250 https://www.ejemplo.com/
 ```
 curl -r -550 https://www.ejemplo.com/
 ```
-Muestra de uso: 
+· Muestras de uso: 
 
 <img width="800" height="500" alt="image" src="https://github.com/user-attachments/assets/e38f2884-b70a-490f-8486-8523edfeb366" />
 
@@ -46,7 +46,7 @@ Muestra de uso:
 ```
 curl -c nombrearchivo.txt https://www.ejemplo.com/
 ```
-Muestra de uso (datos tapados):
+· Muestra de uso (datos ocultos):
 
 <img width="600" height="180" alt="image" src="https://github.com/user-attachments/assets/1336dabc-5abf-4fd4-b6fb-7eff5324f7b9" />
 
@@ -55,7 +55,7 @@ Muestra de uso (datos tapados):
 ```
 curl -I https://www.ejemplo.com/
 ```
-Muestra de uso:
+· Muestra de uso:
 
 <img width="800" height="200" alt="image" src="https://github.com/user-attachments/assets/8816c5cc-6e8e-4aaa-b3fd-0137cea9fca3" />
 
