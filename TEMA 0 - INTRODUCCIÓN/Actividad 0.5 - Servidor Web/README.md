@@ -32,3 +32,8 @@ En nuestra máquina, creamos un archivo [dummy_server.py](dummy_server.py) que e
 <img width="636" height="311" alt="image" src="https://github.com/user-attachments/assets/3e5a863f-18e3-4d94-943f-cf47ae61aafc" />
 
 Debemos ejecutar el servidor en la misma carpeta donde se ubique index.html
+
+## Conclusiones
+
+Realizar esta actividad ha permitido comprobar cómo Python puede montar servidores web de forma rápida y eficiente, sin necesidad de configuraciones complejas ni herramientas externas. 
+Utilizarlo, resulta útil sobre todo en entornos de prueba, compartir archivos de manera sencilla o incluso para levantar servicios temporales.
