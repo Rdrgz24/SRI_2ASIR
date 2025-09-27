@@ -57,7 +57,7 @@ El término en realidad se refiere al Sistema Operativo "Linux" junto al servido
 
 ## Pasos de Instalación
 **1. Instalar Apache y actualizar el firewall**  
-
+-----------------------------------------------
 Actualizamos la lista de paquetes disponibles con el comando:
 ```
 sudo apt update
@@ -93,7 +93,7 @@ Comprobamos el estado de nuestro servidor web Apache ingresando a localhost:
 Servidor apache funcionando correctamente.
 
 **2. Instalar MySQL**  
-
+-----------------------------------------------
 Instalamos mysql-server con el comando:
 ```
 sudo apt install mysql-server -y
@@ -115,7 +115,7 @@ Muestra de comando realizados en máquina virtual:
 
 
 **3. Instalar PHP**  
-   -------------------------------------------
+-----------------------------------------------
 
 **4. Crear host virtual para nuestro sitio web**
    ---------------------------------------
