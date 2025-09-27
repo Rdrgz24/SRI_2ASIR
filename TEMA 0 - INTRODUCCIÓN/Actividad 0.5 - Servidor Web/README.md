@@ -12,7 +12,8 @@ Con python instalado en nuestra máquina, ejecutamos el servidor web predetermin
 python -m http.server 8000
 ```
 Este código hay que ejecutarlo en la misma carpeta donde se ubique el index.html
-<img width="784" height="448" alt="image" src="https://github.com/user-attachments/assets/ac680e09-08b7-455a-b687-69c357ff1a7d" />
+
+<img width="800" height="562" alt="image" src="https://github.com/user-attachments/assets/bbc799d9-3a6b-46cd-9eac-af60e7e27cfd" />
 
 
 ### 2. Servidor web simple con código en archivo .py
