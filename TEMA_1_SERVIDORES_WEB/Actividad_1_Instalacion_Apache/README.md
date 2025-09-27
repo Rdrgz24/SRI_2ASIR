@@ -31,8 +31,6 @@ Puede integrar un sistema relacional de administración de bases de datos como M
 
 Plataforma web de código abierto ampliamente utilizada para desarrollar y ejecutar sitios web dinámicos.
 
-Está compuesta por:
-
 · **L**inux como sistema operativo.
 
 · **A**pache como servidor web para procesar solicitudes HTTP/HTTPS.
@@ -42,7 +40,7 @@ Está compuesta por:
 · **P**HP/Python/Perl para programar la lógica de la aplicación.
 
 **WISA (Windows, IIS, SQL Server, ASP.NET)**
-
+---------------------------
 Plataforma web basada en tecnologías propietarias de Microsoft, diseñada para entornos corporativos o sistemas preferentes de esta compañía.
 
 · **W**indows como sistema operativo.
