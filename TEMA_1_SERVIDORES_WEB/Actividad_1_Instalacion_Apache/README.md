@@ -89,6 +89,7 @@ Muestra de comandos realizados en máquina virtual:
 Comprobamos el estado de nuestro servidor web Apache ingresando a localhost:
 
 <img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/3d68be54-22fe-4f31-9dcf-e85a20be3280" />
+
 Servidor apache funcionando correctamente.
 
 **2. Instalar MySQL**  
