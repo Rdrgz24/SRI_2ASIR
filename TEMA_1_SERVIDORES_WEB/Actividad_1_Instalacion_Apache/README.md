@@ -3,7 +3,7 @@
 ## Preguntas
 
 ### 1. La arquitectura Web es un modelo compuesto de tres capas, ¿cuáles son y cuál es  la función de cada una de ellas?
-
+---------------------------
 Esta arquitectura predomina en las aplicaciones cliente-servidor tradicionales, está compuesta por:
 
 · Nivel de presentación
