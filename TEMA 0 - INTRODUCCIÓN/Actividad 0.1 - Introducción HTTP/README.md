@@ -48,11 +48,11 @@ En cambios, las páginas dinámicas el contenido es manejado por el servidor, po
 
 Telnet es una herramienta antigua para conexiones remotas y está prácticamente en desuso, ya que no cifra la comunicación, a diferencia de SSH que sí ofrece seguridad y cifrado.
 No obstante, para una conexión telnet se usa el comando:
-```bat telnet IP puerto (80) ```
+```telnet IP puerto (80)```
 Una vez conectados podemos hacer un GET del recurso que queramos.
 Ejemplo conectandonos a página de configuración de PC en PcComponentes: 
-<pre> ```bat telnet 104.16.27.13 80 ``` </pre>
-<pre> ```bat GET /configurador/index.html/1.2 ``` </pre>
+```telnet 104.16.27.13 80```
+```GET /configurador/index.html/1.1```
 
 ### Request. Métodos principales
 	
