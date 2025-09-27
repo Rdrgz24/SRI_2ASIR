@@ -44,8 +44,6 @@ Teniendo en cuenta el Modelo OSI, la Capa de Transporte (4) es la encargada de l
 
 La Capa de Red (3) es la encargada del enrutamiento de paquetes en diferentes redes
 
-La dirección IP se maneja en la Capa de Red (Capa 3), encargada del enrutamiento de los paquetes entre dispositivos en diferentes redes.
-
 ## ¿Qué es three-way handshake?
 
 Es un proceso de conexión que realiza el protocolo TCP para asegurar la comunicación antes de enviar los paquetes de extremo a extremo (cliente/servidor).
