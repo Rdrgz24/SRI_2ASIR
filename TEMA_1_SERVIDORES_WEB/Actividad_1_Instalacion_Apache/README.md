@@ -81,7 +81,7 @@ sudo ufw enable
 ```
 sudo ufw status
 ```
-Muestra de comandos realizados en máquina virtual:
+Muestra de comandos realizados en la máquina virtual:
 
 <img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/54673a86-3947-409a-9da4-88194262e4ea" />
 
@@ -108,7 +108,7 @@ Probamos que el servidor funcione correctamente:
 ```
 sudo mysql
 ```
-Muestra de comando realizados en máquina virtual:
+Muestra de comandos realizados en la máquina virtual:
 
 <img width="947" height="770" alt="image" src="https://github.com/user-attachments/assets/03723df7-5363-40d6-b259-ad2d2a174db9" />
 
@@ -123,6 +123,10 @@ Comprobamos que php esté correctamente instalado con:
 php -v
 ```
 Así comprobamos la versión instalada.
+
+Muestra de comandos realizados en la máquina virtual:
+
+<img width="1145" height="236" alt="image" src="https://github.com/user-attachments/assets/863aebfb-c349-4ae7-af95-d76d37c16d22" />
 
 **4. Crear host virtual para nuestro sitio web**
    ---------------------------------------
