@@ -1,4 +1,4 @@
-# Actividad 1 - Instalación de Apache
+<img width="1400" height="1105" alt="image" src="https://github.com/user-attachments/assets/25959558-87bc-47e3-83df-46b435e9c204" /># Actividad 1 - Instalación de Apache
 
 ## Preguntas
 
@@ -28,7 +28,7 @@ Puede integrar un sistema relacional de administración de bases de datos como M
 ### 2. Una plataforma web es el entorno de desarrollo de software empleado para  diseñar y ejecutar un sitio web; destacan dos plataformas web, LAMP y WISA. Explica en qué consiste cada una de ellas.
 
 **LAMP (Linux, Apache, MySQL, PHP/Python/Perl)**
----------------------------
+
 Plataforma web de código abierto ampliamente utilizada para desarrollar y ejecutar sitios web dinámicos.
 
 · **L**inux como sistema operativo.
@@ -40,7 +40,7 @@ Plataforma web de código abierto ampliamente utilizada para desarrollar y ejecu
 · **P**HP/Python/Perl para programar la lógica de la aplicación.
 
 **WISA (Windows, IIS, SQL Server, ASP.NET)**
----------------------------
+
 Plataforma web basada en tecnologías propietarias de Microsoft, diseñada para entornos corporativos o sistemas preferentes de esta compañía.
 
 · **W**indows como sistema operativo.
@@ -58,7 +58,30 @@ El término en realidad se refiere al Sistema Operativo "Linux" junto al servido
 
 ## Pasos de Instalación
 **1. Instalar Apache y actualizar el firewall**  
-   ------------------------------------------------------
+
+Actualizamos la lista de paquetes disponibles con el comando:
+```
+sudo apt update
+```
+Instalamos apache2:
+```
+sudo apt install apache2 -y
+```
+Listamos las aplicaciones conocidas por el cortafuegos UFW:
+```
+sudo ufw app list
+```
+Permitimos el tráfico hacia Apache usando la regla:
+```
+sudo ufw allow in "Apache"
+```
+Habilitamos el cortafuegos y comprobamos su estado:
+```
+sudo ufw enable
+```
+```
+sudo ufw status
+```
 
 **2. Instalar MySQL**  
    ----------------------------------------------
