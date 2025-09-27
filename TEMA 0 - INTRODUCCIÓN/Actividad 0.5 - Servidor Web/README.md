@@ -13,7 +13,7 @@ python -m http.server 8000
 ```
 Este código hay que ejecutarlo en la misma carpeta donde se ubique el index.html
 
-<img width="800" height="562" alt="image" src="https://github.com/user-attachments/assets/bbc799d9-3a6b-46cd-9eac-af60e7e27cfd" />
+<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/bbc799d9-3a6b-46cd-9eac-af60e7e27cfd" />
 
 
 ### 2. Servidor web simple con código en archivo .py
