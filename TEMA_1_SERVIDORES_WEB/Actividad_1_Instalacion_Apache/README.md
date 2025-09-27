@@ -112,10 +112,17 @@ Muestra de comando realizados en máquina virtual:
 
 <img width="947" height="770" alt="image" src="https://github.com/user-attachments/assets/03723df7-5363-40d6-b259-ad2d2a174db9" />
 
-
-
 **3. Instalar PHP**  
 -----------------------------------------------
+Instalamos php y las integraciones con apache y MySQL con el comando:
+```
+sudo apt install php libapache2-mod-php php-mysql
+```
+Comprobamos que php esté correctamente instalado con:
+```
+php -v
+```
+Así comprobamos la versión instalada.
 
 **4. Crear host virtual para nuestro sitio web**
    ---------------------------------------
