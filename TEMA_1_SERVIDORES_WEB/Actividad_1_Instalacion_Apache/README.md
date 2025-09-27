@@ -9,11 +9,14 @@ Esta arquitectura predomina en las aplicaciones cliente-servidor tradicionales, 
 · **Nivel de presentación**
 
 Es la interfaz donde el usuario final se comunica e interactua con la aplicación. Su objetivo es mostrar la información al usuario y recopilar datos de este.
+
 Este nivel se puede ejecutar en un navegador web, una aplicación de escritorio o una interfaz gráfica (GUI). Esta capa se suele desarrollar en HTML, CSS y JavaScript.
 
 · **Nivel de aplicación**
 
-Conocido nivel lógico o medio, es el núcleo de la aplicación; procesa la información recopilada en el nivel de presentación y utilizando la "lógica empresarial" y un conjunto de reglas comerciales se manda información al nivel de datos. Esta capa se suele desarrollar en Python, Perl, Java, PHP o Ruby; se comunica con el nivel de datos mediante las API.  
+Conocido nivel lógico o medio, es el núcleo de la aplicación; procesa la información recopilada en el nivel de presentación y utilizando la "lógica empresarial" y un conjunto de reglas comerciales se manda información al nivel de datos. 
+
+Esta capa se suele desarrollar en Python, Perl, Java, PHP o Ruby; se comunica con el nivel de datos mediante las API.  
 
 · **Nivel de datos**
 
