@@ -1,6 +1,6 @@
-#Actividad 0.2 - UDP and TCP: Comparison of Transport Protocols
+# Actividad 0.2 - UDP and TCP: Comparison of Transport Protocols
 
-https://www.youtube.com/watch?v=Vdc8TCESIg8
+Visualizar vídeo -> https://www.youtube.com/watch?v=Vdc8TCESIg8
 
 ## Diferencias entre udp y tcp
 
