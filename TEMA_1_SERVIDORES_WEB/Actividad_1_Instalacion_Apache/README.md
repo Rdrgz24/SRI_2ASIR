@@ -3,7 +3,16 @@
 ## Preguntas
 
 ### 1. La arquitectura Web es un modelo compuesto de tres capas, ¿cuáles son y cuál es  la función de cada una de ellas?
-   ----------------------------------
+
+Esta arquitectura predomina en las aplicaciones cliente-servidor tradicionales, está compuesta por:
+
+· Nivel de presentación
+
+· Nivel de aplicación
+
+· Nivel de datos
+
+
 ### 2. Una plataforma web es el entorno de desarrollo de software empleado para  diseñar y ejecutar un sitio web; destacan dos plataformas web, LAMP y WISA. Explica en qué consiste cada una de ellas.
    ----------------------------------
 
