@@ -81,6 +81,10 @@ sudo ufw enable
 ```
 sudo ufw status
 ```
+Muestra de comandos realizados en máquina virtual:
+
+<img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/c281066f-a456-451e-9a20-fee321260e77" />
+
 
 **2. Instalar MySQL**  
    ----------------------------------------------
