@@ -83,7 +83,8 @@ sudo ufw status
 ```
 Muestra de comandos realizados en máquina virtual:
 
-<img width="1180" height="782" alt="image" src="https://github.com/user-attachments/assets/cb62d89c-7690-4287-8f5c-a93639a67cf2" />
+<img width="1180" height="781" alt="image" src="https://github.com/user-attachments/assets/54673a86-3947-409a-9da4-88194262e4ea" />
+
 
 
 
