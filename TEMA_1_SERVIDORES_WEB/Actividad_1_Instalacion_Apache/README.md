@@ -85,7 +85,9 @@ Muestra de comandos realizados en máquina virtual:
 
 <img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/54673a86-3947-409a-9da4-88194262e4ea" />
 
+Comprobamos el estado de nuestro servidor web Apache ingresando a localhost:
 
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/3d68be54-22fe-4f31-9dcf-e85a20be3280" />
 
 
 **2. Instalar MySQL**  
