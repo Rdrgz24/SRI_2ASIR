@@ -26,7 +26,7 @@ Puede integrar un sistema relacional de administración de bases de datos como M
 
 
 ### 2. Una plataforma web es el entorno de desarrollo de software empleado para  diseñar y ejecutar un sitio web; destacan dos plataformas web, LAMP y WISA. Explica en qué consiste cada una de ellas.
-
+---------------------------
 **LAMP (Linux, Apache, MySQL, PHP/Python/Perl)**
 
 Plataforma web de código abierto ampliamente utilizada para desarrollar y ejecutar sitios web dinámicos.
