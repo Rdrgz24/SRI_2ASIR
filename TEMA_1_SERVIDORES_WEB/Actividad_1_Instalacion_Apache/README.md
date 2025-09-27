@@ -128,6 +128,18 @@ Muestra de comandos realizados en la máquina virtual:
 
 <img width="1145" height="236" alt="image" src="https://github.com/user-attachments/assets/863aebfb-c349-4ae7-af95-d76d37c16d22" />
 
+Editamos el archivo dir.conf de apache para dar preferencia a index.php frente al resto:
+```
+sudo nano /etc/apache2/mods-enabled/dir.conf
+```
+<img width="807" height="102" alt="image" src="https://github.com/user-attachments/assets/99fbdcb3-440a-4708-a644-2598ace6d0e7" />
+
+Restablecemos el servicio de apache con:
+```
+sudo systemctl restart apache2
+```
+
+
 **4. Crear host virtual para nuestro sitio web**
    ---------------------------------------
 
