@@ -1,15 +1,15 @@
 # ACtividad 0.1 - Introducción a HTTP
 
-### Visualiza los siguientes videos y responde a las cuestiones planteadas a continuación
+## Visualiza los siguientes videos y responde a las cuestiones planteadas a continuación
 https://www.youtube.com/watch?v=eesqK59rhGA
 https://www.youtube.com/watch?v=DuSURHrZG6I
 
-### ¿Quién, dónde y cuándo se crea el primer servidor web?
+## ¿Quién, dónde y cuándo se crea el primer servidor web?
 
 Tim Berners-Lee fue quien creó en primer servidor web, montado en un ordenador NeXT en el CERN a finales de 1990 (primer servidor web, llamado "httpd")
 Con la ayuda de Robert Cailliau creó la World Wide Web desarrollado con NEXTSTEP.
 
-### ¿Qué es pila de protocolos usados por http?
+## ¿Qué es pila de protocolos usados por http?
 
 HTTP trabaja en la capa de aplicación, está basada en la pila TCP/IP.
 
@@ -17,7 +17,7 @@ TCP -> Garantiza la entrega confiable de los datos (cliente/servidor).
 
 IP -> Encamina los paquetes entre redes.
 
-### ¿Componentes de una URL?
+## ¿Componentes de una URL?
 
 Una URL se compone de:
 · Protocolo o esquema -> Usa http:// o https://
@@ -34,7 +34,7 @@ Una URL se compone de:
 
 <img width="1707" height="185" alt="image" src="https://github.com/user-attachments/assets/496793ca-e5c8-4c69-8df7-a2755a5d9b1a" />
 
-### ¿Pasos en la recuperación de una página web mediante HTTP?
+## ¿Pasos en la recuperación de una página web mediante HTTP?
 
 Conexión cliente/servidor en HTTP:
 
@@ -52,12 +52,12 @@ Conexión cliente/servidor en HTTP:
 
 · La conexión se cierra o se mantiene para futuras peticiones:
 
-### Diferencia entre páginas dinámicas y estáticas
+## Diferencia entre páginas dinámicas y estáticas
 
 En las páginas estáticas, el contenido de la web es fijo, por ejemplo un html; cada cliente que la solicita recibe el mismo contenido.
 En cambios, las páginas dinámicas el contenido es manejado por el servidor, por ejemplo Python, PHP, Java... en función de las peticiones de cada usuario, por lo que cada cliente puede recibir un contenido distinto.
 
-### ¿Cómo usar telnet para acceder a un servidor web?
+## ¿Cómo usar telnet para acceder a un servidor web?
 
 Telnet es una herramienta antigua para conexiones remotas y está prácticamente en desuso, ya que no cifra la comunicación, a diferencia de SSH que sí ofrece seguridad y cifrado.
 No obstante, para una conexión telnet se usa el comando:
@@ -73,7 +73,7 @@ telnet 104.16.27.13 80
 GET /configurador/index.html/1.1
 ```
 
-### Request. Métodos principales
+## Request. Métodos principales
 	
 Los métodos más usados en HTTP incluyen:
 · GET: solicitar la lectura de un recurso.
@@ -88,7 +88,7 @@ Los métodos más usados en HTTP incluyen:
 
 · OPTIONS: pregunta al servidor qué métodos admite para ese recurso.
 
-### Response. Códigos
+## Response. Códigos
 
 Los códigos de Respuesta HTTP se componen de tres dígitos e indican el resultado de la petición, se dividen en:
 
@@ -102,7 +102,7 @@ Los códigos de Respuesta HTTP se componen de tres dígitos e indican el resulta
 
 · 500-599 -> Fallo del servidor / problema al procesar peticion (500 Internal Server Error).
 
-### Content type. Tipos principales
+## Content type. Tipos principales
 
 Indica el tipo de datos que se envían en el cuerpo de la respuesta. Entre los más comunes:
 
