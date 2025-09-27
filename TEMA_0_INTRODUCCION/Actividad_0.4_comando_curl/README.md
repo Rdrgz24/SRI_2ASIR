@@ -19,7 +19,7 @@ curl -o nombrearchivo.html https://www.ejemplo.com/
 ```
 Muestra de uso:
 
-<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/7e7c8603-30a4-4efd-abe9-2d8433bb4bdb" />
+<img width="700" height="520" alt="image" src="https://github.com/user-attachments/assets/7e7c8603-30a4-4efd-abe9-2d8433bb4bdb" />
 
 
 ### 3. Mostrar el contenido de un sitio web por rangos:
