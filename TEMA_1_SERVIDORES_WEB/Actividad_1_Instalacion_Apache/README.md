@@ -84,14 +84,34 @@ sudo ufw status
 Muestra de comandos realizados en máquina virtual:
 
 <img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/54673a86-3947-409a-9da4-88194262e4ea" />
----------------------------------
+
+
 Comprobamos el estado de nuestro servidor web Apache ingresando a localhost:
 
 <img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/3d68be54-22fe-4f31-9dcf-e85a20be3280" />
 
 
 **2. Instalar MySQL**  
-   ----------------------------------------------
+
+Instalamos mysql-server con el comando:
+```
+sudo apt install mysql-server -y
+```
+Tras instalar el servidor de mysql, aseguramos la instalación con el comando:
+```
+sudo mysql_secure_installation
+```
+Asignamos password al usuario root, borramos usuarios anónimos y bases de datos de prueba.
+
+Probamos que el servidor funcione correctamente:
+```
+sudo mysql
+```
+Muestra de comando realizados en máquina virtual:
+
+<img width="908" height="733" alt="image" src="https://github.com/user-attachments/assets/64a8c72e-ed14-463f-960c-abade435dbfe" />
+
+
 **3. Instalar PHP**  
    -------------------------------------------
 
