@@ -1,4 +1,3 @@
-<img width="1400" height="1105" alt="image" src="https://github.com/user-attachments/assets/25959558-87bc-47e3-83df-46b435e9c204" /># Actividad 1 - Instalación de Apache
 
 ## Preguntas
 
