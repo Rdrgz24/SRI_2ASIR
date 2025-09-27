@@ -10,7 +10,7 @@ curl https://www.ejemplo.com/
 ```
 Muestra de uso:
 
-<img width="800" height="320" alt="image" src="https://github.com/user-attachments/assets/afa339b9-e0fc-4703-848c-840b2b6ea2c1" />
+<img width="700" height="380" alt="image" src="https://github.com/user-attachments/assets/afa339b9-e0fc-4703-848c-840b2b6ea2c1" />
 
 
 ### 2. Guardar el contenido de un sitio web en un fichero local:
