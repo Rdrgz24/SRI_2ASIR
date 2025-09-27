@@ -51,7 +51,7 @@ Conexión cliente/servidor en HTTP:
 
 · El cliente recibe la respuesta y la interpreta: analiza cabeceras, tipo de contenido, muestra el contenido, solicita recursos adicionales (imágenes, CSS, JS) si es necesario.
 
-· La conexión se cierra o se mantiene para futuras peticiones:
+· La conexión se cierra o se mantiene para futuras peticiones.
 
 ## Diferencia entre páginas dinámicas y estáticas
 
