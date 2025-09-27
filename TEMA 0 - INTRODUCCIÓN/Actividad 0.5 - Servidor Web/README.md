@@ -1,7 +1,7 @@
 # Ejemplo de servidores web en python
 
 Este repositorio contiene varios ejemplos de servidores web simples en Python.
-Se usa el mismo (TEMA 0 - INTRODUCCIÓN/Actividad 0.5 - Servidor Web/index.html) para todos los casos.
+Se usa el mismo [index](index.html) para todos los casos.
 
 ## Contenido del Repositorio
 
