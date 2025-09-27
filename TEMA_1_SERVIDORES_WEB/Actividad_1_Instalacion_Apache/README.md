@@ -180,6 +180,7 @@ Accedemos al localhost desde el navegador:
 
 <img width="395" height="159" alt="image" src="https://github.com/user-attachments/assets/316518ae-abcc-46f5-b335-d2a8d2017076" />
 
+Nuestro sitio web funciona correctamente!!!
 
 **5. Probar procesamiento PHP en el servidor web**
    -------------------------------
