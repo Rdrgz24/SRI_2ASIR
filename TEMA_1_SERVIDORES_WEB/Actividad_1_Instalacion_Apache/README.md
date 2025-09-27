@@ -8,9 +8,18 @@ Esta arquitectura predomina en las aplicaciones cliente-servidor tradicionales, 
 
 · Nivel de presentación
 
+Es la interfaz donde el usuario final se comunica e interactua con la aplicación. Su objetivo es mostrar la información al usuario y recopilar datos de este.
+Este nivel se puede ejecutar en un navegador web, una aplicación de escritorio o una interfaz gráfica (GUI). Esta capa se suele desarrollar en HTML, CSS y JavaScript.
+
 · Nivel de aplicación
 
+Conocido nivel lógico o medio, es el núcleo de la aplicación; procesa la información recopilada en el nivel de presentación y utilizando la "lógica empresarial" y un conjunto de reglas comerciales se manda información al nivel de datos. Esta capa se suele desarrollar en Python, Perl, Java, PHP o Ruby; se comunica con el nivel de datos mediante las API.  
+
 · Nivel de datos
+
+Conocido como nivel de acceso a datos o backend, es donde se almacena y gestiona la información procesada por la aplicación. 
+
+Puede integrar un sistema relacional de administración de bases de datos como MySQL, PostgreSQL, MariaDB, Oracle, DB2 o Microsoft SQL Server; O un servidor NoSQL de bases de datos como Cassandra,CouchDB o MongoDB.
 
 
 ### 2. Una plataforma web es el entorno de desarrollo de software empleado para  diseñar y ejecutar un sitio web; destacan dos plataformas web, LAMP y WISA. Explica en qué consiste cada una de ellas.
