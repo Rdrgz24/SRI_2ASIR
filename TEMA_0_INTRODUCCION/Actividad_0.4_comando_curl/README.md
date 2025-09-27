@@ -1,6 +1,6 @@
 # Actividad 0.4 - Usando Curl
 
-Investigar posibles comandos en -> https://curl.se/docs/manual.html
+Investigar posibles comandos -> https://curl.se/docs/manual.html
 
 ## Busca información sobre el comando curl y muestra al menos cinco ejemplos de uso
 
