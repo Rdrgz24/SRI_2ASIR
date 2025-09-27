@@ -138,10 +138,48 @@ Restablecemos el servicio de apache con:
 ```
 sudo systemctl restart apache2
 ```
-
-
 **4. Crear host virtual para nuestro sitio web**
    ---------------------------------------
+Primero, creamos una carpeta dentro de /var/www/
+```
+sudo mkdir /var/www/myweb
+```
+Asignamos permisos al usuario correspondiente ($USER = usuario del sistema) tras crear la carpeta:
+```
+sudo chown -R $USER:$USER /var/www/myweb
+```
+Creamos un archivo de configuración para nuestro sitio web:
+```
+sudo nano /eyc/apache2/sites-avaliable/myweb.conf
+```
+Configuración aplicada en mi caso:
+
+<img width="711" height="214" alt="image" src="https://github.com/user-attachments/assets/81a792cd-91c9-4394-bcdb-8253b5b0e69e" />
+
+Habilitamos nuestro sitio web y deshabilitamos el sitio web por defecto:
+```
+sudo a2ensite myweb
+```
+```
+sudo a2dissite 000-default
+```
+```
+sudo systemctl reload apache2
+```
+Muestra de comandos en la máquina virtual:
+
+<img width="1782" height="733" alt="image" src="https://github.com/user-attachments/assets/67d7473f-ad6b-41c0-ae18-ccbfeab967e8" />
+
+Creamos un index.html para nuestro sitio web:
+```
+sudo nano /var/www/myweb/index.html
+```
+<img width="649" height="255" alt="image" src="https://github.com/user-attachments/assets/87369003-90aa-4c95-b93f-6235174312fe" />
+
+Accedemos al localhost desde el navegador:
+
+<img width="395" height="159" alt="image" src="https://github.com/user-attachments/assets/316518ae-abcc-46f5-b335-d2a8d2017076" />
+
 
 **5. Probar procesamiento PHP en el servidor web**
    -------------------------------
