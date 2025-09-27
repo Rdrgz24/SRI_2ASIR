@@ -185,3 +185,19 @@ Nuestro sitio web funciona correctamente!!!
 
 **5. Probar procesamiento PHP en el servidor web**
    -------------------------------
+Creamos un archivo php dentro del directorio de nuestro sitio web:
+```
+sudo nano /var/www/myweb/info.php
+```
+Agregamos el contenido:
+<img width="523" height="116" alt="image" src="https://github.com/user-attachments/assets/de18fa69-1c28-455f-891b-288c20a417ed" />
+
+Tras agregar el contenido ingresamos al navegador, accedemos al localhost/info.php
+<img width="1004" height="600" alt="image" src="https://github.com/user-attachments/assets/64d3432c-9340-44e7-9482-cd1cea802135" />
+
+PHP mantiene un correcto funcionamiento dentro del servidor web, lo que signfica que está bien integrado.
+
+Borramos el archivo info.php
+```
+sudo rm /var/www/myweb/info.php
+```
