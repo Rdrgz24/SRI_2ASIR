@@ -52,7 +52,7 @@ No obstante, para una conexión telnet se usa el comando:
 telnet IP puerto (80)
 ```
 Una vez conectados podemos hacer un GET del recurso que queramos.
-Ejemplo conectandonos a página de configuración de PC en PcComponentes: 
+Ejemplo conectándonos a página de configuración de PC en PcComponentes: 
 ```
 telnet 104.16.27.13 80
 ```
