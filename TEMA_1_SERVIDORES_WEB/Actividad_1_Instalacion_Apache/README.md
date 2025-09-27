@@ -27,9 +27,9 @@ Puede integrar un sistema relacional de administración de bases de datos como M
 
 ### 2. Una plataforma web es el entorno de desarrollo de software empleado para  diseñar y ejecutar un sitio web; destacan dos plataformas web, LAMP y WISA. Explica en qué consiste cada una de ellas.
 
-LAMP (Linux, Apache, MySQL, PHP/Python/Perl)
+**LAMP (Linux, Apache, MySQL, PHP/Python/Perl)**
 
-LAMP es una plataforma web de código abierto ampliamente utilizada para desarrollar y ejecutar sitios web dinámicos.
+Plataforma web de código abierto ampliamente utilizada para desarrollar y ejecutar sitios web dinámicos.
 
 Está compuesta por:
 
@@ -37,11 +37,21 @@ Está compuesta por:
 
 · **A**pache como servidor web para procesar solicitudes HTTP/HTTPS.
 
-· **M**ySQL: Sistema gestor de bases de datos.
+· **M**ySQL como sistema gestor de bases de datos.
 
-· **P**HP/Python/Perl: Lenguajes de programación para la lógica de la aplicación.
+· **P**HP/Python/Perl para programar la lógica de la aplicación.
 
+**WISA (Windows, IIS, SQL Server, ASP.NET)**
 
+Plataforma web basada en tecnologías propietarias de Microsoft, diseñada para entornos corporativos o sistemas preferentes de esta compañía.
+
+· **W**indows como sistema operativo.
+
+· **I**IS (Internet Information Services) como servidor web de Microsoft.
+
+· **S**QL Server para la gestión de bases de datos de Microsoft.
+
+· **A**SP.NET como Framework para crear aplicaciones web dinámicas en .NET.
 
 
 ## Instalación de pila LAMP en Ubuntu 24.04
