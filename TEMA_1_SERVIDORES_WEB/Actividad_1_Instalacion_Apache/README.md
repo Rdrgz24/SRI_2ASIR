@@ -110,7 +110,8 @@ sudo mysql
 ```
 Muestra de comando realizados en máquina virtual:
 
-<img width="908" height="733" alt="image" src="https://github.com/user-attachments/assets/64a8c72e-ed14-463f-960c-abade435dbfe" />
+<img width="947" height="770" alt="image" src="https://github.com/user-attachments/assets/03723df7-5363-40d6-b259-ad2d2a174db9" />
+
 
 
 **3. Instalar PHP**  
