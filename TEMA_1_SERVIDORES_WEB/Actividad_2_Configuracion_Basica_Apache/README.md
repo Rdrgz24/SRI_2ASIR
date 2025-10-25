@@ -20,8 +20,6 @@ Reiniciamos el servicio de Apache para aplicar los cambios:
 sudo systemctl restart apache2
 ```
 
-<img width="743" height="28" alt="image" src="https://github.com/user-attachments/assets/14ee2a5c-4bb8-43fb-92e4-4d667acf5d6e" />
-
 Comprobamos la dirección localhost:81 en el navegador.
 
 <img width="356" height="172" alt="image" src="https://github.com/user-attachments/assets/65667b79-156c-4e1b-9344-85c7504ee410" />
