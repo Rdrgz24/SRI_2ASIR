@@ -37,12 +37,24 @@ Añadimos a la dirección IP del localhost (127.0.0.1) el nombre de dominio "mar
 
 <img width="580" height="237" alt="image" src="https://github.com/user-attachments/assets/6a9c8a52-0a44-4bf5-8062-bd375a5d580d" />
 
-Tras realizar este cambio, en vez de acceder a nuestro sitio web mediante la IP 127.0.0.1, podemos acceder con el dominio marisma.intranet.
+Tras realizar este cambio, en vez de acceder a nuestro sitio web mediante la IP, podemos acceder con el dominio marisma.intranet.
 
 <img width="440" height="168" alt="image" src="https://github.com/user-attachments/assets/e8fab724-55e0-4c8b-b5a1-e3511e3f7980" />
 
 ### 3. Cambia la directiva “ServerTokens” para mostrar el nombre del producto.
 -----------------------------------------------
+Editamos el archivo apache2.conf con el comando:
+```
+sudo nano /etc/apache2/apache2.conf
+```
+
+Añadimos al final de archivo, la línea:
+```
+ServerTokens Prod
+```
+
+Esto, mostrará solo el nombre de producto, no mostrará otros datos relacionados con el sistema.
+
 
 ### 4. Comprueba si se visualiza el pie de página en las páginas generadas por Apache (por ejemplo, en las páginas de error). Cambia el valor de la directiva “ServerSignature” y comprueba que funciona correctamente. 
 -----------------------------------------------
