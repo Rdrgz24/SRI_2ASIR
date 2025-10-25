@@ -110,7 +110,7 @@ Creamos la página web en el directorio prueba:
 
 Creamos la página web en el directorio prueba2:
 
-
+<img width="557" height="284" alt="image" src="https://github.com/user-attachments/assets/380328ee-35da-448b-b680-1d92e1c9a039" />
 
 ### 6. Redirecciona el contenido de la carpeta “prueba” hacia “prueba2”
 -----------------------------------------------
