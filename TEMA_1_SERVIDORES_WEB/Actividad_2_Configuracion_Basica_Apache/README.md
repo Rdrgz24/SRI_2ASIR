@@ -35,11 +35,11 @@ sudo nano /etc/hosts
 
 Añadimos a la dirección IP del localhost (127.0.0.1) el nombre de dominio "marisma.intranet".
 
-<img width="580" height="237" alt="image" src="https://github.com/user-attachments/assets/6a9c8a52-0a44-4bf5-8062-bd375a5d580d" />
+<img width="480" height="217" alt="image" src="https://github.com/user-attachments/assets/6a9c8a52-0a44-4bf5-8062-bd375a5d580d" />
 
 Tras realizar este cambio, en vez de acceder a nuestro sitio web mediante la IP, podemos acceder con el dominio marisma.intranet.
 
-<img width="440" height="168" alt="image" src="https://github.com/user-attachments/assets/e8fab724-55e0-4c8b-b5a1-e3511e3f7980" />
+<img width="380" height="148" alt="image" src="https://github.com/user-attachments/assets/e8fab724-55e0-4c8b-b5a1-e3511e3f7980" />
 
 ### 3. Cambia la directiva “ServerTokens” para mostrar el nombre del producto.
 -----------------------------------------------
@@ -55,7 +55,7 @@ ServerTokens Prod
 
 Esto, mostrará solo el nombre de producto, no mostrará otros datos relacionados con el sistema.
 
-<img width="857" height="447" alt="image" src="https://github.com/user-attachments/assets/d9c46f94-405b-4e88-ab2e-65bc7f3da9a6" />
+<img width="600" height="340" alt="image" src="https://github.com/user-attachments/assets/d9c46f94-405b-4e88-ab2e-65bc7f3da9a6" />
 
 Para comprobar la sintaxis es correcta y reinicar el servicio para aplicar cambios, usamos el siguiente comando:
 
