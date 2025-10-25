@@ -95,7 +95,7 @@ Guardamos los cambios, comprobamos la sintaxis y reiniciamos el servicio de apac
 
 Ahora, l introducir una página que no esté en nuestro servidor web, no se mostrará el pie de página generado por Apache.
 
-<img width="576" height="228" alt="image" src="https://github.com/user-attachments/assets/375ed26d-dc4e-4315-8143-0dd06637d8ee" />
+<img width="400" height="208" alt="image" src="https://github.com/user-attachments/assets/375ed26d-dc4e-4315-8143-0dd06637d8ee" />
 
 ### 5. Crea un directorio “prueba” y otro directorio “prueba2”. Incluye un par de páginas en cada una de ellas.
 -----------------------------------------------
