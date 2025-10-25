@@ -13,7 +13,7 @@ Listen 81
 
 Para comprobar que Apache está escuchando por el puerto 81, añadiremos un VirtualHost en el archivo de configuración de nuestro sitio web, en mi caso "/etc/apache2/sites-enabled/myweb.conf".
 
-<img width="551" height="388" alt="image" src="https://github.com/user-attachments/assets/e9e5a03a-728b-452b-9f2c-ddf2cef8221e" />
+<img width="420" height="315" alt="image" src="https://github.com/user-attachments/assets/e9e5a03a-728b-452b-9f2c-ddf2cef8221e" />
 
 Reiniciamos el servicio de Apache para aplicar los cambios:
 ```
