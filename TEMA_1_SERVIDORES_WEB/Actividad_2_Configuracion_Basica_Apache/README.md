@@ -10,6 +10,7 @@ Listen 81
 ```
 
 <img width="632" height="286" alt="image" src="https://github.com/user-attachments/assets/cee193fa-6712-45fd-9f5d-bffe09a2fa5a" />
+
 Para comprobar que Apache está escuchando por el puerto 81, añadiremos un VirtualHost en el archivo de configuración de nuestro sitio web, en mi caso "/etc/apache2/sites-enabled/myweb.conf".
 
 <img width="551" height="388" alt="image" src="https://github.com/user-attachments/assets/e9e5a03a-728b-452b-9f2c-ddf2cef8221e" />
@@ -27,6 +28,18 @@ Con esta captura podemos afirmar que apache escucha por el puerto 81, ya que mue
 
 ### 2. Añadir el dominio “marisma.intranet” en el fichero “hosts”
 -----------------------------------------------
+Accedemos al fichero hosts con el comando:
+```
+sudo nano /etc/hosts
+```
+
+Añadimos a la dirección IP del localhost (127.0.0.1) el nombre de dominio "marisma.intranet".
+
+<img width="580" height="237" alt="image" src="https://github.com/user-attachments/assets/6a9c8a52-0a44-4bf5-8062-bd375a5d580d" />
+
+Tras realizar este cambio, en vez de acceder a nuestro sitio web mediante la IP 127.0.0.1, podemos acceder con el dominio marisma.intranet.
+
+<img width="440" height="168" alt="image" src="https://github.com/user-attachments/assets/e8fab724-55e0-4c8b-b5a1-e3511e3f7980" />
 
 ### 3. Cambia la directiva “ServerTokens” para mostrar el nombre del producto.
 -----------------------------------------------
