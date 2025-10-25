@@ -204,6 +204,6 @@ He creado un directorio con multiples contenidos dentro llamado "prueba3-indexes
 ### Scripts
 Ejercicio | Descripción
 ----------|------------
-[Script 1]() | Crea un script que añada un puerto de escucha en el fichero de configuración de Apache. El puerto se recibirá como parámetro en la llamada y se comprobará que no esté ya presente en el fichero de configuración.
-[Script 2]() | Crea un script que añada un nombre de dominio y una ip al fichero hosts. Debemos comprobar que no existe dicho dominio en el fichero hosts.
-[Script 3]() | Crea un script que nos permita crear una página web con un título, una cabecera y un mensaje.
+[Script 1](script1.sh) | Crea un script que añada un puerto de escucha en el fichero de configuración de Apache. El puerto se recibirá como parámetro en la llamada y se comprobará que no esté ya presente en el fichero de configuración.
+[Script 2](script2.sh) | Crea un script que añada un nombre de dominio y una ip al fichero hosts. Debemos comprobar que no existe dicho dominio en el fichero hosts.
+[Script 3](script3.sh) | Crea un script que nos permita crear una página web con un título, una cabecera y un mensaje.
