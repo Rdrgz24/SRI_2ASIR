@@ -59,7 +59,7 @@ Esto, mostrará solo el nombre de producto, no mostrará otros datos relacionado
 
 Para comprobar la sintaxis es correcta y reinicar el servicio para aplicar cambios, usamos el siguiente comando:
 
-<img width="942" height="111" alt="image" src="https://github.com/user-attachments/assets/1327229f-0776-430e-933f-e7b1015742cd" />
+<img width="700" height="98" alt="image" src="https://github.com/user-attachments/assets/1327229f-0776-430e-933f-e7b1015742cd" />
 
 Como podemos comprobar muestra que la sintaxis aplicada fue válida.
 
