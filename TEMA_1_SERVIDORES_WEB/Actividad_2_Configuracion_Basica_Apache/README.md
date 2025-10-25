@@ -218,7 +218,7 @@ Ejercicio | Descripción
 <img width="600" height="220" alt="image" src="https://github.com/user-attachments/assets/dd8c7c38-d79c-4ec3-a260-072611dba915" />
 <img width="407" height="166" alt="image" src="https://github.com/user-attachments/assets/c7065f5d-31cd-4cf2-9ec8-e2a6754100ca" />
 
-#### Script 3 - agregar página web con peticiones por teclado:
+#### Script 3 - Agregar página web con peticiones por teclado:
 -----------------------------------------------
-<img width="600" height="275" alt="image" src="https://github.com/user-attachments/assets/f3cd883d-72a5-42fd-b1e9-b0ed1b3ebffe" />
+<img width="500" height="255" alt="image" src="https://github.com/user-attachments/assets/f3cd883d-72a5-42fd-b1e9-b0ed1b3ebffe" />
 <img width="409" height="168" alt="image" src="https://github.com/user-attachments/assets/e228122f-52d3-48e0-b8e6-7fce869f5d87" />
