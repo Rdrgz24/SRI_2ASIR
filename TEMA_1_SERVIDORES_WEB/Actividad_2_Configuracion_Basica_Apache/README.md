@@ -130,9 +130,16 @@ Comprobamos el funcionamiento en el navegador, al entrar en prueba, automáticam
 
 <img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/8dac82fe-68c8-4091-bb86-229ebb16d683" />
 
-
 ### 7. Es posible redireccionar tan solo una página en lugar de toda la carpeta. Pruébalo.
 -----------------------------------------------
+Sí, es posible, para ello voy a crear dentro de prueba2 el archivo "index2.html" y lo redireccionamos desde apache2.conf:
+
+<img width="450" height="280" alt="image" src="https://github.com/user-attachments/assets/c843dfd2-be4d-45e9-be96-d1c60b617e55" />
+
+Ahora, al intentar acceder al sitio prueba desde el navegador, nos redirige hacia "index2.html":
+
+<img width="700" height="322" alt="image" src="https://github.com/user-attachments/assets/63c34a3c-2c53-4003-8b44-9cf7e707a9d1" />
+
 
 ### 8. Usa la directiva userdir
 -----------------------------------------------
