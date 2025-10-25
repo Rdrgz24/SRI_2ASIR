@@ -198,3 +198,12 @@ He creado un directorio con multiples contenidos dentro llamado "prueba3-indexes
 <img width="400" height="170" alt="image" src="https://github.com/user-attachments/assets/1a1df8ce-e01c-437a-9980-1fa879f709aa" />
 
 # Actividad 2.2 - Trabajando con scripts
+
+ · Crear un script para cada uno de los siguientes problemas
+
+### Scripts
+Ejercicio | Descripción
+----------|------------
+[Script 1]() | Crea un script que añada un puerto de escucha en el fichero de configuración de Apache. El puerto se recibirá como parámetro en la llamada y se comprobará que no esté ya presente en el fichero de configuración.
+[Script 2]() | Crea un script que añada un nombre de dominio y una ip al fichero hosts. Debemos comprobar que no existe dicho dominio en el fichero hosts.
+[Script 3]() | Crea un script que nos permita crear una página web con un título, una cabecera y un mensaje.
