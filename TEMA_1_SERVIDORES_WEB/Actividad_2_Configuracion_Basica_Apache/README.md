@@ -61,7 +61,7 @@ Para comprobar la sintaxis es correcta y reinicar el servicio para aplicar cambi
 
 <img width="942" height="111" alt="image" src="https://github.com/user-attachments/assets/1327229f-0776-430e-933f-e7b1015742cd" />
 
-Como podemos comprobar la sintaxis es correcta, por lo que los cambios se han aplicado.
+Como podemos comprobar muestra que la sintaxis aplicada fue válida.
 
 ### 4. Comprueba si se visualiza el pie de página en las páginas generadas por Apache (por ejemplo, en las páginas de error). Cambia el valor de la directiva “ServerSignature” y comprueba que funciona correctamente. 
 -----------------------------------------------
