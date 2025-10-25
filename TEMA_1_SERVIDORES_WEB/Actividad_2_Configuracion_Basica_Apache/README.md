@@ -9,12 +9,15 @@ Para añadir el puerto 81, editamos el archivo "/etc/apache2/ports.conf" y agreg
 <img width="632" height="286" alt="image" src="https://github.com/user-attachments/assets/cee193fa-6712-45fd-9f5d-bffe09a2fa5a" />
 
 Para comprobar que Apache está escuchando por el puerto 81, añadiremos un VirtualHost en el archivo de configuración de nuestro sitio web, en mi caso "/etc/apache2/sites-enabled/myweb.conf".
+
 <img width="551" height="388" alt="image" src="https://github.com/user-attachments/assets/e9e5a03a-728b-452b-9f2c-ddf2cef8221e" />
 
 Reiniciamos el servicio de Apache para aplicar los cambios.
+
 <img width="743" height="28" alt="image" src="https://github.com/user-attachments/assets/14ee2a5c-4bb8-43fb-92e4-4d667acf5d6e" />
 
 Comprobamos la dirección localhost:81 en el navegador.
+
 <img width="356" height="172" alt="image" src="https://github.com/user-attachments/assets/65667b79-156c-4e1b-9344-85c7504ee410" />
 
 Con esta captura podemos afirmar que apache escucha por el puerto 81, ya que muestra el VirtualHost que hemos configurado.
