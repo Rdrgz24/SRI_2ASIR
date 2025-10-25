@@ -4,7 +4,7 @@
 
 ### 1. Apache utilizará el puerto 81 además del 80
 
-Para añadir el puerto 81, editamos el archivo "/etc/apache2/ports.conf" y agregamos la línea 
+Para añadir el puerto 81, editamos el archivo "/etc/apache2/ports.conf" y agregamos la línea de código:
 ```
 Listen 81
 ```
@@ -15,7 +15,10 @@ Para comprobar que Apache está escuchando por el puerto 81, añadiremos un Virt
 
 <img width="551" height="388" alt="image" src="https://github.com/user-attachments/assets/e9e5a03a-728b-452b-9f2c-ddf2cef8221e" />
 
-Reiniciamos el servicio de Apache para aplicar los cambios.
+Reiniciamos el servicio de Apache para aplicar los cambios:
+```
+sudo systemctl restart apache2
+```
 
 <img width="743" height="28" alt="image" src="https://github.com/user-attachments/assets/14ee2a5c-4bb8-43fb-92e4-4d667acf5d6e" />
 
