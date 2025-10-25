@@ -208,17 +208,17 @@ Ejercicio | Descripción
 [Script 2](script2.sh) | Crea un script que añada un nombre de dominio y una ip al fichero hosts. Debemos comprobar que no existe dicho dominio en el fichero hosts.
 [Script 3](script3.sh) | Crea un script que nos permita crear una página web con un título, una cabecera y un mensaje.
 
-#### Prueba de funcionamiento de scripts:
-Script 1 - Añadir puerto:
-
+### Prueba de funcionamiento de scripts:
+#### Script 1 - Añadir puerto:
+-----------------------------------------------
 <img width="600" height="250" alt="image" src="https://github.com/user-attachments/assets/6a6ec8fb-cb70-4086-b788-7e4c5c4d7629" />
 
-Script 2 - Añadir ip y host:
-
-<img width="600" height="180" alt="image" src="https://github.com/user-attachments/assets/dd8c7c38-d79c-4ec3-a260-072611dba915" />
+#### Script 2 - Añadir ip y host:
+-----------------------------------------------
+<img width="600" height="220" alt="image" src="https://github.com/user-attachments/assets/dd8c7c38-d79c-4ec3-a260-072611dba915" />
 <img width="407" height="166" alt="image" src="https://github.com/user-attachments/assets/c7065f5d-31cd-4cf2-9ec8-e2a6754100ca" />
 
-Script 3:
-
+#### Script 3:
+-----------------------------------------------
 <img width="600" height="275" alt="image" src="https://github.com/user-attachments/assets/f3cd883d-72a5-42fd-b1e9-b0ed1b3ebffe" />
 <img width="409" height="168" alt="image" src="https://github.com/user-attachments/assets/e228122f-52d3-48e0-b8e6-7fce869f5d87" />
