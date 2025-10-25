@@ -58,8 +58,19 @@ Esto, mostrará solo el nombre de producto, no mostrará otros datos relacionado
 <img width="600" height="340" alt="image" src="https://github.com/user-attachments/assets/d9c46f94-405b-4e88-ab2e-65bc7f3da9a6" />
 
 Para comprobar la sintaxis es correcta y reinicar el servicio para aplicar cambios, usamos el siguiente comando:
+```
+sudo apachectl -t && sudo systemctl restart apache2
+```
+Cambios en la configuración:
+Antes (Apache + versión + sistema) -> ServerTokens en Full o sin restricción.
 
-<img width="700" height="98" alt="image" src="https://github.com/user-attachments/assets/1327229f-0776-430e-933f-e7b1015742cd" />
+<img width="400" height="155" alt="image" src="https://github.com/user-attachments/assets/4da9b488-75cd-48e8-8e0f-59d2ec35fbd3" />
+
+Después (Apache solo) -> ServerTokens en Prod
+
+<img width="400" height="152" alt="image" src="https://github.com/user-attachments/assets/907635ef-409c-4fee-adbd-33562f4dacac" />
+
+
 
 Como podemos comprobar muestra que la sintaxis aplicada fue válida.
 
