@@ -4,7 +4,10 @@
 
 ### 1. Apache utilizará el puerto 81 además del 80
 
-Para añadir el puerto 81, editamos el archivo "/etc/apache2/ports.conf" y agregamos la línea "Listen 81".
+Para añadir el puerto 81, editamos el archivo "/etc/apache2/ports.conf" y agregamos la línea 
+```
+Listen 81
+```
 
 <img width="632" height="286" alt="image" src="https://github.com/user-attachments/assets/cee193fa-6712-45fd-9f5d-bffe09a2fa5a" />
 
