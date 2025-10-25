@@ -70,12 +70,32 @@ Después (Apache solo) -> ServerTokens en Prod
 
 <img width="400" height="152" alt="image" src="https://github.com/user-attachments/assets/907635ef-409c-4fee-adbd-33562f4dacac" />
 
-
-
-Como podemos comprobar muestra que la sintaxis aplicada fue válida.
-
 ### 4. Comprueba si se visualiza el pie de página en las páginas generadas por Apache (por ejemplo, en las páginas de error). Cambia el valor de la directiva “ServerSignature” y comprueba que funciona correctamente. 
 -----------------------------------------------
+
+Comprobamos el pide de página introduciendo una página que no esté en nuestro servidor web.
+
+<img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/c3aed660-fda9-4be2-84cd-35655344db13" />
+
+Como vemos, se muestra el pie de página e información correspondiente.
+
+Editamos la directiva "ServerSignatura" en el archivo apache2.conf.
+```
+sudo nano /etc/apache2/apache2.conf
+```
+
+Añadimos al final de archivo, la línea:
+```
+ServerSignature Off
+```
+
+<img width="400" height="275" alt="image" src="https://github.com/user-attachments/assets/f731d192-35c6-4a8d-a663-b86271f760c2" />
+
+Guardamos los cambios, comprobamos la sintaxis y reiniciamos el servicio de apache.
+
+Ahora, l introducir una página que no esté en nuestro servidor web, no se mostrará el pie de página generado por Apache.
+
+<img width="576" height="228" alt="image" src="https://github.com/user-attachments/assets/375ed26d-dc4e-4315-8143-0dd06637d8ee" />
 
 ### 5. Crea un directorio “prueba” y otro directorio “prueba2”. Incluye un par de páginas en cada una de ellas.
 -----------------------------------------------
