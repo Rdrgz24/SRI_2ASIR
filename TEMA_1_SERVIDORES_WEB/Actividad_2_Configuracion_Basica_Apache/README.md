@@ -112,8 +112,24 @@ Creamos la página web en el directorio prueba2:
 
 <img width="557" height="284" alt="image" src="https://github.com/user-attachments/assets/380328ee-35da-448b-b680-1d92e1c9a039" />
 
+Páginas web en funcionamiento:
+
+<img width="398" height="176" alt="image" src="https://github.com/user-attachments/assets/c457f48e-350e-496b-b87b-7b82c433ade5" />
+<img width="398" height="176" alt="image" src="https://github.com/user-attachments/assets/98adba19-8c06-4901-aaa8-c8f45d671967" />
+
 ### 6. Redirecciona el contenido de la carpeta “prueba” hacia “prueba2”
 -----------------------------------------------
+
+Editamos el fichero de configuración /etc/apache2/apache2.conf y añadimos la línea de código:
+```
+Redirect /prueba /prueba2
+```
+<img width="400" height="280" alt="image" src="https://github.com/user-attachments/assets/9a9441c2-c11e-42ee-91aa-583933b49c37" />
+
+Comprobamos el funcionamiento en el navegador, al entrar en prueba, automáticamente nos redirecciona a prueba2 (código 302).
+
+<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/8dac82fe-68c8-4091-bb86-229ebb16d683" />
+
 
 ### 7. Es posible redireccionar tan solo una página en lugar de toda la carpeta. Pruébalo.
 -----------------------------------------------
