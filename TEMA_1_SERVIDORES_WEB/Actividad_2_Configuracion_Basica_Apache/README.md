@@ -136,13 +136,32 @@ Sí, es posible, para ello voy a crear dentro de prueba2 el archivo "index2.html
 
 <img width="450" height="280" alt="image" src="https://github.com/user-attachments/assets/c843dfd2-be4d-45e9-be96-d1c60b617e55" />
 
-Ahora, al intentar acceder al sitio prueba desde el navegador, nos redirige hacia "index2.html":
+Ahora, al intentar acceder al sitio prueba desde el navegador, nos redirige hacia "prueba2/index2.html":
 
 <img width="700" height="322" alt="image" src="https://github.com/user-attachments/assets/63c34a3c-2c53-4003-8b44-9cf7e707a9d1" />
 
-
 ### 8. Usa la directiva userdir
 -----------------------------------------------
+
+Habilitamos el módulo userdir con el comando ``` sudo a2enmod userdir ``` y reiniciamos el servicio de apache:
+
+<img width="500" height="136" alt="image" src="https://github.com/user-attachments/assets/a9fbf6ab-4861-4449-a677-3c65578c8276" />
+
+Creamos la carpeta "public_html" y dentro, un index.html para mostrar.
+
+<img width="654" height="187" alt="image" src="https://github.com/user-attachments/assets/aeab8346-9e0e-4882-bd62-3298fe07ba11" />
+
+Asignamos los permisos necesarios para poder visualizar la página desde el navegador ```sudo chmod -R 755 ~/public_html```.
+
+<img width="500" height="200" alt="image" src="https://github.com/user-attachments/assets/41591c5e-7c36-4c14-b098-8e1684590415" />
+
+Editamos el archivo userdir.conf y habilitamos nuestro usuario:
+
+<img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/d5c930ab-6be2-4a40-b557-cb2ba77d955b" />
+
+Comprobamos que tenemos acceso a public_html desde el navegador:
+
+<img width="372" height="110" alt="image" src="https://github.com/user-attachments/assets/d0cf0584-6ecc-4cd5-aa9a-7205999e3ca8" />
 
 ### 9. Usa la directiva alias para redireccionar a una carpeta dentro del directorio de usuario.
 -----------------------------------------------
