@@ -166,9 +166,32 @@ Comprobamos que tenemos acceso a public_html desde el navegador:
 ### 9. Usa la directiva alias para redireccionar a una carpeta dentro del directorio de usuario.
 -----------------------------------------------
 
+Editamos el fichero de alias con el comando ```sudo nano /etc/apache2/mods-enabled/alias.conf```; añadimos las siguientes líneas:
+
+<img width="611" height="395" alt="image" src="https://github.com/user-attachments/assets/681cf895-12e1-4ca0-a479-1a4340b84632" />
+
+Reiniciamos el servicio de apache con ```sudo systemctl restart apache2``` y probamos desde el navegador:
+
+<img width="365" height="121" alt="image" src="https://github.com/user-attachments/assets/96700104-c832-4a7f-9b2c-5c8fa40cc5fb" />
+
 ### 10. ¿Para qué sirve la directiva Options y dónde aparece. Comprueba si apache indexa los directorios. Si es así, ¿cómo lo desactivamos?
 -----------------------------------------------
+La directiva "Options" sirve para definir que características están permitidas en un directorio de apache, por ejemplo si el contenido puede indexarse o no, permitir enlaces simbólicos, etc...
 
+Se usa dentro de bloques, los más comunes son <Directory>, <Location> y <Files>.
 
+Apache si indexa los directorios, normalmente buscará index.html o index.php, en el caso de no estar disponible, mostrará el contenido del directorio en plano.
+
+Para desactivar esta característica, editamos el fichero apache2.conf con ```sudo nano /etc/apache2/apache2.conf```.
+
+De manera predeterminada:
+<img width="537" height="137" alt="image" src="https://github.com/user-attachments/assets/7c468bc2-ad99-4898-b26f-dfacb8d96c9c" />
+
+Editamos temporalmente:
+<img width="542" height="132" alt="image" src="https://github.com/user-attachments/assets/515eae78-24fe-460a-bf81-9c1108452c42" />
+
+He creado un directorio con multiples contenidos dentro llamado "prueba3-indexes", al desactivar los indexes sale 403 Forbidden, ya que apache no está ni listando ni mostrando contenido que no sean index.html o similares.
+
+<img width="400" height="146" alt="image" src="https://github.com/user-attachments/assets/1a1df8ce-e01c-437a-9980-1fa879f709aa" />
 
 # Actividad 2.2 - Trabajando con scripts
