@@ -55,6 +55,13 @@ ServerTokens Prod
 
 Esto, mostrará solo el nombre de producto, no mostrará otros datos relacionados con el sistema.
 
+<img width="857" height="447" alt="image" src="https://github.com/user-attachments/assets/d9c46f94-405b-4e88-ab2e-65bc7f3da9a6" />
+
+Para comprobar la sintaxis es correcta y reinicar el servicio para aplicar cambios, usamos el siguiente comando:
+
+<img width="942" height="111" alt="image" src="https://github.com/user-attachments/assets/1327229f-0776-430e-933f-e7b1015742cd" />
+
+Como podemos comprobar la sintaxis es correcta, por lo que los cambios se han aplicado.
 
 ### 4. Comprueba si se visualiza el pie de página en las páginas generadas por Apache (por ejemplo, en las páginas de error). Cambia el valor de la directiva “ServerSignature” y comprueba que funciona correctamente. 
 -----------------------------------------------
