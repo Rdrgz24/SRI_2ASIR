@@ -194,6 +194,7 @@ Editamos temporalmente:
 
 He creado un directorio con multiples contenidos dentro llamado "prueba3-indexes", al desactivar los indexes sale 403 Forbidden, ya que apache no está ni listando ni mostrando contenido que no sean index.html o similares.
 
+<img width="418" height="217" alt="image" src="https://github.com/user-attachments/assets/130d8bae-3e35-425f-a7ba-99e2e5c5ab1d" />
 <img width="400" height="146" alt="image" src="https://github.com/user-attachments/assets/1a1df8ce-e01c-437a-9980-1fa879f709aa" />
 
 # Actividad 2.2 - Trabajando con scripts
