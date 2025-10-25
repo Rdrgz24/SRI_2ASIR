@@ -93,12 +93,24 @@ ServerSignature Off
 
 Guardamos los cambios, comprobamos la sintaxis y reiniciamos el servicio de apache.
 
-Ahora, l introducir una página que no esté en nuestro servidor web, no se mostrará el pie de página generado por Apache.
+Ahora, al introducir una página que no esté en nuestro servidor web, no se mostrará el pie de página generado por Apache.
 
 <img width="400" height="208" alt="image" src="https://github.com/user-attachments/assets/375ed26d-dc4e-4315-8143-0dd06637d8ee" />
 
 ### 5. Crea un directorio “prueba” y otro directorio “prueba2”. Incluye un par de páginas en cada una de ellas.
 -----------------------------------------------
+
+Dentro del directorio /var/www/html creamos las carpetas con el comando:
+
+<img width="500" height="100" alt="image" src="https://github.com/user-attachments/assets/0a32b828-6556-48d9-848b-25346392013d" />
+
+Creamos la página web en el directorio prueba:
+
+<img width="557" height="284" alt="image" src="https://github.com/user-attachments/assets/b0ed9ca9-09b1-425c-9519-cd37938fa6ac" />
+
+Creamos la página web en el directorio prueba2:
+
+
 
 ### 6. Redirecciona el contenido de la carpeta “prueba” hacia “prueba2”
 -----------------------------------------------
