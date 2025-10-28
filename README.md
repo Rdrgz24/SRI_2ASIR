@@ -15,3 +15,4 @@ Ejercicio | Descripción
 ----------|------------
 [Actividad 1 - Instalacion Apache (LAMP)](TEMA_1_SERVIDORES_WEB/Actividad_1_Instalacion_Apache/) | Instalación de pila LAMP (Linux, Apache, MySQL, PHP) en Ubuntu 24.04 desktop.
 [Actividad 2 - Configuración Apache y Scripts](TEMA_1_SERVIDORES_WEB/Actividad_2_Configuracion_Basica_Apache/) | Configuración de puerto, dominio, directiva, redirecciones, alias...
+[Actividad 5 - Directiva Directory - Require)](TEMA_1_SERVIDORES_WEB/Actividad_5_Directiva_Directory/) | Configuración de directivas para permitir o denegar el acceso a sitios web en Apache.
