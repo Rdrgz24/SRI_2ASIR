@@ -1,4 +1,4 @@
-# Actividad Expresiones Regulares
+# Actividad 6 - Expresiones Regulares
 
 ## Realizar los ejercicios propuestos.
 
