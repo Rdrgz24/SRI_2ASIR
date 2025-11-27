@@ -8,7 +8,8 @@ http://www.josedomingo.org/pledin/2011/10/ejemplos-del-modulo-rewrite-en-apache-
 
 Todas las configuraciones se realizarán sobre el archivo de configuración global de apache (/etc/apache2.conf), lo recomendable es un .htaccess dentro del directorio determinado, pero son configuraciones para comprobar el funcionamiento de las directivas, por lo que obviamos las buenas prácticas (teniendo conocimiento de ellas).
 
-Antes de empezar a realizar configuraciones de directivas, debemos habilitar el módulo rewrite
+Antes de empezar a realizar configuraciones de directivas, debemos habilitar el módulo rewrite:
+
 <img width="747" height="94" alt="image" src="https://github.com/user-attachments/assets/9e698349-2199-453c-b9eb-3de3a1fc7017" />
 
 
@@ -41,6 +42,11 @@ wasd
 
 wasd 
 
+<img width="720" height="152" alt="image" src="https://github.com/user-attachments/assets/e39e7d0b-a6a0-4a66-a4ed-ca59d8784974" />
+
+
 ### 5: Uso del RewriteCond
 
 wasd 
+
+<img width="720" height="146" alt="image" src="https://github.com/user-attachments/assets/cb776e0e-1fe7-4454-89fd-b7cdfb826844" />
