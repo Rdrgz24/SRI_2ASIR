@@ -40,10 +40,6 @@ Copiamos el archivo de VirtualHost ejemplo.com.conf para pruebas.com.conf:
 
 <img width="777" height="431" alt="image" src="https://github.com/user-attachments/assets/c166b428-ead0-4826-a9b6-ef40f6372a4e" />
 
-sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/ejemplo.com.conf
-
-sudo nano /etc/apache2/sites-available/ejemplo.com.conf
-
 ### Paso Cinco — Habilita los nuevos Archivos Virtual Host
 
 Habilitamos los nuevos archivos VirtualHost con el comando ```sudo a2ensite nombremodulo.conf``` y reiniciamos el servicio con ```sudo systemctl restart apache2```.
