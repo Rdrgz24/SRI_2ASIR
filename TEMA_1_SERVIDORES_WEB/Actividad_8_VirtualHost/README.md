@@ -46,7 +46,7 @@ Habilitamos los nuevos archivos VirtualHost con el comando ```sudo a2ensite nomb
 
 <img width="862" height="549" alt="image" src="https://github.com/user-attachments/assets/7d2c8d43-6e43-47ff-b579-7c8decb64be2" />
 
-### Paso Seis — Configura Archivos Locales
+### Paso Seis — Configurar Archivos Locales
 
 Añadimos en el fichero /etc/hosts los nombres "servidor.com" y "pruebas.com" simulando un nombre DNS con el que nos podremos conectar en local a nuestros VirtualHost.
 
