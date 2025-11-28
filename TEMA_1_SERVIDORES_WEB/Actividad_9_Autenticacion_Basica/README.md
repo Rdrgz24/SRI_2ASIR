@@ -8,7 +8,7 @@ Se recomienda echar un vistazo a la documentación de Apache sobre autenticació
 
 Creamos usuarios con el comando ```sudo useradd``` y asignamos contraseña a cada uno de estos con ```sudo passwd nombreusuario```:
 
-<img width="861" height="535" alt="image" src="https://github.com/user-attachments/assets/5a5ad756-3ad7-45d6-8107-3f63d2d34446" />
+<img width="600" height="450" alt="image" src="https://github.com/user-attachments/assets/5a5ad756-3ad7-45d6-8107-3f63d2d34446" />
 
 Comprobamos que los usuarios se han creado correctamente y tienen contraseña asignada desde /etc/passwd
 
