@@ -6,7 +6,15 @@
 
 Primero instalaremos y habilitaremos Apache2 en nuestro servidor con el comando ```sudo apt update``` (recargar repositorio) y ```sudo apt install apache2``` (instalar Apache).
 
+<img width="1229" height="284" alt="image" src="https://github.com/user-attachments/assets/75c8bf2e-c1e1-4d59-b48a-485bc5ed355f" />
+
 Tras finalizar la instalación, habilitamos e iniciamos el servicio con ```sudo systemctl enable apache2``` y ```sudo systemctl start apache2```.
+
+<img width="800" height="550" alt="image" src="https://github.com/user-attachments/assets/b48062d0-0f24-41d3-9b11-c7e4410914c8" />
+
+Luego, editamos el archivo hosts con el comando ```sudo nano /etc/hosts``` y añadimos la dirección IP local con los dominios "centro.intranet" y "departamentos.centro.intranet".
+
+<img width="719" height="121" alt="image" src="https://github.com/user-attachments/assets/64a1c23c-9ec4-4519-9c05-31d834feaa69" />
 
 ### Activar los módulos necesarios para ejecutar php y acceder a mysql.
 
