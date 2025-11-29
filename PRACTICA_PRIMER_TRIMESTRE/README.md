@@ -1,8 +1,8 @@
 # PRÁCTICA PRIMER TRIMESTRE 2025 - SERVIDORES WEB
 
-## Vamos a instalar un servidor web interno para un instituto. Se Pide:
+En esta práctica se simulará el servidor web interno para un instituto, donde se alojará un sitio con WordPress usando Apache, un pequeño programa en Python y phpmyadmin usando Nginx.
 
-### Instalación del servidor web apache. Usaremos dos dominios mediante el archivo hosts: centro.intranet y departamentos.centro.intranet. El primero servirá el contenido mediante wordpress y el segundo una aplicación en python.
+## 1. Instalación del servidor web apache. Usaremos dos dominios mediante el archivo hosts: centro.intranet y departamentos.centro.intranet. El primero servirá el contenido mediante wordpress y el segundo una aplicación en python.
 
 Primero instalaremos y habilitaremos Apache2 en nuestro servidor con el comando ```sudo apt update``` (recargar repositorio) y ```sudo apt install apache2``` (instalar Apache).
 
@@ -20,36 +20,70 @@ Antes de saltar al siguiente paso, comprobamos que los dominios han sido añadid
 
 <img width="600" height="420" alt="image" src="https://github.com/user-attachments/assets/7fc2783d-b7b6-4530-8f43-5dba828267f5" />
 
-### Activar los módulos necesarios para ejecutar php y acceder a mysql.
+## 2. Activar los módulos necesarios para ejecutar php y acceder a mysql.
+
+### Instalando PHP
 
 Primero instalamos PHP y los módulos necesarios con el comando ```sudo apt install php libapache2-mod-php php-mysql php-cli php-gd php-xml php-mbstring```.
 
 <img width="1026" height="373" alt="image" src="https://github.com/user-attachments/assets/459b2696-ff5c-4747-a7a3-72ec5fb8a1c7" />
 
+### Instalando y configurando MySQL (MariaDB)
+
 Posteriormente, instalamos mysql con el comando ```sudo apt install mariadb-server mariadb-client``` y configuramos con ```sudo mysql_secure_installation```.
 
+<img width="996" height="534" alt="image" src="https://github.com/user-attachments/assets/f459338d-6cc8-4e51-ace8-3be291f10212" />
 
+Realizamos la configuración inicial de MySQL:
+
+<img width="545" height="729" alt="image" src="https://github.com/user-attachments/assets/d0b8d2ad-5f27-4b2c-b68b-3569fc706c39" />
 
 Tras realizar todos estos cambios reiniciamos el servicio de apache con el comando ```sudo systemctl restart apache2```.
 
-### Instala y configura wordpress.
+<img width="838" height="34" alt="image" src="https://github.com/user-attachments/assets/5f333e69-9c3e-4c77-a154-67e9f1f0ee6e" />
+
+## 3. Instala y configura wordPress.
+
+### Creando el VirtualHost para centro.intranet (WordPress)
+
+Creamos el directorio con los comandos ```sudo mkdir -p /var/www/centro.intranet``` y cambiamos de propietario a nuestro usuario con ```sudo chown -R $USER:$USER /var/www/centro.intranet```.
+
+
+Creamos el VirtualHost con ```sudo nano /etc/apache2/sites-available/centro.intranet.conf``` e insertamos la siguiente información.
+
+<VirtualHost *:80>
+    ServerName centro.intranet
+    DocumentRoot /var/www/centro.intranet
+    <Directory /var/www/centro.intranet>
+        AllowOverride All
+        Require all granted
+    </Directory>
+    ErrorLog ${APACHE_LOG_DIR}/centro_error.log
+    CustomLog ${APACHE_LOG_DIR}/centro_access.log combined
+</VirtualHost>
+
+Tras crear el VirtualHost, toca habilitarlo y recargar el servicio de Apache usando ```sudo a2ensite centro.intranet.conf``` junto a ```sudo a2enmod rewrite``` y por último ```sudo systemctl reload apache2```.
+
+
+### Descargar e instalar WordPress
+
+### Crear la base de datos
+
+
+## Activar el módulo “wsgi” para permitir la ejecución de aplicaciones Python.
 
 wasd 
 
-### Activar el módulo “wsgi” para permitir la ejecución de aplicaciones Python.
+## Crea y despliega una pequeña aplicación python para comprobar que funciona correctamente.
 
 wasd 
 
-### Crea y despliega una pequeña aplicación python para comprobar que funciona correctamente.
+## Adicionalmente protegeremos el acceso a la aplicación python mediante autenticación.
 
 wasd 
 
-### Adicionalmente protegeremos el acceso a la aplicación python mediante autenticación.
+## Instala y configura awstat.
 
 wasd 
 
-### Instala y configura awstat.
-
-wasd 
-
-### Instala un segundo servidor de tu elección (nginx, lighttpd) bajo el dominio “servidor2.centro.intranet”. Debes configurarlo para que sirva en el puerto 8080 y haz los cambios necesarios para ejecutar php. Instala phpmyadmin.
+## Instala un segundo servidor de tu elección (nginx, lighttpd) bajo el dominio “servidor2.centro.intranet”. Debes configurarlo para que sirva en el puerto 8080 y haz los cambios necesarios para ejecutar php. Instala phpmyadmin.
