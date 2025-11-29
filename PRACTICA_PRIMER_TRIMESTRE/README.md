@@ -12,13 +12,19 @@ Tras finalizar la instalación, habilitamos e iniciamos el servicio con ```sudo 
 
 <img width="800" height="550" alt="image" src="https://github.com/user-attachments/assets/b48062d0-0f24-41d3-9b11-c7e4410914c8" />
 
-Luego, editamos el archivo hosts con el comando ```sudo nano /etc/hosts``` y añadimos la dirección IP local con los dominios "centro.intranet" y "departamentos.centro.intranet".
+Luego, editamos el archivo hosts con el comando ```sudo nano /etc/hosts``` y añadimos la dirección IP local con los dominios "centro.intranet" para WP, "departamentos.centro.intranet" para el programa de Python y "servidor2.centro.intranet" para nginx con phpmyadmin.
 
-<img width="719" height="121" alt="image" src="https://github.com/user-attachments/assets/64a1c23c-9ec4-4519-9c05-31d834feaa69" />
+<img width="820" height="92" alt="image" src="https://github.com/user-attachments/assets/349c533d-cd61-4076-9f58-67e3b7081eb2" />
+
+Antes de saltar al siguiente paso, comprobamos que los dominios han sido añadidos correctamente y están funcionales enviando paquetes ICMP (ping).
+
+<img width="600" height="420" alt="image" src="https://github.com/user-attachments/assets/7fc2783d-b7b6-4530-8f43-5dba828267f5" />
 
 ### Activar los módulos necesarios para ejecutar php y acceder a mysql.
 
-wasd 
+Primero instalamos PHP y los módulos necesarios con el comando ```sudo apt install php libapache2-mod-php php-mysql php-cli php-gd php-xml php-mbstring``` y reiniciamos el servicio de apache con ```sudo systemctl restart apache2```:
+
+
 
 ### Instala y configura wordpress.
 
