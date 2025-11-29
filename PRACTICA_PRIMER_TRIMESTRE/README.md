@@ -74,25 +74,47 @@ Cambiamos el propietario y asignamos los permisos necesarios con los comandos ``
 
 ### Crear la base de datos
 
-Accedemos a MySQL con el comando ```sudo mysql -u root -p``` e insertamos el siguiente comando:
+Accedemos a MySQL con el comando ```sudo mysql -u root -p``` e insertamos las siguientes líneas de comando:
 
-CREATE DATABASE wordpressdb;
-
-CREATE USER 'userwp'@'localhost' IDENTIFIED BY '...';
-
-GRANT ALL PRIVILEGES ON wordpressdb.* TO 'userwp'@'localhost';
-
-FLUSH PRIVILEGES;
-
-EXIT;
+<img width="967" height="534" alt="image" src="https://github.com/user-attachments/assets/ccc744ee-d4ba-4c7a-93be-430019756447" />
 
 ### Configurando WordPress
 
-## Activar el módulo “wsgi” para permitir la ejecución de aplicaciones Python.
+Accedemos a la URL http://centro.intranet y realizamos la configuración de WordPress:
 
-wasd 
+Elegimos el idioma:
 
-## Crea y despliega una pequeña aplicación python para comprobar que funciona correctamente.
+<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/0cc457a0-80be-4c96-ad4b-fda6992fca7a" />
+
+Insertamos la información correspondiente a la base de datos creada anteriormente:
+
+<img width="700" height="505" alt="image" src="https://github.com/user-attachments/assets/0f8c4fd3-f696-43d3-a54b-72199739b34c" />
+
+Nos informa de una correcta conexión con la base de datos:
+
+<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/b6717ac9-9b76-488c-93ef-4e851c1ccb52" />
+
+Rellenamos la información pertinente para la instalación de WordPress:
+
+<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/b9b4213f-6e65-4f73-9b19-47fd9fa010de" />
+
+Instalación y configuración de WordPress completada:
+
+<img width="700" height="303" alt="image" src="https://github.com/user-attachments/assets/737099b4-ddf1-4fa1-a325-06597246b8d6" />
+
+Página de inicio:
+
+<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/959ded8b-5b47-465e-af33-5d7f78854222" />
+
+## 4. Activar el módulo “wsgi” para permitir la ejecución de aplicaciones Python.
+
+Activamos con:
+
+sudo apt install libapache2-mod-wsgi-py3
+sudo a2enmod wsgi
+sudo systemctl restart apache2
+
+## 5. Crea y despliega una pequeña aplicación python para comprobar que funciona correctamente.
 
 wasd 
 
