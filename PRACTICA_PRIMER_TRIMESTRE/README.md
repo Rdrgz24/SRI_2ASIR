@@ -138,7 +138,7 @@ Sitio correctamente mostrado en el navegador:
 
 <img width="612" height="111" alt="image" src="https://github.com/user-attachments/assets/faffcac9-ef8c-4b56-8c14-a70abd9edda7" />
 
-## Adicionalmente protegeremos el acceso a la aplicación python mediante autenticación.
+## 6. Adicionalmente protegeremos el acceso a la aplicación python mediante autenticación.
 
 Para proteger el acceso al sitio, haremos uso del archivo htpasswd con el comando ```sudo htpasswd -c /etc/apache2/.htpasswd nombreusuario```.
 
@@ -156,8 +156,72 @@ Tras iniciar sesión.
 
 <img width="500" height="80" alt="image" src="https://github.com/user-attachments/assets/6aec0093-f6a4-494f-adab-29ca6a03b494" />
 
-## Instala y configura awstat.
+## 7. Instala y configura awstat.
 
-wasd 
+Instalamos awstat con el comando:
 
-## Instala un segundo servidor de tu elección (nginx, lighttpd) bajo el dominio “servidor2.centro.intranet”. Debes configurarlo para que sirva en el puerto 8080 y haz los cambios necesarios para ejecutar php. Instala phpmyadmin.
+<img width="700" height="230" alt="image" src="https://github.com/user-attachments/assets/ae2cce32-2b8c-4cc0-a383-b82f8f968af3" />
+
+Copiamos el contenido de awstats.conf a un archivo para el centro con el comando ```sudo cp /etc/awstats/awstats.conf /etc/awstats/awstats.centro.intranet.conf``` y lo editamos con la información adecuada.
+
+Ficheros log:
+
+<img width="600" height="90" alt="image" src="https://github.com/user-attachments/assets/3400a53f-3548-48b9-b3a5-ef91956dc0da" />
+
+Nombre del sitio:
+
+<img width="600" height="66" alt="image" src="https://github.com/user-attachments/assets/d5a99a1d-9bd1-4d63-97ab-1d5bfde8f9c1" />
+
+Habilitamos cgi y reiniciamos el servicio de apache.
+
+<img width="828" height="113" alt="image" src="https://github.com/user-attachments/assets/a4cbdda9-7cdb-4328-9df0-e98c6e993e72" />
+
+Generamos estadísticas del sitio.
+
+<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/3ca14b49-9446-49de-8179-75c6ba5fea2a" />
+
+Accedemos a las estadísticas del sitio "centro.intranet".
+
+<img width="100" height="675" alt="image" src="https://github.com/user-attachments/assets/8ee7dd13-3a83-45a1-8432-392ae97b6ecd" />
+
+## 8. Instala un segundo servidor de tu elección (nginx, lighttpd) bajo el dominio “servidor2.centro.intranet”. Debes configurarlo para que sirva en el puerto 8080 y haz los cambios necesarios para ejecutar php. Instala phpmyadmin.
+
+### Instalando Nginx
+
+Para instalarlo usamos el comando ```sudo apt install nginx php-fpm```.
+
+<img width="700" height="240" alt="image" src="https://github.com/user-attachments/assets/2f7d8623-1a39-46e1-9a45-01af33b567e0" />
+
+Creamos la carpeta /var/www/servidor2 y cambiamos el propietario.
+
+<img width="967" height="50" alt="image" src="https://github.com/user-attachments/assets/43060af7-a790-406b-9017-e724b07fe2f3" />
+
+Ahora, para que no haya conflicto con Apache (puerto 80) usaré el puerto 8080 para el servidor2, para ello creamos el archivo ```sudo nano /etc/nginx/sites-available/servidor2``` e insertamos la siguiente configuración.
+
+<img width="794" height="403" alt="image" src="https://github.com/user-attachments/assets/71efd6cc-3a6e-4007-a686-28d3b459dd14" />
+
+Copiamos el archivo creado de sites-avaliable a sites-enabled, comprobamos sintaxis y reiniciamos el servicio de nginx.
+
+<img width="800" height="300" alt="image" src="https://github.com/user-attachments/assets/1657c222-60d0-4b44-b584-c427b4f103d7" />
+
+### Instalando y usando phpmyadmin sobre Nginx
+
+Ejecutamos el comando ```sudo apt install phpmyadmin```, como no usaremos ni apache2 ni lighttpd no seleccionamos ninguno, simplemente pulsamos sobre "Aceptar".
+
+<img width="800" height="300" alt="image" src="https://github.com/user-attachments/assets/b708add5-6fe0-4495-b6dd-4baa30ccba2d" />
+
+Pulsamos sobre "Sí" para configurar la base de datos de phpmyadmin con bd-config-common
+
+<img width="800" height="300" alt="image" src="https://github.com/user-attachments/assets/7bc6ffc8-436f-459d-bf83-b70999c62920" />
+
+Insertamos una contraseña y pulsamos sobre "Aceptar" (luego pide confirmación).
+
+<img width="800" height="253" alt="image" src="https://github.com/user-attachments/assets/2da788a4-f128-4813-8439-074133579f89" />
+
+Usamos el enlace simbólico para vincular nginx con phpmyadmin con el siguiente comando:
+
+<img width="800" height="57" alt="image" src="https://github.com/user-attachments/assets/17c95447-25ce-4872-8f31-31a3c3a0774d" />
+
+Comprobamos que tenemos acceso al segundo servidor web ingresando a http://servidor2.centro.intranet:8080/phpmyadmin.
+
+<img width="1209" height="512" alt="image" src="https://github.com/user-attachments/assets/e6771d67-4aae-423b-89db-28d5009c38c2" />
