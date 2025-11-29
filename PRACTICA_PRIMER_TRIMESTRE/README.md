@@ -108,15 +108,41 @@ Página de inicio:
 
 ## 4. Activar el módulo “wsgi” para permitir la ejecución de aplicaciones Python.
 
-Activamos con:
+Instalamos el módulo desde los repositorios APT con el comando ```sudo apt install libapache2-mod-wsgi-py3```, habilitamos el módulo con ```sudo a2enmod wsgi``` y reiniciamos el servicio de Apache ```sudo systemctl restart apache2```.
 
-sudo apt install libapache2-mod-wsgi-py3
-sudo a2enmod wsgi
-sudo systemctl restart apache2
+<img width="800" height="430" alt="image" src="https://github.com/user-attachments/assets/6ac91cfc-079b-4f8c-8fbd-6ba70534e57f" />
 
 ## 5. Crea y despliega una pequeña aplicación python para comprobar que funciona correctamente.
 
-wasd 
+Primero creamos la carpeta y el archivo de python:
+
+<img width="600" height="51" alt="image" src="https://github.com/user-attachments/assets/e89a4ec3-d4b9-44d6-b52f-7ebdee609600" />
+
+### Creando pequeña aplicación python
+
+En esta "aplicación" se muestran dos mensajes, uno de bienvenida y otro con los datos de una lista de nombres.
+
+<img width="600" height="110" alt="image" src="https://github.com/user-attachments/assets/0140aeef-4576-4d84-9d72-a25b0d8858b7" />
+
+### Creando VirtualHost
+
+Creamos el archivo de configuración con el comando ```sudo nano /etc/apache2/sites-available/departamentos.conf``` e introducimos:
+
+<VirtualHost *:80>
+
+ServerName departamentos.centro.intranet
+
+WSGIScriptAlias / /var/www/departamentos/app.wsgi
+
+<Directory /var/www/departamentos>
+Require all granted
+</Directory>
+
+ErrorLog ${APACHE_LOG_DIR}/departamentos_error.log
+CustomLog ${APACHE_LOG_DIR}/departamentos_access.log combined
+</VirtualHost>
+
+Habilitamos el sitio y recargamos el servicio de apache con ```sudo a2ensite departamentos.conf``` y ```sudo systemctl reload apache2```.
 
 ## Adicionalmente protegeremos el acceso a la aplicación python mediante autenticación.
 
