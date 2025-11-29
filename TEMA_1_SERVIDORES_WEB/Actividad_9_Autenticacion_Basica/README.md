@@ -43,7 +43,8 @@ Probamos a entrar al sitio:
 
 El directorio ya lo creamos anteriormente, también administramos los permisos locales, ahora añadimos la configuración
 
-<img width="1080" height="384" alt="image" src="https://github.com/user-attachments/assets/f978dec5-db35-42b2-906c-29609570c6cc" />
+<img width="1112" height="400" alt="image" src="https://github.com/user-attachments/assets/3976e05d-8d46-4e79-bbb7-263cd4fa705b" />
+
 
 Añadimos los usuarios al archivo de autenticación mediante el comando ```sudo htpasswd /etc/apache2/.htpasswd nombreusuario```
 
@@ -51,9 +52,13 @@ Añadimos los usuarios al archivo de autenticación mediante el comando ```sudo 
 
 <img width="721" height="79" alt="image" src="https://github.com/user-attachments/assets/4b5b3fce-daa6-41d1-8afc-b9c0cee1da7b" />
 
-wasd 
+Si intentamos acceder al contenido con el usuario3 usando curl -> 403 Forbidden. Pertenece al grupo2.
 
-<img width="654" height="282" alt="image" src="https://github.com/user-attachments/assets/66f5cb4d-2456-40fc-90af-7b66a955a107" />
+<img width="1090" height="328" alt="image" src="https://github.com/user-attachments/assets/cf5a4227-fa59-46a4-a674-6bcdaffd44e7" />
+
+Si intentamos acceder al contenido con el usuario1 usando curl -> 200 OK. Pertenece al grupo1.
+
+<img width="1087" height="249" alt="image" src="https://github.com/user-attachments/assets/7d105bbc-931a-4f48-9820-ef71d48dc843" />
 
 
 ### 5. La directiva satisfy controla cómo se debe comportar el servidor cuando tenemos autorizaciones a nivel de host (order, allow, deny) y autorizaciones de usuarios (require). 
@@ -62,4 +67,4 @@ Ya usamos la directiva satisfy arriba, usamos "any" esto indica que si se cumple
 
 ### 6. En el directorio privado2 haz que sólo sea accesible desde el localhost, y estudia cómo se comporta la autorización si ponemos: satisfy any, satisfy all
 
-Ya se mostró en la última captura de "<Directory>" que con Order, deny, allow, denegamos todas las conexiones y permitimos las entrantes desde 127.0.0.1.
+Ya se mostró en la última captura de "Directory" que con Order, deny, allow, denegamos todas las conexiones y permitimos las entrantes desde 127.0.0.1.
