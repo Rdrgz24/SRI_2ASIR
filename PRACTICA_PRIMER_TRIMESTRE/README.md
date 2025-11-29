@@ -116,33 +116,32 @@ Instalamos el módulo desde los repositorios APT con el comando ```sudo apt inst
 
 Primero creamos la carpeta y el archivo de python:
 
-<img width="600" height="51" alt="image" src="https://github.com/user-attachments/assets/e89a4ec3-d4b9-44d6-b52f-7ebdee609600" />
+<img width="700" height="50" alt="image" src="https://github.com/user-attachments/assets/094c18df-c258-46c1-bd63-b672b6c57510" />
 
 ### Creando pequeña aplicación python
 
 En esta "aplicación" se muestran dos mensajes, uno de bienvenida y otro con los datos de una lista de nombres.
 
-<img width="600" height="110" alt="image" src="https://github.com/user-attachments/assets/0140aeef-4576-4d84-9d72-a25b0d8858b7" />
+<img width="737" height="118" alt="image" src="https://github.com/user-attachments/assets/a664cb17-c1ad-453c-81d6-06988e9c1cbc" />
+
+def application(environ, start_response):
+status = '200 OK'
+response = b"WSGI funcionando desde myapp.py!"
+
+headers = [('Content-Type', 'text/plain')]
+start_response(status, headers)
+
+return [response]
 
 ### Creando VirtualHost
 
 Creamos el archivo de configuración con el comando ```sudo nano /etc/apache2/sites-available/departamentos.conf``` e introducimos:
 
-<VirtualHost *:80>
-
-ServerName departamentos.centro.intranet
-
-WSGIScriptAlias / /var/www/departamentos/app.wsgi
-
-<Directory /var/www/departamentos>
-Require all granted
-</Directory>
-
-ErrorLog ${APACHE_LOG_DIR}/departamentos_error.log
-CustomLog ${APACHE_LOG_DIR}/departamentos_access.log combined
-</VirtualHost>
+<img width="811" height="261" alt="image" src="https://github.com/user-attachments/assets/b724dd8f-78c5-4a04-801b-fe54594d3d6f" />
 
 Habilitamos el sitio y recargamos el servicio de apache con ```sudo a2ensite departamentos.conf``` y ```sudo systemctl reload apache2```.
+
+<img width="846" height="114" alt="image" src="https://github.com/user-attachments/assets/194878f3-b458-46bc-be39-6785c8596538" />
 
 ## Adicionalmente protegeremos el acceso a la aplicación python mediante autenticación.
 
