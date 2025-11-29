@@ -58,24 +58,35 @@ Tras crear el VirtualHost, toca habilitarlo y recargar el servicio de Apache usa
 
 <img width="867" height="222" alt="image" src="https://github.com/user-attachments/assets/070e3bb0-9cd1-45e8-887c-b9abf60010e9" />
 
-### Descargar e instalar WordPress
+### Descargar WordPress y asignar ubicación
 
-Para descargar e instalar WordPress debemos descargarlo de la página oficial, descomprimirlo y posteriormente moverlo, para ello usamos los comandos:
+Para descargar e instalar WordPress debemos descargarlo de la página oficial dentro de /tmp (carpeta temporal), usamos el comando ```cd /tmp``` y ```wget https://wordpress.org/latest.tar.gz```:
 
-cd /tmp
-wget https://wordpress.org/latest.tar.gz
-tar -xf latest.tar.gz
-sudo mv wordpress/* /var/www/centro.intranet/
+<img width="988" height="338" alt="image" src="https://github.com/user-attachments/assets/28e5325d-d26e-435d-8e59-344afb8e21a9" />
 
-Asignamos los permisos necesarios:
+Descomprimimos el archivo  y lo movemos hacia la ubicación del VirtualHost con los comandos ```tar -xf latest.tar.gz``` y ```sudo mv wordpress/* /var/www/centro.intranet/```:
 
-sudo chown -R www-data:www-data /var/www/centro.intranet
-sudo chmod -R 755 /var/www/centro.intranet
+<img width="1014" height="182" alt="image" src="https://github.com/user-attachments/assets/89436b21-1da3-4b8c-a182-eab2009aa072" />
+
+Cambiamos el propietario y asignamos los permisos necesarios con los comandos ```sudo chown -R www-data:www-data /var/www/centro.intranet``` y ```sudo chmod -R 755 /var/www/centro.intranet```.
+
+<img width="1089" height="49" alt="image" src="https://github.com/user-attachments/assets/5ddeede4-7502-486f-8a1a-295b0325ec9e" />
 
 ### Crear la base de datos
 
+Accedemos a MySQL con el comando ```sudo mysql -u root -p``` e insertamos el siguiente comando:
 
+CREATE DATABASE wordpressdb;
 
+CREATE USER 'userwp'@'localhost' IDENTIFIED BY '...';
+
+GRANT ALL PRIVILEGES ON wordpressdb.* TO 'userwp'@'localhost';
+
+FLUSH PRIVILEGES;
+
+EXIT;
+
+### Configurando WordPress
 
 ## Activar el módulo “wsgi” para permitir la ejecución de aplicaciones Python.
 
