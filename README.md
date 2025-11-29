@@ -24,4 +24,5 @@ Ejercicio | Descripción
 [Actividad_6_Expresiones_Regulares)](TEMA_1_SERVIDORES_WEB/Actividad_6_Expresiones_Regulares/) | Haciendo uso de expresiones regulares para filtrar digitos, caracteres, números...
 [Actividad_7_Directivas_Reescritura)](TEMA_1_SERVIDORES_WEB/Actividad_7_Directivas_Reescritura/) | Trabajando con redirecciones, URL amigables, hot linking...
 [Actividad_8_VirtualHost)](TEMA_1_SERVIDORES_WEB/Actividad_8_VirtualHost/) | Creando y configurando host virtuales, permisos y archivos.
-[Actividad_9_Autenticacion_Basica)](TEMA_1_SERVIDORES_WEB/Actividad_9_Autenticacion_Basica/) | ---
+[Actividad_9_Autenticacion_Basica)](TEMA_1_SERVIDORES_WEB/Actividad_9_Autenticacion_Basica/) | Autenticación de usuarios en Apache, directivas, controles de acceso y Satisfy.
+[Actividad_10_Certificado_SSL)](TEMA_1_SERVIDORES_WEB/Actividad_10_Certificado_SSL/) | Trabajando con máquina EC2 de AWS, ccreando un certificado autofirmado con openssl y registro DNS con no-ip.
