@@ -48,26 +48,33 @@ Tras realizar todos estos cambios reiniciamos el servicio de apache con el coman
 
 Creamos el directorio con los comandos ```sudo mkdir -p /var/www/centro.intranet``` y cambiamos de propietario a nuestro usuario con ```sudo chown -R $USER:$USER /var/www/centro.intranet```.
 
+<img width="1025" height="54" alt="image" src="https://github.com/user-attachments/assets/4c9a20e1-596b-475e-8c04-ba0d958e9f00" />
 
 Creamos el VirtualHost con ```sudo nano /etc/apache2/sites-available/centro.intranet.conf``` e insertamos la siguiente información.
 
-<VirtualHost *:80>
-    ServerName centro.intranet
-    DocumentRoot /var/www/centro.intranet
-    <Directory /var/www/centro.intranet>
-        AllowOverride All
-        Require all granted
-    </Directory>
-    ErrorLog ${APACHE_LOG_DIR}/centro_error.log
-    CustomLog ${APACHE_LOG_DIR}/centro_access.log combined
-</VirtualHost>
+<img width="792" height="303" alt="image" src="https://github.com/user-attachments/assets/64b6a3c7-5b9a-4094-941b-c5fbb00747ff" />
 
 Tras crear el VirtualHost, toca habilitarlo y recargar el servicio de Apache usando ```sudo a2ensite centro.intranet.conf``` junto a ```sudo a2enmod rewrite``` y por último ```sudo systemctl reload apache2```.
 
+<img width="867" height="222" alt="image" src="https://github.com/user-attachments/assets/070e3bb0-9cd1-45e8-887c-b9abf60010e9" />
 
 ### Descargar e instalar WordPress
 
+Para descargar e instalar WordPress debemos descargarlo de la página oficial, descomprimirlo y posteriormente moverlo, para ello usamos los comandos:
+
+cd /tmp
+wget https://wordpress.org/latest.tar.gz
+tar -xf latest.tar.gz
+sudo mv wordpress/* /var/www/centro.intranet/
+
+Asignamos los permisos necesarios:
+
+sudo chown -R www-data:www-data /var/www/centro.intranet
+sudo chmod -R 755 /var/www/centro.intranet
+
 ### Crear la base de datos
+
+
 
 
 ## Activar el módulo “wsgi” para permitir la ejecución de aplicaciones Python.
