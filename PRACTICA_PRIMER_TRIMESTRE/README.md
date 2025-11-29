@@ -182,7 +182,7 @@ Generamos estadísticas del sitio.
 
 Accedemos a las estadísticas del sitio "centro.intranet".
 
-<img width="1000" height="675" alt="image" src="https://github.com/user-attachments/assets/8ee7dd13-3a83-45a1-8432-392ae97b6ecd" />
+<img width="800" height="605" alt="image" src="https://github.com/user-attachments/assets/8ee7dd13-3a83-45a1-8432-392ae97b6ecd" />
 
 ## 8. Instala un segundo servidor de tu elección (nginx, lighttpd) bajo el dominio “servidor2.centro.intranet”. Debes configurarlo para que sirva en el puerto 8080 y haz los cambios necesarios para ejecutar php. Instala phpmyadmin.
 
