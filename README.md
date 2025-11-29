@@ -1,6 +1,11 @@
 # Servicios de Red e Internet
 ## 2º Adminitración de Sistemas Informáticos en Red
 
+## Práctica Primer Trimestre - Servidores Web
+Ejercicio | Descripción
+----------|------------
+[Documentación Práctica Primer Trimestre](PRACTICA_PRIMER_TRIMESTRE/) | Usando servidores de Apache y Nginx. Instalación y configuración de WordPress, phpMyAdmin...
+
 ## Tema 0 - Introducción
 Ejercicio | Descripción
 ----------|------------
