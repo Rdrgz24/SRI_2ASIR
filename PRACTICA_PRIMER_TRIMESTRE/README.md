@@ -120,18 +120,18 @@ Primero creamos la carpeta y el archivo de python:
 
 ### Creando pequeña aplicación python
 
-En esta "aplicación" se muestran dos mensajes, uno de bienvenida y otro con los datos de una lista de nombres.
+En esta "aplicación" se muestra un mensaje de bienvenida (es con python pero tiene extensión wsgi).
 
-<img width="737" height="118" alt="image" src="https://github.com/user-attachments/assets/a664cb17-c1ad-453c-81d6-06988e9c1cbc" />
+<img width="747" height="212" alt="image" src="https://github.com/user-attachments/assets/b26a1d57-30b1-4f7e-9f5c-1513d30dd1ef" />
 
 def application(environ, start_response):
-status = '200 OK'
-response = b"WSGI funcionando desde myapp.py!"
+    status = '200 OK'
+    output = b"Hola desde la aplicación Python con WSGI"
 
-headers = [('Content-Type', 'text/plain')]
-start_response(status, headers)
+    headers = [('Content-type', 'text/plain')]
+    start_response(status, headers)
 
-return [response]
+    return [output]
 
 ### Creando VirtualHost
 
