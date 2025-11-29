@@ -22,9 +22,15 @@ Antes de saltar al siguiente paso, comprobamos que los dominios han sido añadid
 
 ### Activar los módulos necesarios para ejecutar php y acceder a mysql.
 
-Primero instalamos PHP y los módulos necesarios con el comando ```sudo apt install php libapache2-mod-php php-mysql php-cli php-gd php-xml php-mbstring``` y reiniciamos el servicio de apache con ```sudo systemctl restart apache2```:
+Primero instalamos PHP y los módulos necesarios con el comando ```sudo apt install php libapache2-mod-php php-mysql php-cli php-gd php-xml php-mbstring```.
+
+<img width="1026" height="373" alt="image" src="https://github.com/user-attachments/assets/459b2696-ff5c-4747-a7a3-72ec5fb8a1c7" />
+
+Posteriormente, instalamos mysql con el comando ```sudo apt install mariadb-server mariadb-client``` y configuramos con ```sudo mysql_secure_installation```.
 
 
+
+Tras realizar todos estos cambios reiniciamos el servicio de apache con el comando ```sudo systemctl restart apache2```.
 
 ### Instala y configura wordpress.
 
