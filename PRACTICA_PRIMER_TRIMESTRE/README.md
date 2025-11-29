@@ -122,30 +122,39 @@ Primero creamos la carpeta y el archivo de python:
 
 En esta "aplicación" se muestra un mensaje de bienvenida (es con python pero tiene extensión wsgi).
 
-<img width="747" height="212" alt="image" src="https://github.com/user-attachments/assets/b26a1d57-30b1-4f7e-9f5c-1513d30dd1ef" />
-
-def application(environ, start_response):
-    status = '200 OK'
-    output = b"Hola desde la aplicación Python con WSGI"
-
-    headers = [('Content-type', 'text/plain')]
-    start_response(status, headers)
-
-    return [output]
+<img width="734" height="214" alt="image" src="https://github.com/user-attachments/assets/dd6ee8ec-1610-4582-8cd3-a2cdbdf697b6" />
 
 ### Creando VirtualHost
 
 Creamos el archivo de configuración con el comando ```sudo nano /etc/apache2/sites-available/departamentos.conf``` e introducimos:
 
-<img width="811" height="261" alt="image" src="https://github.com/user-attachments/assets/b724dd8f-78c5-4a04-801b-fe54594d3d6f" />
+<img width="809" height="262" alt="image" src="https://github.com/user-attachments/assets/97b4b1ab-74ee-4331-a4a3-ee1dbdaeb1b0" />
 
 Habilitamos el sitio y recargamos el servicio de apache con ```sudo a2ensite departamentos.conf``` y ```sudo systemctl reload apache2```.
 
 <img width="846" height="114" alt="image" src="https://github.com/user-attachments/assets/194878f3-b458-46bc-be39-6785c8596538" />
 
+Sitio correctamente mostrado en el navegador:
+
+<img width="612" height="111" alt="image" src="https://github.com/user-attachments/assets/faffcac9-ef8c-4b56-8c14-a70abd9edda7" />
+
 ## Adicionalmente protegeremos el acceso a la aplicación python mediante autenticación.
 
-wasd 
+Para proteger el acceso al sitio, haremos uso del archivo htpasswd con el comando ```sudo htpasswd -c /etc/apache2/.htpasswd nombreusuario```.
+
+<img width="700" height="78" alt="image" src="https://github.com/user-attachments/assets/3687dae4-34e3-4eca-aebe-9b8a064b1e72" />
+
+Ahora, modificamos el VirtualHost para que funcione por método de autentiación.
+
+<img width="804" height="318" alt="image" src="https://github.com/user-attachments/assets/eb322bf1-a7d5-4c18-bd68-f28837d2d25c" />
+
+Recargamos apache con ```systemctl reload apache2``` y la página de departamentos; como podemos ver nos pide las credenciales de acceso.
+
+<img width="816" height="365" alt="image" src="https://github.com/user-attachments/assets/b9696bbe-a2a9-4c20-89f9-4971fa11e6e9" />
+
+Tras iniciar sesión.
+
+<img width="500" height="80" alt="image" src="https://github.com/user-attachments/assets/6aec0093-f6a4-494f-adab-29ca6a03b494" />
 
 ## Instala y configura awstat.
 
