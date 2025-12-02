@@ -178,7 +178,7 @@ Reiniciamos el servicio de apache con ```sudo systemctl restart apache2``` y pro
 -----------------------------------------------
 La directiva "Options" sirve para definir que características están permitidas en un directorio de apache, por ejemplo si el contenido puede indexarse o no, permitir enlaces simbólicos, etc...
 
-Se usa dentro de bloques, los más comunes son <Directory>, <Location> y <Files>.
+Se usa dentro de bloques, los más comunes son Directory, Location y Files.
 
 Apache si indexa los directorios, normalmente buscará index.html o index.php, en el caso de no estar disponible, mostrará el contenido del directorio en plano.
 
