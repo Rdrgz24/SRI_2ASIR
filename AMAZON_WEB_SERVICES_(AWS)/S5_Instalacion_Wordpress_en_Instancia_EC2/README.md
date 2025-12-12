@@ -46,7 +46,9 @@ Asignamos un nombre significativo, seleccionamos "Zonal" en el modo de disponibi
 
 ### Creando tabla de enrutamiento
 
+#### Tabla de enrutamiento para Internet Gateway <--> Public Subnet
 
+#### Tabla de enrutamiento para NAT Gateway <--> Private Subnet
 
 ## 2. Creación de Instancias
 
