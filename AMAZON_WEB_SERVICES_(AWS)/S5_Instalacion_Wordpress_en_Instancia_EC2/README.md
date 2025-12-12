@@ -46,9 +46,40 @@ Asignamos un nombre significativo, seleccionamos "Zonal" en el modo de disponibi
 
 ### Creando tabla de enrutamiento
 
+La tabla de enrutamiento permitirá indicar la ruta de salida hacia Internet, subredes u otros servicios de red. En este caso nos servirá para enlazar:
+
+· Subredes públicas - Tabla de enrutamiento pública - Acceso con Puerta de enlace de Internet (ruta) 
+
+· Subredes privadas - Tabla de enrutamiento privada - Acceso con Puerta de enlace NAT (ruta)
+
 #### Tabla de enrutamiento para Internet Gateway <--> Public Subnet
 
+Creamos una tabla de enrutamiento llamada "Public-RT-WordPress" seleccionando la VPC creada anteriormente.
+
+<img width="1111" height="377" alt="image" src="https://github.com/user-attachments/assets/a5ab92e1-6385-46ee-9f8c-02c631338d90" />
+
+Asignamos las rutas, en este caso todo acceso (0.0.0.0/0) saldrá a Internet mediante la puerta de enlace igw anteriormente creada.
+
+<img width="1100" height="242" alt="image" src="https://github.com/user-attachments/assets/289b3beb-1b58-4d5c-9fec-e39b3686137e" />
+
+Una vez creada la tabla de enrutamiento, la asignamos a las dos subredes públicas; Esto permite a las subredes públicas saber que deben seguir la ruta hacia la IGW para salir a Internet.
+
+<img width="1120" height="339" alt="image" src="https://github.com/user-attachments/assets/88ab6978-4853-4d51-859d-e91b51685c2c" />
+
 #### Tabla de enrutamiento para NAT Gateway <--> Private Subnet
+
+Creamos una tabla de enrutamiento llamada "Private-RT-WordPress" seleccionando la VPC creada anteriormente.
+
+<img width="1106" height="376" alt="image" src="https://github.com/user-attachments/assets/521b15c2-0fb1-4fdf-933b-423aa4854613" />
+
+Asignamos las rutas, en este caso todo acceso (0.0.0.0/0) saldrá a Internet mediante la puerta de enlace NAT anteriormente creada.
+
+<img width="1111" height="243" alt="image" src="https://github.com/user-attachments/assets/5462abc6-daff-4869-b264-dc6f4691f244" />
+
+Por último, asignamos las dos subredes privadas a esta tabla de enrutamiento; Esto permite a las subredes privadas saber que deben hacer uso de la ruta hacia NAT.
+
+<img width="1108" height="339" alt="image" src="https://github.com/user-attachments/assets/4e078d00-3740-449e-8374-3e8b7a3eec39" />
+
 
 ## 2. Creación de Instancias
 
