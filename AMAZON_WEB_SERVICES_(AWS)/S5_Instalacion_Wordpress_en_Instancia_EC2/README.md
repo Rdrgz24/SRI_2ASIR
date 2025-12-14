@@ -83,6 +83,10 @@ Por último, asignamos las dos subredes privadas a esta tabla de enrutamiento; E
 
 ## 2. Creación de Instancias
 
+Para esta actividad estamos usando AWS Academy con unos recursos limitados...
+
+<img width="1919" height="855" alt="image" src="https://github.com/user-attachments/assets/092c30b7-2b61-41b5-bfd7-3e8535b5a22b" />
+
 
 
 ## 3. Apache y PHP
