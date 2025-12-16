@@ -111,7 +111,43 @@ Establecemos conexión por SSH desde el símbolo del sistema de Windows con el c
 
 ## 3. Apache y PHP
 
+### Apache
+
+Actualizamos los repositorios con ```sudo apt update``` e instalamos apache con el comando ```sudo apt install apache2```.
+
+<img width="787" height="333" alt="image" src="https://github.com/user-attachments/assets/23f068eb-1902-479c-9d8b-3e5476aff6de" />
+
+Arrancamos el servicio con ```sudo systemctl start apache2```, habilitamos su arranque al iniciar la instancia con ```sudo systemctl enable apache2``` y comprobamos el estado con ```sudo systemctl status apache2```.
+
+<img width="961" height="381" alt="image" src="https://github.com/user-attachments/assets/cf428979-72e6-46f5-8176-c19c0ec4c78d" />
+
+Luego, comprobamos que Apache se ha instalado correctamente en nuestro servidor buscando la IP (o DNS) en nuestro navegador.
+
+<img width="1200" height="720" alt="image" src="https://github.com/user-attachments/assets/9d35f164-8648-4e0b-8d00-9f9292ee5e8d" />
+
+### PHP
+
+Aunque ya previamente actualizamos los repositorios, volvemos a ejecutar ```sudo apt -y update && sudo apt upgrade```. Luego, instalamos PHP con el comando ```sudo apt install php libapache2-mod-php php-cli```.
+
+<img width="935" height="280" alt="image" src="https://github.com/user-attachments/assets/da82e707-23a7-4840-a7dc-45f3b5526023" />
+
+PHP correctamente instalado.
+
+<img width="533" height="99" alt="image" src="https://github.com/user-attachments/assets/77e73a75-c6c0-490c-ae0d-176cf8bded38" />
+
+### MySQL
+
+Instalamos MySQL como módulo de PHP con el comando ```sudo apt install php-mysql```
+
+<img width="484" height="223" alt="image" src="https://github.com/user-attachments/assets/0ab48088-ea6a-49a6-bd18-c0fc7de52028" />
+
+Tras instalar PHP y MySQL, reiniciamos el servicio de Apache ```sudo systemctl start apache2```, comprobamos el estado ```sudo systemctl status apache2```, y por último verificamos que los módulos de MySQL se añadieron a PHP ```php --modules | grep mysql```.
+
+<img width="958" height="435" alt="image" src="https://github.com/user-attachments/assets/07145275-fd53-4ef9-b4d2-9daa982275a9" />
+
 ## 4. Creación de la base de datos
+
+Dentro del servicio RDS...
 
 ## 5. Elastic File System (EFS)
 
