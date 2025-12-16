@@ -6,18 +6,29 @@ Creamos dos subredes públicas con intención de construir al final del ejercici
 
 ## 1. Introducción
 
-
 ### Creando VPC
 
 Antes de crear la instancia, debemos crear una VPC, para ello, dentro de la Consola de Administración, nos dirigimos hacia "VPC" - "Crear VPC". Dentro, seleccionamos "Solo la VPC", la etiquetamos como "VPC-WordPress" y asignamos la red 10.0.0.0/16 con la que posteriormente crearemos las subredes.
 
 <img width="1217" height="809" alt="image" src="https://github.com/user-attachments/assets/faf04214-7c59-4b89-a2f8-dcde7f8988c4" />
 
+Tras crear la VPC, la seleccionamos, damos sobre "Actions" - "Edit VPC Settings".
+
+<img width="1673" height="377" alt="image" src="https://github.com/user-attachments/assets/2d01d1dd-90b4-4e32-a680-c02e4e5f394f" />
+
+Habilitamos en las opciones DNS las casillas "Enable DNS resolution" y "Enable DNS hostnames".
+
+<img width="1654" height="626" alt="image" src="https://github.com/user-attachments/assets/41981222-fa11-41d3-be2f-e4165e9091a9" />
+
 ### Creando subredes
 
 Dentro de la Consola de Administración, vamos a "Crear subred" y teniendo seleccionada "VPC-WordPress" asignamos el nombre a la subred, ya sea pública o privada y asignamos la subred correspondiente con máscara 255.255.255.0.
 
 <img width="1110" height="774" alt="image" src="https://github.com/user-attachments/assets/bbbfcc3d-e732-4931-8cdc-32cf9994f86d" />
+
+Esta configuración solo se aplica a las subredes públicas; Dentro de "Edit subnet settings" marcamos la casilla "Enable auto-assign public IPv4 address".
+
+<img width="1728" height="401" alt="image" src="https://github.com/user-attachments/assets/bbd0851a-ee67-40a7-a90f-55716a1074f6" />
 
 Creamos todas las subredes, tanto públicas como privadas (todas asignadas a VPC-WordPress) quedando como resultado:
 
@@ -80,14 +91,23 @@ Por último, asignamos las dos subredes privadas a esta tabla de enrutamiento; E
 
 <img width="1108" height="339" alt="image" src="https://github.com/user-attachments/assets/4e078d00-3740-449e-8374-3e8b7a3eec39" />
 
-
 ## 2. Creación de Instancias
 
-Para esta actividad estamos usando AWS Academy con unos recursos limitados...
+Creamos una instancia llamada "servidorwordpress" por ejemplo con el sistema operativo "Debian", con una "t2.nano" y 15GB de almacenamiento será suficiente para WordPress.
 
-<img width="1919" height="855" alt="image" src="https://github.com/user-attachments/assets/092c30b7-2b61-41b5-bfd7-3e8535b5a22b" />
+<img width="1252" height="700" alt="image" src="https://github.com/user-attachments/assets/c88d846d-f425-4603-9344-8cd97c804a44" />
 
+Aplicamos las siguientes reglas del grupo de seguridad (SSH y HTTP abierto), creando nosotros un nuevo grupo y asignando todo desde cero.
 
+<img width="1099" height="839" alt="image" src="https://github.com/user-attachments/assets/aab15c46-8ba8-42ef-89d2-d1af198bf943" />
+
+Instancia iniciada y direcciones asignadas correctamente.
+
+<img width="1758" height="428" alt="image" src="https://github.com/user-attachments/assets/a4b51463-3d1c-4426-9bd9-70c98546610f" />
+
+Establecemos conexión por SSH desde el símbolo del sistema de Windows con el comando:
+
+<img width="945" height="313" alt="image" src="https://github.com/user-attachments/assets/205f81e3-67fd-411e-87ee-65565dfd0ad7" />
 
 ## 3. Apache y PHP
 
