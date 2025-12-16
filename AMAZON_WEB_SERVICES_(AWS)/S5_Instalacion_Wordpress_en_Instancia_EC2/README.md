@@ -149,6 +149,29 @@ Tras instalar PHP y MySQL, reiniciamos el servicio de Apache ```sudo systemctl s
 
 Dentro del servicio RDS...
 
+<img width="1115" height="793" alt="image" src="https://github.com/user-attachments/assets/74826731-3e56-46de-a6ac-38adda090bc3" />
+
+wasd 
+
+<img width="1099" height="837" alt="image" src="https://github.com/user-attachments/assets/d1c034b8-df9e-4c64-ac41-1ede5f54575c" />
+
+wasd 
+
+<img width="1124" height="856" alt="image" src="https://github.com/user-attachments/assets/c781cade-f1ed-4512-ad1c-ba76fc7dba7b" />
+
+wasd 
+
+<img width="1089" height="375" alt="image" src="https://github.com/user-attachments/assets/b232ad09-342c-4f38-a649-4909e063813e" />
+
+wasd 
+
+<img width="733" height="238" alt="image" src="https://github.com/user-attachments/assets/592f85d3-d9b6-45a9-969a-f72a069b82df" />
+
+Creando base de datos
+
+<img width="1728" height="181" alt="image" src="https://github.com/user-attachments/assets/4fdf02e7-3b74-4eb3-83df-9d93091172eb" />
+
+
 ## 5. Elastic File System (EFS)
 
 ## 6. Descarga de WordPress
