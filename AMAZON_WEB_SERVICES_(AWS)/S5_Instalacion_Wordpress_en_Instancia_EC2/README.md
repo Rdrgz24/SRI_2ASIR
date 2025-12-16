@@ -167,10 +167,9 @@ wasd
 
 <img width="733" height="238" alt="image" src="https://github.com/user-attachments/assets/592f85d3-d9b6-45a9-969a-f72a069b82df" />
 
-Creando base de datos
+wasd 
 
-<img width="1728" height="181" alt="image" src="https://github.com/user-attachments/assets/4fdf02e7-3b74-4eb3-83df-9d93091172eb" />
-
+<img width="1730" height="764" alt="image" src="https://github.com/user-attachments/assets/90ea8050-8bdf-496b-9c1f-3699b3214fa8" />
 
 ## 5. Elastic File System (EFS)
 
