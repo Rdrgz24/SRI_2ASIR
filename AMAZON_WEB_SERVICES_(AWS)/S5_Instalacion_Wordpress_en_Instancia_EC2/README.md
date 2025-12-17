@@ -211,6 +211,57 @@ Conexión con EFS completada.
 
 ## 6. Descarga de WordPress
 
+### Descarga y descompresión
+
+Descargamos WordPress con el comando ```sudo wget http://wordpress.org/latest.tar.gz``` en la ruta /var/www/html, luego lo descomprimimos con ```tar -xf latest.tar.gz```.
+
+<img width="1433" height="374" alt="image" src="https://github.com/user-attachments/assets/b1966061-03f8-4be3-abfb-d2a6f0159ec6" />
+
+### Creación de base de datos, usuario y contraseña
+
+Primero, debemos instalar MySQL cliente para conectarnos a la base de datos.
+
+<img width="934" height="288" alt="image" src="https://github.com/user-attachments/assets/1ca214fa-1850-4c87-9863-929ebb66af5a" />
+
+wasd 
+
+<img width="1254" height="239" alt="image" src="https://github.com/user-attachments/assets/9c389756-bed8-453c-923f-caafd8425cc3" />
+
+wasd 
+
+<img width="888" height="265" alt="image" src="https://github.com/user-attachments/assets/29ae6036-387e-43bc-8c3c-06ae78e9105b" />
+
+Salimos de la conexión de base de datos con EXIT;
+
+### Completando configuración de WordPress desde navegador
+
+Ahora, accedemos al navegador mediante la dirección DNS pública.
+
+<img width="1628" height="654" alt="image" src="https://github.com/user-attachments/assets/e190bb88-ab81-4ab6-9028-ac25e459556e" />
+
+Asignamos la configuración de la base de datos creada anteriormente.
+
+<img width="1394" height="723" alt="image" src="https://github.com/user-attachments/assets/00de586e-4236-4edd-b58b-e461d080d205" />
+
+sudo chown -R www-data:www-data .
+sudo find . -type d -exec chmod 755 {} \;
+sudo find . -type f -exec chmod 644 {} \;
+
+wasd 
+
+<img width="819" height="314" alt="image" src="https://github.com/user-attachments/assets/83a33e77-58bc-47c3-9741-68b58a4f187f" />
+
+wasd 
+
+<img width="1478" height="980" alt="image" src="https://github.com/user-attachments/assets/70c387e9-9821-45fd-80fa-6e81899136a1" />
+
+wasd 
+
+<img width="909" height="452" alt="image" src="https://github.com/user-attachments/assets/6a7d16ce-196e-49ca-a01f-28c6bcfe7504" />
+
+wasd 
+
+<img width="1917" height="991" alt="image" src="https://github.com/user-attachments/assets/aa77b06b-6133-4e28-8639-f6289edba35b" />
 
 
 ## 7. Comprobación final
