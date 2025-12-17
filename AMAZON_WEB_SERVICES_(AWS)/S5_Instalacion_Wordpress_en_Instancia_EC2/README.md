@@ -295,4 +295,4 @@ Tras realizar esta práctica, he podido comprender gran parte del funcionamiento
  
  · Como asignar direcciones IP públicas y resoluciones DNS (lo que más tiempo me ha llevado para solucionar).
  
- · Creación y correcto funcionamiento de servicios / servidores web.
+ · Puesta en marcha y correcto funcionamiento de servicios / servidores web.
