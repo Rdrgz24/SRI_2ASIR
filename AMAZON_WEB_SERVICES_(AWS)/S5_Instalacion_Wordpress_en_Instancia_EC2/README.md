@@ -173,8 +173,44 @@ Base de datos correctamente creada, luego la asignamos a la instancia EC2 "servi
 
 ## 5. Elastic File System (EFS)
 
+Dentro de servicios, pulsamos sobre "EFS", "Create File System", asignamos el nombre "almacenwordpress" y seleccionamos nuestra VPC-WordPress, el resto de configuración se dejará de manera predeterminada.
 
+<img width="540" height="545" alt="image" src="https://github.com/user-attachments/assets/0ec40f91-c386-47fb-88f1-fcb9613f7835" />
+
+Comprobamos que está creado (salen 4 mount targets porque tenemos 4 zonas de disponibilidad distintas por las subredes creadas manualmente y las de RDS, creadas automáticamente).
+
+<img width="1114" height="333" alt="image" src="https://github.com/user-attachments/assets/15b2dcbd-d0f0-4f94-acc0-7b0d2eb877b4" />
+
+Editamos el grupo de seguridad de la instancia EC2 "seguridad WordPress" y permitimos acceso de la instancia al EFS.
+
+<img width="1397" height="366" alt="image" src="https://github.com/user-attachments/assets/5e0d1a4c-e81f-474e-ab2a-6b6b73350e1c" />
+
+Nos conectamos vía IP.
+
+<img width="1832" height="391" alt="image" src="https://github.com/user-attachments/assets/b1b7b263-5d50-4877-bb3a-5a4ecb6c5bf4" />
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Tras probar me dió "Error connection time out", esto me llevó a investigar y verificar la configuración de la instancia EC2 y de EFS, finalmente, encontré el error. Las zonas de disponibilidad eran distintas, y al intentar montar por IP no encontraba, EC2 estaba en "us-east-1e" y EFS estaba en todas menos en esa. ¿Qué hice? Sencillo, añadir en las "mount targets" la zona de disponibilidad "us-east-1e".
+
+<img width="1079" height="51" alt="image" src="https://github.com/user-attachments/assets/62ff5901-9257-4a41-a532-e14e1f0ff577" />
+
+Además de añadir en las reglas de entrada de la EFS -> Permitir vía NFS el security group de la EC2.
+
+<img width="1076" height="58" alt="image" src="https://github.com/user-attachments/assets/ebb8c312-93f0-42ba-b89f-219552046fb5" />
+
+Ahora conectamos vía IP con zona de disponibilidad "us-east-1e":
+
+<img width="661" height="144" alt="image" src="https://github.com/user-attachments/assets/142754cf-2ad0-46b7-b76d-4029065407ab" />
+
+Ahora sí, creamos la carpeta, insertamos el comando correspondiente y verificamos con ```sudo mount | grep nfs```.
+
+<img width="1457" height="116" alt="image" src="https://github.com/user-attachments/assets/a5570150-9e3f-443b-b09b-293e15ffe49b" />
+
+Conexión con EFS completada.
 
 ## 6. Descarga de WordPress
+
+
 
 ## 7. Comprobación final
