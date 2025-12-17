@@ -147,31 +147,33 @@ Tras instalar PHP y MySQL, reiniciamos el servicio de Apache ```sudo systemctl s
 
 ## 4. Creación de la base de datos
 
-Dentro del servicio RDS...
+Dentro del servicio RDS, pulsamos sobre "Configuración completa" y seleccionamos "MySQL" como tipo de base de datos. Para el tipo de plantilla usaremos "Sandbox".
 
 <img width="1115" height="793" alt="image" src="https://github.com/user-attachments/assets/74826731-3e56-46de-a6ac-38adda090bc3" />
 
-wasd 
+Seleccionamos que solo tenga una instancia para disponibilidad, identificamos la base de datos con "DBwordpress" usuario "admin", contraseña "adminadmin" (debemos pulsar sobre self-managed).
 
 <img width="1099" height="837" alt="image" src="https://github.com/user-attachments/assets/d1c034b8-df9e-4c64-ac41-1ede5f54575c" />
 
-wasd 
+Como tipo de base de datos, podemos elegir, entre otras la db.t3.micro. Disco ssd principal de 20GB (suficiente). Paso importante, debemos seleccionar la VPC de WordPress y crear una nueva subred para la DB (denegamos acceso público).
 
 <img width="1124" height="856" alt="image" src="https://github.com/user-attachments/assets/c781cade-f1ed-4512-ad1c-ba76fc7dba7b" />
 
-wasd 
+Además, asignaremos un nuevo grupo de seguridad a la RDS llamado "WordpressDBseguridad".
 
 <img width="1089" height="375" alt="image" src="https://github.com/user-attachments/assets/b232ad09-342c-4f38-a649-4909e063813e" />
 
-wasd 
+Como configuración adicional, es muy importante indicar el nombre inicial de la base de datos, la llamaremos "DBwordpress". 
 
 <img width="733" height="238" alt="image" src="https://github.com/user-attachments/assets/592f85d3-d9b6-45a9-969a-f72a069b82df" />
 
-wasd 
+Base de datos correctamente creada, luego la asignamos a la instancia EC2 "servidorwordpress" pulsando sobre "Acciones" - "Configurar conexión EC2". En la captura se ve como está correctamente asignada a la instancia.
 
 <img width="1730" height="764" alt="image" src="https://github.com/user-attachments/assets/90ea8050-8bdf-496b-9c1f-3699b3214fa8" />
 
 ## 5. Elastic File System (EFS)
+
+
 
 ## 6. Descarga de WordPress
 
