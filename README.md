@@ -27,4 +27,9 @@ Ejercicio | Descripción
 [Actividad_9_Autenticacion_Basica)](TEMA_1_SERVIDORES_WEB/Actividad_9_Autenticacion_Basica/) | Autenticación de usuarios en Apache, directivas, controles de acceso y Satisfy.
 [Actividad_10_Certificado_SSL)](TEMA_1_SERVIDORES_WEB/Actividad_10_Certificado_SSL/) | Trabajando con máquina EC2 de AWS, ccreando un certificado autofirmado con openssl y registro DNS con no-ip.
 
+## Amazon Web Services (AWS)
+Ejercicio | Descripción
+----------|------------
+[Práctica Instancia EC2 con WordPress](AMAZON_WEB_SERVICES_(AWS)/S5_Instalacion_Wordpress_en_Instancia_EC2/) | Configuración de VPC, Instancia EC2, EFS, RDS y grupos de seguridad - Uso de Apache, PHP, WordPress, MySQL...
+
 ### Rafael Rodríguez Cruz
