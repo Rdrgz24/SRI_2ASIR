@@ -265,4 +265,22 @@ Tras ingresar las credenciales en el "wp-login" tenemos acceso a editar toda la 
 
 ## 7. Conexión de EFS a directorio WP-Content
 
+wasd 
 
+<img width="641" height="245" alt="image" src="https://github.com/user-attachments/assets/87577a17-0e25-4a3c-a771-179f4602b706" />
+
+wasd 
+
+<img width="594" height="67" alt="image" src="https://github.com/user-attachments/assets/09de0913-7a45-44f2-84e5-0c9a31998914" />
+
+wasd
+
+<img width="710" height="23" alt="image" src="https://github.com/user-attachments/assets/d3ae0fda-c22e-4254-9a60-8a7f1f25435c" />
+
+wasd 
+
+<img width="1458" height="35" alt="image" src="https://github.com/user-attachments/assets/c789edaf-78b3-4e60-8bee-e5ff371cb94c" />
+
+wasd 
+
+<img width="1458" height="194" alt="image" src="https://github.com/user-attachments/assets/e8ba9cec-baaf-43f1-9774-38e8f1d4ce78" />
