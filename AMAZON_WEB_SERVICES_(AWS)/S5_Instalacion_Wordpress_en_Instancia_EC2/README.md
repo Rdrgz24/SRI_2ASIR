@@ -239,29 +239,28 @@ Ahora, accedemos al navegador mediante la dirección DNS pública.
 
 <img width="1628" height="654" alt="image" src="https://github.com/user-attachments/assets/e190bb88-ab81-4ab6-9028-ac25e459556e" />
 
-Asignamos la configuración de la base de datos creada anteriormente.
+Asignamos la configuración de la base de datos creada anteriormente (nombre, usuario, contraseña y ubicación).
 
 <img width="1394" height="723" alt="image" src="https://github.com/user-attachments/assets/00de586e-4236-4edd-b58b-e461d080d205" />
 
-sudo chown -R www-data:www-data .
-sudo find . -type d -exec chmod 755 {} \;
-sudo find . -type f -exec chmod 644 {} \;
+Una vez rellenados los datos, me daba el error "Unable to write to wp-config.php file." y tuve que cambiar el propietario y los permisos de la carpeta wordpress. Usé ```sudo chown -R www-data:www-data .```, ```sudo chmod 755 wordpress```.
 
-wasd 
+Una vez asignados el propietario y permisos apropiados, tendremos acceso a la base de datos. 
 
 <img width="819" height="314" alt="image" src="https://github.com/user-attachments/assets/83a33e77-58bc-47c3-9741-68b58a4f187f" />
 
-wasd 
+Rellenamos la información pertinente del sitio. (Muestro las credenciales por si el profesor desea hacer alguna gestión).
 
 <img width="1478" height="980" alt="image" src="https://github.com/user-attachments/assets/70c387e9-9821-45fd-80fa-6e81899136a1" />
 
-wasd 
+Instalación completada, pulsamos sobre "Acceder".
 
 <img width="909" height="452" alt="image" src="https://github.com/user-attachments/assets/6a7d16ce-196e-49ca-a01f-28c6bcfe7504" />
 
-wasd 
+Tras ingresar las credenciales en el "wp-login" tenemos acceso a editar toda la configuración de nuestro WordPress.
 
 <img width="1917" height="991" alt="image" src="https://github.com/user-attachments/assets/aa77b06b-6133-4e28-8639-f6289edba35b" />
 
+## 7. Conexión de EFS a directorio WP-Content
 
-## 7. Comprobación final
+
