@@ -289,7 +289,10 @@ Tras enlazar el EFS con wp-content, copiamos el contenido de la carpeta wp-conte
 
 Tras realizar esta práctica, he podido comprender gran parte del funcionamiento de AWS, entre ellas:
 
- · Como crear una VPC manualmente (VPC, subredes, grupos de seguridad, Internet Gateway, NAT Gateway, tablas de enrutamiento...)
- · Como administrar reglas de entrada y salida en el Firewall con grupos de seguridad (SSH, HTTP, RDS, EFS...)
+ · Como crear una VPC manualmente (VPC, subredes, grupos de seguridad, Internet Gateway, NAT Gateway, tablas de enrutamiento...).
+ 
+ · Como administrar reglas de entrada y salida en el Firewall con grupos de seguridad (SSH, HTTP, RDS, EFS...).
+ 
  · Como asignar direcciones IP públicas y resoluciones DNS (lo que más tiempo me ha llevado para solucionar).
+ 
  · Creación y correcto funcionamiento de servicios / servidores web.
