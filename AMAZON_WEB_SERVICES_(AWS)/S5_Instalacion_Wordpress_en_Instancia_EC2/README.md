@@ -223,11 +223,11 @@ Primero, debemos instalar MySQL cliente para conectarnos a la base de datos.
 
 <img width="934" height="288" alt="image" src="https://github.com/user-attachments/assets/1ca214fa-1850-4c87-9863-929ebb66af5a" />
 
-wasd 
+Nos conectamos a la base de datos con el comando ```sudo mysql -u admin -h nombreRDS -p --skip-ssl``` para saltar ssl.
 
 <img width="1254" height="239" alt="image" src="https://github.com/user-attachments/assets/9c389756-bed8-453c-923f-caafd8425cc3" />
 
-wasd 
+Creamos la base de datos "wordpress" con usuario "wordpress_user" junto a su contraseña. Asignamos todos los privilegios a este usuarios sobre la base de datos y refrescamos privilegios.
 
 <img width="888" height="265" alt="image" src="https://github.com/user-attachments/assets/29ae6036-387e-43bc-8c3c-06ae78e9105b" />
 
@@ -265,22 +265,31 @@ Tras ingresar las credenciales en el "wp-login" tenemos acceso a editar toda la 
 
 ## 7. Conexión de EFS a directorio WP-Content
 
-wasd 
+Renombramos la carpeta "wp-content" a "wp-content-old" usando el comando ```sudo mv carpeta nuevonombrecarpeta```. 
 
 <img width="641" height="245" alt="image" src="https://github.com/user-attachments/assets/87577a17-0e25-4a3c-a771-179f4602b706" />
 
-wasd 
+Tras renombrarla, creamos una nueva carpeta llamada wp-content (vemos que su propietario es root:root, esto vamos a cambiarlo).
 
 <img width="594" height="67" alt="image" src="https://github.com/user-attachments/assets/09de0913-7a45-44f2-84e5-0c9a31998914" />
 
-wasd
+Asignamos como propietario de wp-content usuario www-data grupo www-data
 
 <img width="710" height="23" alt="image" src="https://github.com/user-attachments/assets/d3ae0fda-c22e-4254-9a60-8a7f1f25435c" />
 
-wasd 
+Esta vez, cargamos el EFS con el directorio wp-content (esta vez lo hice con la dirección DNS en lugar de la IP porque ya tiene correctamente la configuración del grupo de seguridad).
 
 <img width="1458" height="35" alt="image" src="https://github.com/user-attachments/assets/c789edaf-78b3-4e60-8bee-e5ff371cb94c" />
 
-wasd 
+Tras enlazar el EFS con wp-content, copiamos el contenido de la carpeta wp-content-old hacia wp-content con el comando ```sudo cp -R origen destino```. Comprobamos que el EFS está montado con ```sudo mount | grep wp-content``` y vemos que está correctamente enlazado. Finalmente, visualizamos el contenido de wp-content con el comando ```ls -l nombrecarpeta/```.
 
 <img width="1458" height="194" alt="image" src="https://github.com/user-attachments/assets/e8ba9cec-baaf-43f1-9774-38e8f1d4ce78" />
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Tras realizar esta práctica, he podido comprender gran parte del funcionamiento de AWS, entre ellas:
+
+ · Como crear una VPC manualmente (VPC, subredes, grupos de seguridad, Internet Gateway, NAT Gateway, tablas de enrutamiento...)
+ · Como administrar reglas de entrada y salida en el Firewall con grupos de seguridad (SSH, HTTP, RDS, EFS...)
+ · Como asignar direcciones IP públicas y resoluciones DNS (lo que más tiempo me ha llevado para solucionar).
+ · Creación y correcto funcionamiento de servicios / servidores web.
