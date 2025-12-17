@@ -243,7 +243,9 @@ Asignamos la configuración de la base de datos creada anteriormente (nombre, us
 
 <img width="1394" height="723" alt="image" src="https://github.com/user-attachments/assets/00de586e-4236-4edd-b58b-e461d080d205" />
 
-Una vez rellenados los datos, me daba el error "Unable to write to wp-config.php file." y tuve que cambiar el propietario y los permisos de la carpeta wordpress. Usé ```sudo chown -R www-data:www-data .```, ```sudo chmod 755 wordpress```.
+Tras tener rellenados los datos, me daba el error "Unable to write to wp-config.php file." y tuve que cambiar el propietario y los permisos de la carpeta wordpress. Usé ```sudo chown -R www-data:www-data .```, ```sudo chmod 755 wordpress```.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Una vez asignados el propietario y permisos apropiados, tendremos acceso a la base de datos. 
 
