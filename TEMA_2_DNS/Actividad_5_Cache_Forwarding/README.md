@@ -2,11 +2,11 @@
 
 ## 1. Instalar bind en el servidor
 
-sudo apt-get update && sudo apt-get upgrade -y
+Dentro del servidor (Ubuntu Server 24.04) ejecutamos el comando ```sudo apt-get update && sudo apt-get upgrade -y``` para actualizar la lista de paquetes y que las aplicaciones se mantengan en su estado más reciente.
 
 <img width="1666" height="539" alt="image" src="https://github.com/user-attachments/assets/f6f6991b-62d8-459e-ac4b-26ed0492e952" />
 
-sudo apt-get install bind9 bind9utils bind9-doc
+Posteriormente, instalaremos el servidor DNS bind9sudo apt-get install bind9 bind9utils bind9-doc
 
 <img width="861" height="318" alt="image" src="https://github.com/user-attachments/assets/8ac5f6bc-31a9-4a8c-9c82-1a7db683ba50" />
 
