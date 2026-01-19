@@ -1,6 +1,6 @@
 # Servicios de Red e Internet - 2º Adminitración de Sistemas Informáticos en Red
 
-# Primer Trimestre - Actividades y trabajo trimestral
+# Primer Trimestre - Actividades y práctica
 
 ## Práctica Primer Trimestre - Servidores Web
 Ejercicio | Descripción
