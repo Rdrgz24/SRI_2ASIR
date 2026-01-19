@@ -10,7 +10,7 @@ Posteriormente, instalaremos el servidor DNS bind9sudo apt-get install bind9 bin
 
 <img width="861" height="318" alt="image" src="https://github.com/user-attachments/assets/8ac5f6bc-31a9-4a8c-9c82-1a7db683ba50" />
 
-2. Configurar servidor DNS para almacenamiento en caché
+## 2. Configurar servidor DNS para almacenamiento en caché
 
 Accedemos -> cd /etc/bind, editamos -> sudo nano named.conf.options
 
@@ -24,13 +24,13 @@ ACL añadir
 
 <img width="1004" height="206" alt="image" src="https://github.com/user-attachments/assets/1269bd4d-d75c-4e14-8bab-05c9da834f3f" />
 
-3. Configurar como servidor DNS de reenvío (Forwarding)
+## 3. Configurar como servidor DNS de reenvío (Forwarding)
 
 ------
 
 ------
 
-4. Probar configuración y reiniciar bind
+## 4. Probar configuración y reiniciar bind
 
 sudo named-checkconf
 
