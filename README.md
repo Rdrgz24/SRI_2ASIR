@@ -1,6 +1,8 @@
 # Servicios de Red e Internet
 ## 2º Adminitración de Sistemas Informáticos en Red
 
+## Primer Trimestre - Actividades y trabajo trimestral
+
 ## Práctica Primer Trimestre - Servidores Web
 Ejercicio | Descripción
 ----------|------------
@@ -31,5 +33,9 @@ Ejercicio | Descripción
 Ejercicio | Descripción
 ----------|------------
 [Práctica Instancia EC2 con WordPress](AMAZON_WEB_SERVICES_(AWS)/S5_Instalacion_Wordpress_en_Instancia_EC2/) | Configuración de VPC, Instancia EC2, EFS, RDS y grupos de seguridad - Uso de Apache, PHP, WordPress, MySQL...
+
+## Segundo Trimestre - Actividades
+
+
 
 ### Rafael Rodríguez Cruz
