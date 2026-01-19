@@ -1,5 +1,4 @@
-# Servicios de Red e Internet
-## 2º Adminitración de Sistemas Informáticos en Red
+# Servicios de Red e Internet - 2º Adminitración de Sistemas Informáticos en Red
 
 ## Primer Trimestre - Actividades y trabajo trimestral
 
