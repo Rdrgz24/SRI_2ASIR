@@ -8,6 +8,8 @@ wasd
 
 wasd
 
+<img width="827" height="334" alt="image" src="https://github.com/user-attachments/assets/02acc964-429c-4d0f-97dc-531232b6498f" />
+
 ## 1. Instalar bind en el servidor
 
 Dentro del servidor (Ubuntu Server 24.04) ejecutamos el comando ```sudo apt-get update && sudo apt-get upgrade -y``` para actualizar la lista de paquetes y que las aplicaciones se mantengan en su estado más reciente.
