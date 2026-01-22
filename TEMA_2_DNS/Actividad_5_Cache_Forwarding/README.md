@@ -16,10 +16,7 @@ Accedemos a la carpeta de DNS bind con el comando ```cd etc/bind```, dentro de l
 
 <img width="726" height="365" alt="image" src="https://github.com/user-attachments/assets/e2777d23-16a6-48bb-8963-0b98a6a74939" />
 
-
-
-
-Añadimos un ACL por encima de ```options{}``` llamada "autchclients"que contenga la red a la que pertenece el servidor (192.168.195.0/24) y las direcciones "localhost" junto a "localnets".
+Añadimos un ACL por encima de ```options{}``` llamada "autchclients" que contenga la red a la que pertenece el servidor (192.168.195.0/24) y las direcciones "localhost" junto a "localnets".
 
 <img width="1004" height="206" alt="image" src="https://github.com/user-attachments/assets/1269bd4d-d75c-4e14-8bab-05c9da834f3f" />
 
@@ -37,20 +34,23 @@ Comprobamos que el puerto 53 esté escuchando tras aplicar la configuración. En
 
 ## 3. Configurar como servidor DNS de reenvío (Forwarding)
 
-------
+Tras configurar nuestro servidor DNS como almacenamiento caché, toca configurarlo como servidor DNS de reenvío. Esta configuración, permitirá al servicio DNS que los peticiones / solicitudes que no se puedan resolver localmente  se envíen a servidores DNS externos que nosotros indiquemos. 
 
-Editamos el archivo, dentro de ```options{}```, añadimos la sección ```forwarders{}``` con IP del router (que resolverá peticiones DNS) y un DNS público, por ejemplo la IP 1.1.1.1 correspondiente al DNS de cloudflare.
+Para ello, volvemos a editar el archivo de configuración con ```sudo nano named.conf.options``` y dentro de ```options{}```, descomentamos la sección ```forwarders{}``` con IP del DNS de oogle (8.8.8.8) y de cloudflare DNS (1.1.1.1).
 
-<img width="895" height="329" alt="image" src="https://github.com/user-attachments/assets/30c7c21c-2dba-4f4a-b7c5-b39c1829fb30" />
-
-------
+<img width="800" height="550" alt="image" src="https://github.com/user-attachments/assets/2e81b47c-a3b7-409c-afbe-1799c1907828" />
 
 ## 4. Probar configuración y reiniciar bind
 
-sudo named-checkconf
+Tras guardar el archivo ```named.conf.options```, comprobamos la sintaxis con el comando ```sudo named-checkconf```, como podemos ver da error con la línea "dnssec-enable", esto es debido a que es una directiva obsoleta, ya dnssec viene activado internamente por defecto, solo está pendiente de si se valida o no.
 
-sudo systemctl restart bind9
+<img width="875" height="79" alt="image" src="https://github.com/user-attachments/assets/c0643003-f789-4c43-8c14-d7511e5abe52" />
 
-sudo ufw allow Bind9
+Por lo que esta línea quedará totalmente borrada de nuestro archivo de configuración. Para ello editamos con ```sudo nano named.conf.options``` y guardamos los cambios.
 
-sudo journalctl -u bind9 -f
+<img width="800" height="550" alt="image" src="https://github.com/user-attachments/assets/3d94665a-a364-418a-adcd-6ef6272d5f32" />
+
+Comprobamos la sintaxis nuevamente con ```sudo named-checkconf```, habilitamos el DNS en el firewall ufw con ```sudo ufw allow Bind9``` y por último reiniciamos el servicio con ```sudo systemctl restart bind9```.
+
+<img width="648" height="140" alt="image" src="https://github.com/user-attachments/assets/e3e77fa4-c6ba-470e-bc95-ca0bd207504c" />
+
