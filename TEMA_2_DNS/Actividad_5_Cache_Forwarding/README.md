@@ -62,3 +62,8 @@ Comprobamos la sintaxis nuevamente con ```sudo named-checkconf```, habilitamos e
 
 <img width="648" height="140" alt="image" src="https://github.com/user-attachments/assets/e3e77fa4-c6ba-470e-bc95-ca0bd207504c" />
 
+Antes de hacer
+
+<img width="1284" height="228" alt="image" src="https://github.com/user-attachments/assets/770ec35f-1916-447f-b82f-1139be1b7a5c" />
+
+
