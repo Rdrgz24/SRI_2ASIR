@@ -2,13 +2,21 @@
 
 ## 0. Detalles de configuración y red
 
-wasd
+Máquina Servidor - Ubuntu Server 24.04 -> Nombre del equipo "userver" - usando usuario "rafael".
+
+IP 192.168.195.27/24 - DNS 192.168.195.101 - Gateway 192.168.195.101 (Router 2ASIR Nodo marisma002).
 
 <img width="1326" height="607" alt="image" src="https://github.com/user-attachments/assets/a543cd53-8761-4047-9d95-771900468ea5" />
 
-wasd
+Máquina Cliente - Ubuntu Desktop 24.04 -> Nombre del equipo "Standard-PC-i440FX-PIIX-1996" - usando usuario "rafael".
+
+IP 192.168.195.22/24 - DNS 192.168.195.27 (IP del Servidor - Resolución DNS) - Gateway 192.168.195.101 (Router 2ASIR Nodo marisma002)
 
 <img width="827" height="334" alt="image" src="https://github.com/user-attachments/assets/02acc964-429c-4d0f-97dc-531232b6498f" />
+
+En el archivo /etc/resolv.conf de nuestro cliente, añadimos la IP del servidor con la línea ```nameserver 192.168.195.27```.
+
+<img width="834" height="268" alt="image" src="https://github.com/user-attachments/assets/343cbe30-8216-4c07-8df8-c9d4d855d4b9" />
 
 ## 1. Instalar bind en el servidor
 
@@ -68,4 +76,15 @@ Antes de hacer
 
 <img width="1284" height="228" alt="image" src="https://github.com/user-attachments/assets/770ec35f-1916-447f-b82f-1139be1b7a5c" />
 
+## 5. Comprobaciones desde el cliente (Paquetes ICMP, nslookup y dig)
+
+wasd
+
+<img width="1007" height="465" alt="image" src="https://github.com/user-attachments/assets/4ab32f88-4e3d-486f-a2ae-69014f56e6db" />
+
+wasd
+
+<img width="1006" height="407" alt="image" src="https://github.com/user-attachments/assets/6b1669c3-8dc6-47ae-846e-4ea3b15570e1" />
+
+wasd
 
