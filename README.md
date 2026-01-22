@@ -35,6 +35,11 @@ Ejercicio | Descripción
 
 # Segundo Trimestre - Actividades
 
+## Tema 2 - DNS
+
+[Actividad 5 Caching & Forwarding](TEMA_2_DNS/Actividad_5_Cache_Forwarding/) | Configuración de servidor DNS - Caché con DNS Bind9 - Reenvío a DNS externos y comprobaciones desde el cliente - Manual completo.
+
+
 
 
 ### Rafael Rodríguez Cruz
