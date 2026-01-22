@@ -1,5 +1,13 @@
 # Actividad 5 - Caching & Fordwarding - DNS Bind9
 
+## 0. Detalles de configuración y red
+
+wasd
+
+<img width="1326" height="607" alt="image" src="https://github.com/user-attachments/assets/a543cd53-8761-4047-9d95-771900468ea5" />
+
+wasd
+
 ## 1. Instalar bind en el servidor
 
 Dentro del servidor (Ubuntu Server 24.04) ejecutamos el comando ```sudo apt-get update && sudo apt-get upgrade -y``` para actualizar la lista de paquetes y que las aplicaciones se mantengan en su estado más reciente.
