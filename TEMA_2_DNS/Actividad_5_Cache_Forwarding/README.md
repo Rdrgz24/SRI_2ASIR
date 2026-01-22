@@ -78,13 +78,14 @@ Antes de hacer
 
 ## 5. Comprobaciones desde el cliente (Paquetes ICMP, nslookup y dig)
 
-wasd
+Múltiples pruebas con el comando ping (envío y respuesta de paquetes ICMP) - todas las peticiones fueros resueltas, tanto por IP como por Nombre de Dominio (DNS).
 
 <img width="1007" height="465" alt="image" src="https://github.com/user-attachments/assets/4ab32f88-4e3d-486f-a2ae-69014f56e6db" />
 
-wasd
+Múltiples pruebas con el comando nslookup (resolución DNS) - todas las peticiones fueros resueltas, tanto por petición DNS directa (DNS a IP) como por petición DNS inversa (IP a DNS).
 
 <img width="1006" height="407" alt="image" src="https://github.com/user-attachments/assets/6b1669c3-8dc6-47ae-846e-4ea3b15570e1" />
 
-wasd
+Múltiples pruebas con el comando dig (resolución DNS detallada) - todas las peticiones fueros resueltas, se puede verificar en la captura de pantalla que el servidor que está resolviendo todas las peticiones es el configurado (192.168.195.27:53).
 
+<img width="1001" height="627" alt="image" src="https://github.com/user-attachments/assets/c8b4045c-9bf4-46a5-aeb1-37431eed6643" />
