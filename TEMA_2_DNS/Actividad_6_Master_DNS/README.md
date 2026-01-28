@@ -30,19 +30,19 @@ Servidores web: www, departamentos
 
 <img width="1026" height="416" alt="image" src="https://github.com/user-attachments/assets/fd4a966f-9604-40a6-976d-d12a822c5966" />
 
-## Aplicar y comprobar BIND
+## 2. Aplicar y comprobar BIND
 
 Comprobamos la sintaxis con el comando ```sudo named-checkconf``` y ```sudo named-checkzone``` tanto para la zona directa como para la zona inversa. Si todo está correcto, reiniciamos el servicio con el comando ```sudo systemctl restart bind9``` y comprobamos el estado con ```sudo systemctl restart bind9```.
 
 <img width="1038" height="647" alt="image" src="https://github.com/user-attachments/assets/55573cbc-3dbc-47b4-8a23-2e5078af7fcc" />
 
-## Configuración del cliente
+## 3. Configuración del cliente
 
 Editamos el archivo de configuración con ```sudo nano /etc/resolv.conf``` y añadimos la línea "search marisma.intranet", ya que la línea "nameserver 192.168.195.27" ya estaba añadida desde la práctica anterior.
 
 <img width="1038" height="128" alt="image" src="https://github.com/user-attachments/assets/1af47fee-9815-4b54-b73e-7a6a9239fd00" />
 
-## Comprobaciones
+## 4. Comprobaciones
 
 Haremos uso del comando ```dig``` para comprobar las resoluciones de cada uno de los registros de las zonas, además usaremos ```ping``` y ```nslookup```.
 
