@@ -39,7 +39,7 @@ Ejercicio | Descripción
 Ejercicio | Descripción
 ----------|------------
 [Actividad 5 Caching & Forwarding](TEMA_2_DNS/Actividad_5_Cache_Forwarding/) | Configuración de servidor DNS - Caché con DNS Bind9 - Reenvío a DNS externos y comprobaciones desde el cliente - Manual completo.
-
+[Actividad 6 Master DNS - Autoritativo](TEMA_2_DNS/Actividad_6_Master_DNS/) | Configuración de zona directa e inversa en servidor DNS - Resolución de nombres en servidor autoritativo con registros y PTR.
 
 
 
