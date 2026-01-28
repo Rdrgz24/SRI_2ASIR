@@ -27,7 +27,38 @@ wasd
 
 ## Aplicar y comprobar BIND
 
+wasd
+
+<img width="1038" height="647" alt="image" src="https://github.com/user-attachments/assets/55573cbc-3dbc-47b4-8a23-2e5078af7fcc" />
 
 ## Configuración del cliente
 
+wasd
+
+<img width="1038" height="128" alt="image" src="https://github.com/user-attachments/assets/1af47fee-9815-4b54-b73e-7a6a9239fd00" />
+
 ## Comprobaciones
+
+wasd
+
+<img width="1248" height="558" alt="image" src="https://github.com/user-attachments/assets/5a29a2e8-f7c5-40b5-ab4c-e517f132e38b" />
+
+wasd
+
+<img width="973" height="628" alt="image" src="https://github.com/user-attachments/assets/e967f3fe-7793-421f-8e47-8021bc488a04" />
+
+wasd
+
+<img width="1241" height="557" alt="image" src="https://github.com/user-attachments/assets/7a8d2c1e-325f-4e6c-bd48-629b2b26992f" />
+
+wasd
+
+<img width="1241" height="668" alt="image" src="https://github.com/user-attachments/assets/d3552d08-21ef-4e8f-a921-02d44cea0c24" />
+
+wasd
+
+<img width="1241" height="668" alt="image" src="https://github.com/user-attachments/assets/af8527d0-a4ab-4fe1-ba03-843c66c3bcc3" />
+
+wasd
+
+<img width="1241" height="736" alt="image" src="https://github.com/user-attachments/assets/17330511-257e-476c-b97d-0264965cca6d" />
