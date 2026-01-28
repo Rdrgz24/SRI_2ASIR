@@ -11,29 +11,34 @@ Para la configuración de BIND, primero debemos editar el archivo de configuraci
 ### 1.1 Configurando zona DNS directa
 
 Para esta zona, se definirán los siguientes FQDN:
+
 Servidor DNS: ns1
+
 Servidor fpt: ftp1
+
 Servidores de correo: mail1, mail2
+
 Servidores web: www, departamentos
+
+ - Creamos el archivo de zona directa con ```sudo nano /etc/bind/db.marisma.intranet``` y asignamos un registro de autoridad con SOA a los nombres de dominio "ns1.marisma.intranet" y "admin.marisma.intranet", registros A para asignar IPv4 a nombre de dominio y MX para asignar un servidor mal a un nombre específico (va en orden, es decir, a menor número = más prioritario, por lo que prevalecería mail1).
 
 <img width="1026" height="416" alt="image" src="https://github.com/user-attachments/assets/103b953b-2aed-4965-8bbb-e0bebac51b2e" />
 
 ### 1.2 Configurando zona DNS inversa
 
-wasd
+ - Creamos el archivo de zona inversa con el comando ```sudo nano /etc/bind/db.192.168.195```, y al igual que hicimos en la zona directa, usaremos el registro de autoridad SOA con los nombres de dominio "ns1.marisma.intranet" y "admin.marisma.intranet". Posteriormente usaremos los registros PTR, que permite resolver direcciones IP a nombres de dominio.
 
 <img width="1026" height="416" alt="image" src="https://github.com/user-attachments/assets/fd4a966f-9604-40a6-976d-d12a822c5966" />
 
-
 ## Aplicar y comprobar BIND
 
-wasd
+Comprobamos la sintaxis con el comando ```sudo named-checkconf``` y ```sudo named-checkzone``` tanto para la zona directa como para la zona inversa. Si todo está correcto, reiniciamos el servicio con el comando ```sudo systemctl restart bind9``` y comprobamos el estado con ```sudo systemctl restart bind9```.
 
 <img width="1038" height="647" alt="image" src="https://github.com/user-attachments/assets/55573cbc-3dbc-47b4-8a23-2e5078af7fcc" />
 
 ## Configuración del cliente
 
-wasd
+Editamos el archivo de configuración con ```sudo nano /etc/resolv.conf``` y añadimos la línea "search marisma.intranet", ya que la línea "nameserver 192.168.195.27" ya estaba añadida desde la práctica anterior.
 
 <img width="1038" height="128" alt="image" src="https://github.com/user-attachments/assets/1af47fee-9815-4b54-b73e-7a6a9239fd00" />
 
