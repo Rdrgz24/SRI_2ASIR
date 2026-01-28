@@ -44,26 +44,28 @@ Editamos el archivo de configuración con ```sudo nano /etc/resolv.conf``` y añ
 
 ## Comprobaciones
 
-wasd
+Haremos uso del comando ```dig``` para comprobar las resoluciones de cada uno de los registros de las zonas, además usaremos ```ping``` y ```nslookup```.
+
+Primero, comprobamos los registros SOA (autoritativos) vemos que lo resuelve correctamente y devuelve tanto ns1.marisma.intranet. como admin.marisma.intranet.
 
 <img width="1248" height="558" alt="image" src="https://github.com/user-attachments/assets/5a29a2e8-f7c5-40b5-ab4c-e517f132e38b" />
 
-wasd
+Pasamos a comprobar los registros A y tenemos a marisma.intranet. apuntado a ns1.marisma.intranet junto a ns1.marisma.intranet apuntando a la dirección IP 192.168.195.27.
 
 <img width="973" height="628" alt="image" src="https://github.com/user-attachments/assets/e967f3fe-7793-421f-8e47-8021bc488a04" />
 
-wasd
+Los registros A, que también los resuelve, recordemos que son los asociados a una IP.
 
 <img width="1241" height="557" alt="image" src="https://github.com/user-attachments/assets/7a8d2c1e-325f-4e6c-bd48-629b2b26992f" />
 
-wasd
+Registros MX, nos devuelve tanto mail1.marisma.intranet. como mail2.marisma.intranet. a su vez apuntando a la IP del servidor DNS.
 
 <img width="1241" height="668" alt="image" src="https://github.com/user-attachments/assets/d3552d08-21ef-4e8f-a921-02d44cea0c24" />
 
-wasd
+Comprobamos la resolución inversa con ```-x``` y nos resuelve todos los registros PTR.
 
 <img width="1241" height="668" alt="image" src="https://github.com/user-attachments/assets/af8527d0-a4ab-4fe1-ba03-843c66c3bcc3" />
 
-wasd
+Por último hacemos ```ping -c2``` a varios de los registros y ```nslookup```, como podemos ver se resuelven todos correctamente.
 
 <img width="1241" height="736" alt="image" src="https://github.com/user-attachments/assets/17330511-257e-476c-b97d-0264965cca6d" />
