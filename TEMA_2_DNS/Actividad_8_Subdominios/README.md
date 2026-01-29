@@ -1,20 +1,16 @@
 # Actividad 8 - Subdominios
 
-Para esta actividad, usaré el mismo dominio de la práctica 6 (marisma.intranet), ya que las zonas directas e inversas, registros y configuraciones ya están realizadas y funcionales, por lo que para esta práctica solo indicaremos como hacer el subdominio, tanto de forma manual como con un script en bash.
+Para esta actividad, usaré el mismo dominio de la práctica 6 (marisma.intranet), ya que las zonas directas e inversas, registros y configuraciones ya están realizadas y funcionales, por lo que para esta práctica solo indicaremos como hacer el subdominio.
 
-El subdominio a crear se llama "informática.marisma.intranet" y dispone de varios hosts.
-
-Nombre de dominio principal: iesmarisma.intranet
-
-Nombre de hosts en el dominio principal: www, ftp, smtp
-
-Nombre del subdominio: informatica.iesmarisma.intranet
+El subdominio a crear se llama "informática.marisma.intranet", estará alojado en el dominio padre "marisma.intranet" y resolverá las direcciones vía IP del servidor (192.168.195.27/24).
 
 Nombre de hosts en el subdominio: www, ftp, smtp
 
-La práctica permite elegir entre dos métodos, o bien creamos
+La práctica permite elegir entre dos métodos:
 Creando un subdominio virtual.
 Delegando el subdominio.
+
+#### Yo, elegiré delegando un sobdominio, ya que me parece más óptimo para un entorno real. Ya que... el subdominio virtual trabaja sobre una sola zona DNS (tanto dominio como subdominios) y un subdominio delegadotrabaja o tiene una autoridad propia sobre su DNS, lo que permite separar su gestión del dominio principal.
 
 ## 1. Configuración sobre el dominio padre
 
@@ -34,29 +30,26 @@ Lo siguiente, por supuesto, será crear el archivo de configuración de la zona 
 
 Por último realizamos las correspondientes comprobaciones, las cuales son ```sudo named-checkconf``` para comprobar la sintaxis general, ```sudo named-checkzone marisma.intranet /etc/bind/db.marisma.intranet``` para comprobar la sintaxis específica del archivo de zona del dominio padre y por último ```sudo named-checkzone informatica.marisma.intranet /etc/bind/db.informatica.marisma.intranet```, reinciamos el servicio DNS con ```sudo systemctl restart bind9``` y comprobamos su estado con ```sudo systemctl status bind9```.
 
+Si nos fijamos, al comprobar el dominio padre, indica "ns1.informatica.marisma.intranet has no addresses records", esto aparece porque el servidor NS del subdominio está fuera de la zona padre y su registro A es un glue record. Y claro, named-checkzone no considera los glue records como registros de dirección propios, aunque sean necesarios y correctos. Todo funciona.
+
 <img width="1583" height="731" alt="image" src="https://github.com/user-attachments/assets/9cb915bf-ed42-4c06-9a30-6879da302014" />
 
 ## 3. Comprobación del cliente
 
-wasd
+Primero, insertamos el comando ```cat /etc/resolv.conf``` y podemos ver la configuración que está aplicada desde la práctica pasada (6.Master_DNS), luego he comprobado que el NS se resuelva correctamente con el comando ```dig informatica.marisma.intranet NS``` - lo resuleve correctamente.
 
 <img width="1347" height="781" alt="image" src="https://github.com/user-attachments/assets/ef1185aa-7f52-456f-9a08-ad51c2178da7" />
 
-wasd
+Seguimos probando con el resto de hosts (registros A añadidos anteriormente), en este caso ```dig www.informatica.marisma.intranet``` - se resuelve correctamente.
 
 <img width="1347" height="633" alt="image" src="https://github.com/user-attachments/assets/dc50f70f-c8fb-416e-ad22-56de6d471bbb" />
 
-wasd
+Siguente comprobación sobre el host "ftp" este caso ```dig ftp.informatica.marisma.intranet``` - se resuelve correctamente.
 
 <img width="1347" height="633" alt="image" src="https://github.com/user-attachments/assets/8d401b3d-0262-4332-8cf1-7ab68f398e5d" />
 
-wasd
+Como último registro, comprobamos sobre el host "smtp" con el comando ```dig smtp.informatica.marisma.intranet``` y verificamos que todos los hosts se resuelve correctamente.
 
 <img width="1347" height="633" alt="image" src="https://github.com/user-attachments/assets/4d333814-47fd-47e6-8049-c9dd706857b6" />
 
-wasd
-
-<img width="1634" height="878" alt="image" src="https://github.com/user-attachments/assets/8e3c989d-038e-4fd8-be87-4670cceb067b" />
-
-
-
+Como hemos podido comprobar, todos los host (registros A) han sido resueltos correctamente en el subdominio delegado.
