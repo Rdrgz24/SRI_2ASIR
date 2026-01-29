@@ -1,6 +1,6 @@
 # Actividad 8 - Subdominios
 
-Para esta actividad, usaré el mismo dominio de la práctica 6 (marisma.intranet), ya que las zonas directas e inversas, registros y configuraciones ya están realizadas y funcionales, por lo que para esta práctica solo indicaremos como hacer el subdominio.
+Para esta actividad, usaré el mismo dominio de la práctica 6, ya que las zonas directas e inversas, registros y configuraciones ya están realizadas y funcionales, por lo que para esta práctica solo indicaremos como hacer el subdominio.
 
 El subdominio a crear se llama "informática.marisma.intranet", estará alojado en el dominio padre "marisma.intranet" y resolverá las direcciones vía IP del servidor (192.168.195.27/24).
 
