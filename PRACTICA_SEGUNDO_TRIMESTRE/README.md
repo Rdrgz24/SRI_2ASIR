@@ -184,5 +184,6 @@ wasd
 
 wasd
 
-<img width="865" height="235" alt="image" src="https://github.com/user-attachments/assets/c9ae65ae-e97f-46dc-9202-c673bfe97e05" />
+<img width="800" height="198" alt="image" src="https://github.com/user-attachments/assets/336cba40-4560-4dee-b1b4-c4ca641964a2" />
+
 
