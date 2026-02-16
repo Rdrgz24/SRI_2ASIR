@@ -22,4 +22,18 @@ Ubuntu Server nos da la opción de instalar el servicio OpenSSH (servicio SSH) p
 
 <img width="1042" height="262" alt="image" src="https://github.com/user-attachments/assets/b54650c9-198d-44f6-a323-84147bdea0b2" />
 
-wasd
+Usamos el comando ```uname -a```, ```ip a```, ```ping -c2 8.8.8.8```
+
+<img width="1027" height="390" alt="image" src="https://github.com/user-attachments/assets/74582953-6527-4e8b-bbde-e05528474f44" />
+
+Ejecutamos el comando ```sudo apt update && sudo apt upgrade -y``` para actualizar la lista de repositorios junto a las aplicaciones del sistema.
+
+<img width="1278" height="373" alt="image" src="https://github.com/user-attachments/assets/38a2c9c8-dab9-4d19-9459-ca84e86bab4f" />
+
+Por último, para la sección de pasos previos, instalamos los paquetes básicos de los que tiene que disponer el sistema.
+
+<img width="933" height="246" alt="image" src="https://github.com/user-attachments/assets/e76abc4e-ef1e-4089-b561-f1a550899665" />
+
+## 1. Instalación de servicios
+
+### 1.1 Instalación de pila LAMP
