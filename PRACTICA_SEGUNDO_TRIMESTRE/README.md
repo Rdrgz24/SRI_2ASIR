@@ -37,3 +37,53 @@ Por último, para la sección de pasos previos, instalamos los paquetes básicos
 ## 1. Instalación de servicios
 
 ### 1.1 Instalación de pila LAMP
+
+La pila LAMP está formada por:
+
+ · Linux
+
+ · Apache
+
+ · MySQL/MariaDB
+
+ · PHP
+
+ <img width="1265" height="425" alt="image" src="https://github.com/user-attachments/assets/0089414b-d3a1-41aa-b00f-4c856408a169" />
+
+### 1.2 Instalación de PHP y sus módulos
+
+ <img width="1010" height="200" alt="image" src="https://github.com/user-attachments/assets/da03776e-c465-4674-bab0-bc4c8fea30ef" />
+
+### 1.3 Instalación de PHPMyAdmin
+
+<img width="1283" height="441" alt="image" src="https://github.com/user-attachments/assets/fccf11a2-49d1-4779-bd66-0ba7fb53df83" />
+
+wasd
+
+<img width="771" height="246" alt="image" src="https://github.com/user-attachments/assets/55a382a5-c3c1-4aad-992e-caae48e9b6da" />
+
+wasd
+
+<img width="1262" height="270" alt="image" src="https://github.com/user-attachments/assets/526919e3-205d-4f76-9a92-373d83610b6c" />
+
+wasd
+
+<img width="1105" height="248" alt="image" src="https://github.com/user-attachments/assets/4685a767-fda7-4a63-a158-1723c72fb680" />
+
+wasd
+
+<img width="1284" height="487" alt="image" src="https://github.com/user-attachments/assets/6a161ac4-9e0a-4231-9915-69e0468b3e6b" />
+
+### 2.4 Instalación de FTP
+
+wasd
+
+<img width="502" height="117" alt="image" src="https://github.com/user-attachments/assets/502f3e2e-d1ee-4b69-80a4-f8d363202043" />
+
+Habilitamos
+
+<img width="994" height="279" alt="image" src="https://github.com/user-attachments/assets/0f6eea25-2db2-4958-a354-1590a766777f" />
+
+wasd
+
+
