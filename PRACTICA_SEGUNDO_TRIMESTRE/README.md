@@ -74,7 +74,7 @@ wasd
 
 <img width="1284" height="487" alt="image" src="https://github.com/user-attachments/assets/6a161ac4-9e0a-4231-9915-69e0468b3e6b" />
 
-### 2.4 Instalación de FTP
+### 1.4 Instalación de FTP
 
 wasd
 
@@ -86,4 +86,20 @@ Habilitamos
 
 wasd
 
+### 1.5 Habilitando servicio SSH
 
+wasd
+
+<img width="1019" height="356" alt="image" src="https://github.com/user-attachments/assets/4043009a-bc0f-48ee-9206-5cb1726b97f3" />
+
+### 1.6 Instalación del servidor DNS BIND9
+
+wasd
+
+<img width="598" height="233" alt="image" src="https://github.com/user-attachments/assets/bd0b8a98-a291-44aa-a7b0-d92907d27207" />
+
+### 1.7 Instalación de soporte Python con Apache
+
+wasd
+
+<img width="602" height="209" alt="image" src="https://github.com/user-attachments/assets/62b6e618-d3d1-4da6-a4a8-d395d52836b3" />
