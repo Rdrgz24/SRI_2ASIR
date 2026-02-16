@@ -103,3 +103,46 @@ wasd
 wasd
 
 <img width="602" height="209" alt="image" src="https://github.com/user-attachments/assets/62b6e618-d3d1-4da6-a4a8-d395d52836b3" />
+
+## 2. Configuración de servicios
+
+### 2.1 Apache
+
+Activación de módulos:
+
+<img width="839" height="260" alt="image" src="https://github.com/user-attachments/assets/c84c03ac-21c5-40ab-967a-8b2743b24062" />
+
+### 2.2 PHP
+
+wasd
+
+<img width="799" height="106" alt="image" src="https://github.com/user-attachments/assets/7ff4b5de-cc6b-47b8-b8ef-3aca39ab2d89" />
+
+wasd
+
+<img width="797" height="91" alt="image" src="https://github.com/user-attachments/assets/184c183a-d8c3-475e-b5ac-19a584444d65" />
+
+wasd
+
+<img width="771" height="119" alt="image" src="https://github.com/user-attachments/assets/6fb95203-839a-4f05-b289-37b84ff00b2a" />
+
+wasd
+
+### 2.3 MariaDB
+
+wasd
+
+<img width="723" height="285" alt="image" src="https://github.com/user-attachments/assets/437098a7-1b84-4796-b0c8-5645f90dce93" />
+
+### 2.4 PHPMyadmin
+
+wasd
+
+### 2.5 FTP + TLS
+
+wasd
+
+<img width="552" height="24" alt="image" src="https://github.com/user-attachments/assets/b2c45bce-b8e2-4317-b5b6-702d88d54c1d" />
+
+wasd
+
