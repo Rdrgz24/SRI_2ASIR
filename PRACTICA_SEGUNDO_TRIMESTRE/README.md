@@ -38,39 +38,41 @@ Por último, para la sección de pasos previos, instalamos los paquetes básicos
 
 ### 1.1 Instalación de pila LAMP
 
-La pila LAMP está formada por:
-
- · Linux
-
- · Apache
-
- · MySQL/MariaDB
-
- · PHP
+Para esta práctica haré uso de LAMP (Linux, Apache, MariaDB/MySQL, PHP/Perl) ya que es un stack tecnológico muy conocido y apoyado por la comunidad. Para ello usamos el comando ```sudo apt install apache2 mariadb-server php libapache2-mod-php php-mysql -y```. La pila LAMP incluye PHP y los módulos necesarios para la correcta integración.
 
  <img width="1265" height="425" alt="image" src="https://github.com/user-attachments/assets/0089414b-d3a1-41aa-b00f-4c856408a169" />
 
-### 1.2 Instalación de PHP y sus módulos
+### 1.2 Instalación más módulos PHP
+
+No obstamte, debemos instalar otro módulos necesarios para la integración con phpMyAdmin y más funcionalidades para la web, para ello usamos el comando ```sudo apt install php-cli php-curl php-gd php-mbstring php-xml php-zip -y```.
 
  <img width="1010" height="200" alt="image" src="https://github.com/user-attachments/assets/da03776e-c465-4674-bab0-bc4c8fea30ef" />
 
+Tras completar la instalación de PHP y todos sus módulos, usamos el comando ```php -v``` para comprobar la versión y ```php -m``` para comprobar las extensiones o módulos instalados.
+
+SUBIR AQUI CAPTURA.
+
 ### 1.3 Instalación de PHPMyAdmin
+
+Insertamos el comando ```sudo apt install phpmyadmin```, introducimos la tecla "Y" para aceptar y damos Intro para confirmar la instalación del programa.
 
 <img width="1283" height="441" alt="image" src="https://github.com/user-attachments/assets/fccf11a2-49d1-4779-bd66-0ba7fb53df83" />
 
-wasd
+En el proceso de instalación, nos pregunta que motor o servidor web va a ejecutar phpMyAdmin, marcamos "apache2" y damos Intro sobre "Ok". 
 
 <img width="771" height="246" alt="image" src="https://github.com/user-attachments/assets/55a382a5-c3c1-4aad-992e-caae48e9b6da" />
 
-wasd
+Nos pregunta si queremos crear la base de datos de manera automática con "dbconfig-common", marcamos la casilla "Yes" y damos Intro.
 
 <img width="1262" height="270" alt="image" src="https://github.com/user-attachments/assets/526919e3-205d-4f76-9a92-373d83610b6c" />
 
-wasd
+Insertamos una contraseña segura en la base de datos del servidor para el acceso a phpMyAdmin.
 
 <img width="1105" height="248" alt="image" src="https://github.com/user-attachments/assets/4685a767-fda7-4a63-a158-1723c72fb680" />
 
-wasd
+### Habilitando los servicios
+
+Tras instalar la pila LAMP, es conveniente habilitar los servicios para que se inicien al arrancar el servidor ```sudo systemctl enable ...```, iniciarlos en la propia sesión con ```sudo systemctl start ...```y comprobar su estado con ```sudo systemctl status ...```, en este caso habilito e inicio tanto apache2 como mariadb.
 
 <img width="1284" height="487" alt="image" src="https://github.com/user-attachments/assets/6a161ac4-9e0a-4231-9915-69e0468b3e6b" />
 
