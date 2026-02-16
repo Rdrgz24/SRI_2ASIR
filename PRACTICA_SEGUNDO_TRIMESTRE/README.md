@@ -78,21 +78,27 @@ Tras instalar la pila LAMP, es conveniente habilitar los servicios para que se i
 
 ### 1.4 Instalación de FTP
 
-wasd
+Para hacer uso del servicio FTP, instalaré el paquete "vsftpd" con el comando ```sudo apt install vsftpd```.
 
 <img width="502" height="117" alt="image" src="https://github.com/user-attachments/assets/502f3e2e-d1ee-4b69-80a4-f8d363202043" />
 
-Habilitamos
+Tras instalarlo, habilitamos el servicio con ```sudo systemctl enable vsftpd```, lo iniciamos con ```sudo systemctl start vsftpd``` y comprobamos su estado con ```sudo systemctl status vsftpd```.
 
 <img width="994" height="279" alt="image" src="https://github.com/user-attachments/assets/0f6eea25-2db2-4958-a354-1590a766777f" />
 
-wasd
+Posteriormente habilitaremos la seguridad en el servicio.
 
 ### 1.5 Habilitando servicio SSH
 
-wasd
+Tal y como marcamos en la instalación, el servicio SSH se instaló, no obstante, por defecto no viene habilitado, por lo que usaremos el comando ```sudo systemctl enable ssh```, luego ```sudo systemctl start ssh``` y por último ```sudo systemctl status ssh``` para comprobar su estado.
 
 <img width="1019" height="356" alt="image" src="https://github.com/user-attachments/assets/4043009a-bc0f-48ee-9206-5cb1726b97f3" />
+
+Si probamos desde un cliente la conexión SSH con el comando ```ssh rafael@192.168.195.5```, insertamos "yes" por ser un host conocido e introducimos la contraseña. Como podemos ver, ha entrado correctamente por SSH, hemos verificado con ```uname -a```.
+
+<img width="1072" height="513" alt="image" src="https://github.com/user-attachments/assets/0079fd40-4fb6-4e6d-890a-5a1bde45366c" />
+
+
 
 ### 1.6 Instalación del servidor DNS BIND9
 
