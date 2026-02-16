@@ -146,3 +146,43 @@ wasd
 
 wasd
 
+<img width="454" height="21" alt="image" src="https://github.com/user-attachments/assets/2c551fbe-c2f4-4614-bae5-2b0bed594620" />
+
+wasd
+
+<img width="753" height="270" alt="image" src="https://github.com/user-attachments/assets/d6a29350-9c4e-4cbc-b41d-73d2eb0b1504" />
+
+wasd
+
+<img width="805" height="243" alt="image" src="https://github.com/user-attachments/assets/cf6ff9b8-5605-4b71-9c31-711e6b87b4fc" />
+
+wasd
+
+### 2.6 SSH y SFTP
+
+wasd
+
+<img width="760" height="86" alt="image" src="https://github.com/user-attachments/assets/5c46168f-a39f-4d0e-ad41-4b884e3271bf" />
+
+wasd
+
+<img width="1278" height="388" alt="image" src="https://github.com/user-attachments/assets/b35f471c-c434-4390-8b24-d77a74a57a31" />
+
+wasd
+
+<img width="947" height="326" alt="image" src="https://github.com/user-attachments/assets/0ff51ea1-f012-4c50-9a60-2305acdbdb75" />
+
+### 2.7 Configuración del DNS BIND9
+
+wasd
+
+<img width="774" height="156" alt="image" src="https://github.com/user-attachments/assets/562551d0-2da2-4099-bc89-4d8ba1e1143e" />
+
+wasd
+
+<img width="733" height="262" alt="image" src="https://github.com/user-attachments/assets/31bd6387-2e30-4457-bb6f-0eb3fd594dc0" />
+
+wasd
+
+<img width="865" height="235" alt="image" src="https://github.com/user-attachments/assets/c9ae65ae-e97f-46dc-9202-c673bfe97e05" />
+
