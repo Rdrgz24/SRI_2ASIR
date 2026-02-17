@@ -210,15 +210,13 @@ Para comprobar y verificar que el servidor DNS funciona, vamos a usar múltiples
 
 ### 2.8 Configuración de soporte Python (WSGI)
 
-wasd
-
+En realidad, aquí vamos a crear un VirtualHost "temporal" para apuntar a las aplicaciones Python del usuario, para ello usaremos el comando ```sudo nano /etc/apache2/sites-avaliable/py.conf```.
 <img width="549" height="23" alt="image" src="https://github.com/user-attachments/assets/5635768c-5f0a-4c76-9eb9-414b70cf00dd" />
 
-wasd
+Insertamos toda la estructura de un VirtualHost en Apache junto a la directiva ```WSGIScriptAlias``` apuntando hacia /var/www/py/app.wsgi.
 
 <img width="810" height="157" alt="image" src="https://github.com/user-attachments/assets/57a8e486-51ac-4ba3-8c63-95e41e8abb5b" />
 
-
-wasd
+Por último, habilitamos el sitio "py" en nuestro Apache con el comando ```sudo a2ensite py```.
 
 <img width="870" height="376" alt="image" src="https://github.com/user-attachments/assets/0f564fa9-974e-463f-bd3e-d35811b8dde0" />
