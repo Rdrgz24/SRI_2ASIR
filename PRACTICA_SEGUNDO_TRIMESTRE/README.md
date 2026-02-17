@@ -192,23 +192,21 @@ Esta configuración es importante y crítica, ya que el servicio DNS se encargar
 
 <img width="779" height="226" alt="image" src="https://github.com/user-attachments/assets/8e19ed03-dbd1-412f-8e10-a1d6b31fccf0" />
 
+En base al archivo original "db.local", haremos una copia para solo modificarlo con la zona que queremos y así evitar tener que escribir todo el texto, para ello usamos el comando ```sudo ctp /etc/bind/db.local /etc/bind/db.hosting2asir.intranet```.
+
+<img width="683" height="31" alt="image" src="https://github.com/user-attachments/assets/8809f0a7-4184-48cf-a50b-c73029a76131" />
+
 Luego, tras añadirlo como zona, creamos el nuevo archivo de configuración con ```sudo nano /etc/bind/db.hosting2asir.intranet```, aquí indicaremos los registros SOA (autoritativos) ```ns.host.intranet. admin.hosting2asir.intranet.``` con su serial y tiempos de llegada correspondientes. En las cuatro últimas líneas indicamos NameServer principal ```ns.hosting2asir.intranet.```, asociamos tres registros tipo A, el primero ```ns IN A 192.168.195.5``` donde asociamos el NameServer a esa IP, luego ```@ IN A 192.168.195.5``` que asigna la dirección IP como principal del servidor, por último ```www IN A 192.168.195.5``` para hacerlo un poco más interesante y poder acceder al dominio vía http://www.hosting2asir.intranet.
-
-<img width="681" height="25" alt="image" src="https://github.com/user-attachments/assets/2671b5d7-bb67-45bf-af1e-fd91086d5644" />
-
-Tras aplicar la configuración del DNS, debemos comprobar si la sintaxis es correcta, y si no hay problemas con los archivos de configuración y zona recién creados. Para ello usamos el comando ```sudo named-checkconf``` para comprobar la sintaxis del archivo de configuración, luego ```sudo named-checkzone hosting2asir.intranet /etc/bind/db.hosting2asir.intranet``` para comprobar la sintaxis del archivo de zona recién creado, si todo está correcto (el primero no muestra nada y el segundo OK), reiniciamos el servicio DNS con ```sudo systemctl restart bind9``` y comprobamos el correcto estado con ```sudo systemctl status bind9```.
 
 <img width="808" height="221" alt="image" src="https://github.com/user-attachments/assets/7c768f40-8807-4a4d-8b00-b9b1ac6cdc2a" />
 
-wasd
+Tras aplicar la configuración del DNS, debemos comprobar si la sintaxis es correcta, y si no hay problemas con los archivos de configuración y zona recién creados. Para ello usamos el comando ```sudo named-checkconf``` para comprobar la sintaxis del archivo de configuración, luego ```sudo named-checkzone hosting2asir.intranet /etc/bind/db.hosting2asir.intranet``` para comprobar la sintaxis del archivo de zona recién creado, si todo está correcto (el primero no muestra nada y el segundo OK), reiniciamos el servicio DNS con ```sudo systemctl restart bind9``` y comprobamos el correcto estado con ```sudo systemctl status bind9```.
 
 <img width="994" height="457" alt="image" src="https://github.com/user-attachments/assets/0c2a0aad-eebf-45d3-92e8-24912df231fd" />
 
 wasd
 
 <img width="760" height="589" alt="image" src="https://github.com/user-attachments/assets/1a9cc1a2-4ff2-4462-826c-afd18489404e" />
-
-wasd
 
 ### 2.8 Configuración de soporte Python (WSGI)
 
