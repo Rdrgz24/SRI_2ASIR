@@ -50,7 +50,7 @@ No obstamte, aunque la integración con Apache ya estaría, debemos instalar otr
 
 Tras completar la instalación de PHP y todos sus módulos, usamos el comando ```php -v``` para comprobar la versión y ```php -m``` para comprobar las extensiones o módulos instalados.
 
-SUBIR AQUI CAPTURA.
+<img width="1164" height="224" alt="image" src="https://github.com/user-attachments/assets/6b5dafe6-b809-4250-85ae-debe10737f53" />
 
 ### 1.3 Instalación de PHPMyAdmin
 
@@ -62,7 +62,7 @@ En el proceso de instalación, nos pregunta que motor o servidor web va a ejecut
 
 <img width="771" height="246" alt="image" src="https://github.com/user-attachments/assets/55a382a5-c3c1-4aad-992e-caae48e9b6da" />
 
-Nos pregunta si queremos crear la base de datos de manera automática con "dbconfig-common", marcamos la casilla "Yes" y damos Intro.
+Creamos la base de datos de manera automática con "dbconfig-common", para ello, marcamos la casilla "Yes" y damos Intro.
 
 <img width="1262" height="270" alt="image" src="https://github.com/user-attachments/assets/526919e3-205d-4f76-9a92-373d83610b6c" />
 
@@ -70,9 +70,9 @@ Insertamos una contraseña segura en la base de datos del servidor para el acces
 
 <img width="1105" height="248" alt="image" src="https://github.com/user-attachments/assets/4685a767-fda7-4a63-a158-1723c72fb680" />
 
-### Habilitando los servicios
+### Habilitando los servicios LAMP
 
-Tras instalar la pila LAMP, es conveniente habilitar los servicios para que se inicien al arrancar el servidor ```sudo systemctl enable ...```, iniciarlos en la propia sesión con ```sudo systemctl start ...```y comprobar su estado con ```sudo systemctl status ...```, en este caso habilito e inicio tanto apache2 como mariadb.
+Tras instalar la pila LAMP, es conveniente habilitar los servicios para que se inicien al arrancar el servidor ```sudo systemctl enable ...```, iniciarlos en la propia sesión con ```sudo systemctl start ...```y comprobar su estado con ```sudo systemctl status ...```, en este caso he habilitado e iniciado tanto apache2 como mariadb.
 
 <img width="1284" height="487" alt="image" src="https://github.com/user-attachments/assets/6a161ac4-9e0a-4231-9915-69e0468b3e6b" />
 
@@ -94,57 +94,66 @@ Tal y como marcamos en la instalación, el servicio SSH se instaló, no obstante
 
 <img width="1019" height="356" alt="image" src="https://github.com/user-attachments/assets/4043009a-bc0f-48ee-9206-5cb1726b97f3" />
 
-Si probamos desde un cliente la conexión SSH con el comando ```ssh rafael@192.168.195.5```, insertamos "yes" por ser un host conocido e introducimos la contraseña. Como podemos ver, ha entrado correctamente por SSH, hemos verificado con ```uname -a```.
+Probaremos desde un cliente la conexión SSH con el comando ```ssh rafael@192.168.195.5```, aceptamos con "yes" indicando que es un host conocido e introducimos la contraseña. Como podemos ver, ha conectado por SSH exitosamente, hemos verificado la conexión con ```uname -a``` dentro del servidor.
 
 <img width="1072" height="513" alt="image" src="https://github.com/user-attachments/assets/0079fd40-4fb6-4e6d-890a-5a1bde45366c" />
 
-
-
 ### 1.6 Instalación del servidor DNS BIND9
 
-wasd
+En esta práctica, haremos uso del servidor DNS BIND9 para crear una zona maestra (hosting2asir.intranet) donde posteriormente se añadirán subdominios por cada uno de los usuarios que automatice el script. Para instalarlo, usamos el comando ```sudo apt install bind9 bind9utils bind9-doc```, insertamos "Y" y pulsamos Intro.
 
 <img width="598" height="233" alt="image" src="https://github.com/user-attachments/assets/bd0b8a98-a291-44aa-a7b0-d92907d27207" />
 
 ### 1.7 Instalación de soporte Python con Apache
 
-wasd
+Para poder usar Python en la práctica, debemos instalar los módulos compatibles con Apache y su correspondiente integración. Para ello, usamos el comando ```sudo apt install libapache2-mod-wsgi-py3 python3```, insertamos "Y" y pulsamos Intro.
 
 <img width="602" height="209" alt="image" src="https://github.com/user-attachments/assets/62b6e618-d3d1-4da6-a4a8-d395d52836b3" />
 
 ## 2. Configuración de servicios
 
+Tras instalar todos los servicios, toca configurar uno a uno todo lo necesario para que al usar y ejecutar el script todo funcione correctamente.
+
 ### 2.1 Apache
 
-Activación de módulos:
+Como hemos instalado módulos relacionados con Apache, este no los trata hasta que se habilite, por lo que usamos el comando ```sudo a2enmod ...``` para activar ```rewrite```, ```wsgi``` y ```ssl```, tras activar todos, usamos el comando ```sudo systemctl restart apache2``` para reiniciar o recargar apache y aplicar la configuración.
 
 <img width="839" height="260" alt="image" src="https://github.com/user-attachments/assets/c84c03ac-21c5-40ab-967a-8b2743b24062" />
 
 ### 2.2 PHP
 
-wasd
+Editamos el archivo php.ini para integrarlo correctamente con Apache, para ello usamos el comando ```sudo nano /etc/php/8.3/apache2/php.ini```, donde descomentaremos la línea "display_errors" y la dejaremos tal que así ```display_errores = On```.
 
 <img width="799" height="106" alt="image" src="https://github.com/user-attachments/assets/7ff4b5de-cc6b-47b8-b8ef-3aca39ab2d89" />
 
-wasd
+Posteriormente, aplicamos ```upload_max_filesize = 20M``` que para esta práctica no tiene mucha utilidad, pero vamos a trabajar siempre intentando simular entornos reales.
 
 <img width="797" height="91" alt="image" src="https://github.com/user-attachments/assets/184c183a-d8c3-475e-b5ac-19a584444d65" />
 
-wasd
+Lo mismo pasa con este, aplicamos ```upload_max_size = 20M``` que aunque no lo vayamos a usar para nada, es útil.
 
 <img width="771" height="119" alt="image" src="https://github.com/user-attachments/assets/6fb95203-839a-4f05-b289-37b84ff00b2a" />
 
-wasd
-
 ### 2.3 MariaDB
 
-wasd
+Este paso es muy importante de cumplir, ya que es una medida de seguridad bastante potente. Vamos a acceder a la configuración de la base de datos con ```sudo mariadb``` como root. Dentro vamos a crear un usuario llamado "rafael" apuntando a la instancia local (localhost) con una contraseña segura ```CREATE USER 'rafael'@'localhost' IDENTIFIED BY '........';```. Posteriormente le concedemos privilegios sobre toda la instancia y todas las bases de datos (administrador) con ```GRANT ALL PRIVILEGES ON *.* TO 'rafael'@'localhost' WITH GRANT OPTION;```, por último aplicamos / refrescamos los privilegios con ```FLUSH PRIVILEGES;```. 
 
 <img width="723" height="285" alt="image" src="https://github.com/user-attachments/assets/437098a7-1b84-4796-b0c8-5645f90dce93" />
 
 ### 2.4 PHPMyadmin
 
 wasd
+
+<img width="1281" height="493" alt="image" src="https://github.com/user-attachments/assets/08c4281b-98ab-4691-aa66-dd6f2a6f036e" />
+
+wasd
+
+<img width="1067" height="116" alt="image" src="https://github.com/user-attachments/assets/b67ea7c4-f574-4a92-9b9b-ee54319b5db0" />
+
+wasd
+
+<img width="1070" height="676" alt="image" src="https://github.com/user-attachments/assets/88ecffce-4775-4ddb-a4b9-dbffa114f83d" />
+
 
 ### 2.5 FTP + TLS
 
@@ -158,13 +167,11 @@ wasd
 
 wasd
 
-<img width="753" height="270" alt="image" src="https://github.com/user-attachments/assets/d6a29350-9c4e-4cbc-b41d-73d2eb0b1504" />
+<img width="744" height="306" alt="image" src="https://github.com/user-attachments/assets/90458bab-af59-4bca-bfea-fb8dd4f6b199" />
 
 wasd
 
-<img width="805" height="243" alt="image" src="https://github.com/user-attachments/assets/cf6ff9b8-5605-4b71-9c31-711e6b87b4fc" />
-
-wasd
+<img width="791" height="247" alt="image" src="https://github.com/user-attachments/assets/506d64e6-bfcf-4bd9-9fd4-472eb4477f00" />
 
 ### 2.6 SSH y SFTP
 
