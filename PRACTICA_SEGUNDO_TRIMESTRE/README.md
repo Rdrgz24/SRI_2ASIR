@@ -1,4 +1,4 @@
-# Práctica Segundo Trimestre - Servidor de alojamiento web
+<img width="683" height="31" alt="image" src="https://github.com/user-attachments/assets/2409ecf3-910b-4444-9993-6de30083581d" /># Práctica Segundo Trimestre - Servidor de alojamiento web
 
 ## 0. Pasos previos
 
@@ -146,7 +146,7 @@ La configuración de phpMyAdmin no es compleja, solo debemos acceder al archivo 
 
 <img width="1281" height="493" alt="image" src="https://github.com/user-attachments/assets/08c4281b-98ab-4691-aa66-dd6f2a6f036e" />
 
-Ya que estamos, vamos a probar si phpMyAdmin está operativo en el servidor web, para ello, desde una máquina cliente que tengo de la [Práctica 8 - Subdominios](TEMA_2_DNS/Actividad_8_Subdominios), donde tengo ya previamente un nameserver del servidor que estuve configurando, no obstante, voy a poner como servidor DNS primario la IP del de esta práctica (192.168.195.5) dentro de ```/etc/resolv.conf``` para que resuelva las peticiones del dominio local hosting2asir.intranet.
+Ya que estamos, vamos a probar si phpMyAdmin está operativo en el servidor web, para ello, desde una máquina cliente que tengo de la [Práctica 8 - Subdominios](../../TEMA_2_DNS/Actividad_8_Subdominios), donde tengo ya previamente un nameserver del servidor que estuve configurando, no obstante, voy a poner como servidor DNS primario la IP del de esta práctica (192.168.195.5) dentro de ```/etc/resolv.conf``` para que resuelva las peticiones del dominio local hosting2asir.intranet.
 
 <img width="1067" height="116" alt="image" src="https://github.com/user-attachments/assets/b67ea7c4-f574-4a92-9b9b-ee54319b5db0" />
 
@@ -204,7 +204,7 @@ Tras aplicar la configuración del DNS, debemos comprobar si la sintaxis es corr
 
 <img width="994" height="457" alt="image" src="https://github.com/user-attachments/assets/0c2a0aad-eebf-45d3-92e8-24912df231fd" />
 
-wasd
+Para comprobar y verificar que el servidor DNS funciona, vamos a usar múltiples comandos de utilidad. Primero, hemos comprobado con ```nslookup hosting2asir.intranet``` que devuelve el contenido 192.168.195.5, lo que verifica que la resolución es correcta. Luego comprobamos con ```ping -c2 hosting2asir.intranet``` que hay comunicación y en realidad estamos llamando a la dirección IP, por último ```dig hosting2asir.intranet``` ha contestado con un registro DNS ```IN A 192.168.195.5``` justo el que se esperaba, ya que es el que tiene asociado el NameServer y la IP principal del servidor.
 
 <img width="760" height="589" alt="image" src="https://github.com/user-attachments/assets/1a9cc1a2-4ff2-4462-826c-afd18489404e" />
 
