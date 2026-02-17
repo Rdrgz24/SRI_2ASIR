@@ -164,42 +164,41 @@ Una vez que hemos hecho la copia, podemos trabajar sobre el archivo original, vo
 
 <img width="454" height="21" alt="image" src="https://github.com/user-attachments/assets/2c551fbe-c2f4-4614-bae5-2b0bed594620" />
 
-wasd
+Posteriormente, edité las variables del archivo de configuración, de tal manera que el servicio usara TLS con los pre firmados que asigna Ubuntu, quitamos el acceso anónimo, permitimos el acceso local, la estrictura e indicamos el tipo de certificado TLS a usar.
 
 <img width="744" height="306" alt="image" src="https://github.com/user-attachments/assets/90458bab-af59-4bca-bfea-fb8dd4f6b199" />
 
-wasd
+Tras editar el archivo de configuración, debemos reiniciar el servicio con ```sudo systemctl restart vsftpd.service``` y comprobar el estado con ```sudo systemctl status vsftpd.service```.
 
 <img width="791" height="247" alt="image" src="https://github.com/user-attachments/assets/506d64e6-bfcf-4bd9-9fd4-472eb4477f00" />
 
 ### 2.6 SSH y SFTP
 
-wasd
+Para habilitar el acceso a SSH y SFTP, debemos editar el archivo de configuración con el comando ```sudo nano /etc/ssh/sshd_config```, donde descomentamos la línea ```PasswordAuthentication yes``` para que permita y pida la contraseña como credencial de acceso.
 
 <img width="760" height="86" alt="image" src="https://github.com/user-attachments/assets/5c46168f-a39f-4d0e-ad41-4b884e3271bf" />
 
-wasd
+Luego, bajamos dentro del documento y comprobamos que como ```Subsystem``` esté insertado ```sftp /usr/lib/openssh/sftp-server```. Guardamos y cerramos.
 
 <img width="1278" height="388" alt="image" src="https://github.com/user-attachments/assets/b35f471c-c434-4390-8b24-d77a74a57a31" />
 
-wasd
+Tras aplicar la configuración, reiniciamos el servicio con ```sudo systemctl restart ssh``` y comprobamos su estado con ```sudo systemctl status ssh```.
 
 <img width="947" height="326" alt="image" src="https://github.com/user-attachments/assets/0ff51ea1-f012-4c50-9a60-2305acdbdb75" />
 
 ### 2.7 Configuración del DNS BIND9
 
-wasd
+Esta configuración es importante y crítica, ya que el servicio DNS se encargará de alojar el sitio web principal (hosting2asir.intranet) y los subdominios (usuario1.hosting2asir.intranet, usuario2.hosting2asir.intranet, etc...). Empezamos editando el archivo de configuración local con ```sudo nano /etc/bind/named.conf.local``` donde añadiremos las líneas ```zone "hosting2asir.intranet"``` como tipo de zona maestra e indicamos el archivo de configuración de esta zona ```file /etc/bind/db.hosting2asir.intranet```.
 
 <img width="779" height="226" alt="image" src="https://github.com/user-attachments/assets/8e19ed03-dbd1-412f-8e10-a1d6b31fccf0" />
 
-wasd
+Luego, tras añadirlo como zona, creamos el nuevo archivo de configuración con ```sudo nano /etc/bind/db.hosting2asir.intranet```, aquí indicaremos los registros SOA (autoritativos) ```ns.host.intranet. admin.hosting2asir.intranet.``` con su serial y tiempos de llegada correspondientes. En las cuatro últimas líneas indicamos NameServer principal ```ns.hosting2asir.intranet.```, asociamos tres registros tipo A, el primero ```ns IN A 192.168.195.5``` donde asociamos el NameServer a esa IP, luego ```@ IN A 192.168.195.5``` que asigna la dirección IP como principal del servidor, por último ```www IN A 192.168.195.5``` para hacerlo un poco más interesante y poder acceder al dominio vía http://www.hosting2asir.intranet.
 
 <img width="681" height="25" alt="image" src="https://github.com/user-attachments/assets/2671b5d7-bb67-45bf-af1e-fd91086d5644" />
 
-wasd
+Tras aplicar la configuración del DNS, debemos comprobar si la sintaxis es correcta, y si no hay problemas con los archivos de configuración y zona recién creados. Para ello usamos el comando ```sudo named-checkconf``` para comprobar la sintaxis del archivo de configuración, luego ```sudo named-checkzone hosting2asir.intranet /etc/bind/db.hosting2asir.intranet``` para comprobar la sintaxis del archivo de zona recién creado, si todo está correcto (el primero no muestra nada y el segundo OK), reiniciamos el servicio DNS con ```sudo systemctl restart bind9``` y comprobamos el correcto estado con ```sudo systemctl status bind9```.
 
 <img width="808" height="221" alt="image" src="https://github.com/user-attachments/assets/7c768f40-8807-4a4d-8b00-b9b1ac6cdc2a" />
-
 
 wasd
 
