@@ -2,27 +2,27 @@
 
 ## 0. Pasos previos
 
-Para realizar esta práctica usaremos una máquina virtual con Ubuntu Server 24.04.3, donhde hemos asignados los siguientes recursos en el Proxmox del centro.
+Para realizar esta práctica usaremos una máquina virtual con Ubuntu Server 24.04.3, donhde hemos asignado los siguientes recursos en el Proxmox del centro.
 
 <img width="600" height="450" alt="image" src="https://github.com/user-attachments/assets/c57f9e4b-1f31-40a3-8be5-b897f5f7ae3e" />
 
-Una vez hemos creado la máquina virtual, la iniciamos. En el paso de configuración de red pulsamos sobre la interfaz de red - "Edit IPv4".
+Tras crear la máquina virtual, la iniciamos. Nos paramos en el paso de configuración de red, donde pulsamos sobre la interfaz de red - "Edit IPv4".
 
 <img width="1043" height="208" alt="image" src="https://github.com/user-attachments/assets/fdb762aa-13b7-48cd-b558-6e0b4d3c5506" />
 
-Marcamos como método "Manual" e insertamos una dirección IP estática, en este caso mi servidor dispondrá de la dirección 192.168.195.5/24 y su enrutador será 192.168.195.101
+Marcamos como método "Manual" e insertamos una dirección IP estática, en este caso mi servidor dispondrá de la dirección 192.168.195.5/24 y su enrutador será 192.168.195.101, un servidor de alojamiento siempre debe tener dirección IP estática.
 
 <img width="1271" height="577" alt="image" src="https://github.com/user-attachments/assets/6d30e056-7b53-4dfb-80af-f41afa5621cb" />
 
-Creamos un usuario y asignamos un nombre identificativo a nuestro servidor. Insertamos unas credenciales seguras para el usuario.
+Asignamos un nombre identificativo al usuario y al servidor. Luego, insertamos unas credenciales seguras para el usuario.
 
 <img width="1104" height="315" alt="image" src="https://github.com/user-attachments/assets/8d8dfedf-2d87-4ef1-9938-32f03095723e" />
 
-Ubuntu Server nos da la opción de instalar el servicio OpenSSH (servicio SSH) por defecto, marcamos la casilla y pulsamos Intro sobre "Done".
+Ubuntu ya nos da la opción de instalar el servicio OpenSSH (servicio SSH) por defecto, marcamos la casilla y pulsamos Intro sobre "Done" para después solo tener que habilitar el servicio, nos ahorramos instalarlo.
 
 <img width="1042" height="262" alt="image" src="https://github.com/user-attachments/assets/b54650c9-198d-44f6-a323-84147bdea0b2" />
 
-Usamos el comando ```uname -a```, ```ip a```, ```ping -c2 8.8.8.8```
+Una vez el sistema está instalado, reiniciamos la máquina e iniciamos sesión con nuestro usuario. Usamos el comando ```uname -a``` para ver el nombre del equipo, ```ip a``` para comprobar que la dirección IP es la correcta, y por último ```ping -c2 8.8.8.8``` para verificar que la máquina tiene conexión a Internet.
 
 <img width="1027" height="390" alt="image" src="https://github.com/user-attachments/assets/74582953-6527-4e8b-bbde-e05528474f44" />
 
@@ -30,7 +30,7 @@ Ejecutamos el comando ```sudo apt update && sudo apt upgrade -y``` para actualiz
 
 <img width="1278" height="373" alt="image" src="https://github.com/user-attachments/assets/38a2c9c8-dab9-4d19-9459-ca84e86bab4f" />
 
-Por último, para la sección de pasos previos, instalamos los paquetes básicos de los que tiene que disponer el sistema.
+Por último, instalamos los paquetes básicos de los que tiene que disponer el sistema para un correcto funcionamiento y gestión de certificados, web y paquetes.
 
 <img width="933" height="246" alt="image" src="https://github.com/user-attachments/assets/e76abc4e-ef1e-4089-b561-f1a550899665" />
 
@@ -38,15 +38,15 @@ Por último, para la sección de pasos previos, instalamos los paquetes básicos
 
 ### 1.1 Instalación de pila LAMP
 
-Para esta práctica haré uso de LAMP (Linux, Apache, MariaDB/MySQL, PHP/Perl) ya que es un stack tecnológico muy conocido y apoyado por la comunidad. Para ello usamos el comando ```sudo apt install apache2 mariadb-server php libapache2-mod-php php-mysql -y```. La pila LAMP incluye PHP y los módulos necesarios para la correcta integración.
+Para esta práctica haré uso de LAMP (Linux, Apache, MariaDB/MySQL, PHP/Perl) ya que es un stack tecnológico muy conocido y apoyado por la comunidad. Para ello usamos el comando ```sudo apt install apache2 mariadb-server php libapache2-mod-php php-mysql -y```. Esta pila o conjunto de paquetes ya incluye PHP y los módulos necesarios para la correcta integración con los servicios web de Apache.
 
- <img width="1265" height="425" alt="image" src="https://github.com/user-attachments/assets/0089414b-d3a1-41aa-b00f-4c856408a169" />
+<img width="1265" height="425" alt="image" src="https://github.com/user-attachments/assets/0089414b-d3a1-41aa-b00f-4c856408a169" />
 
 ### 1.2 Instalación más módulos PHP
 
-No obstamte, debemos instalar otro módulos necesarios para la integración con phpMyAdmin y más funcionalidades para la web, para ello usamos el comando ```sudo apt install php-cli php-curl php-gd php-mbstring php-xml php-zip -y```.
+No obstamte, aunque la integración con Apache ya estaría, debemos instalar otro módulos necesarios para la integración con phpMyAdmin y más funcionalidades web, para ello usamos el comando ```sudo apt install php-cli php-curl php-gd php-mbstring php-xml php-zip -y```.
 
- <img width="1010" height="200" alt="image" src="https://github.com/user-attachments/assets/da03776e-c465-4674-bab0-bc4c8fea30ef" />
+<img width="1010" height="200" alt="image" src="https://github.com/user-attachments/assets/da03776e-c465-4674-bab0-bc4c8fea30ef" />
 
 Tras completar la instalación de PHP y todos sus módulos, usamos el comando ```php -v``` para comprobar la versión y ```php -m``` para comprobar las extensiones o módulos instalados.
 
