@@ -36,13 +36,13 @@ Por último, instalamos los paquetes básicos de los que tiene que disponer el s
 
 ## 1. Instalación de servicios
 
-### 1.1 Instalación de pila LAMP
+### 1.1 Pila LAMP
 
 Para esta práctica haré uso de LAMP (Linux, Apache, MariaDB/MySQL, PHP/Perl) ya que es un stack tecnológico muy conocido y apoyado por la comunidad. Para ello usamos el comando ```sudo apt install apache2 mariadb-server php libapache2-mod-php php-mysql -y```. Esta pila o conjunto de paquetes ya incluye PHP y los módulos necesarios para la correcta integración con los servicios web de Apache.
 
 <img width="1265" height="425" alt="image" src="https://github.com/user-attachments/assets/0089414b-d3a1-41aa-b00f-4c856408a169" />
 
-### 1.2 Instalación más módulos PHP
+### 1.2 Módulos PHP
 
 No obstamte, aunque la integración con Apache ya estaría, debemos instalar otro módulos necesarios para la integración con phpMyAdmin y más funcionalidades web, para ello usamos el comando ```sudo apt install php-cli php-curl php-gd php-mbstring php-xml php-zip -y```.
 
@@ -52,7 +52,7 @@ Tras completar la instalación de PHP y todos sus módulos, usamos el comando ``
 
 <img width="1164" height="224" alt="image" src="https://github.com/user-attachments/assets/6b5dafe6-b809-4250-85ae-debe10737f53" />
 
-### 1.3 Instalación de PHPMyAdmin
+### 1.3 phpMyAdmin
 
 Insertamos el comando ```sudo apt install phpmyadmin```, introducimos la tecla "Y" para aceptar y damos Intro para confirmar la instalación del programa.
 
@@ -69,13 +69,13 @@ Creamos la base de datos de manera automática con "dbconfig-common", para ello,
 Insertamos una contraseña segura en la base de datos del servidor para el acceso a phpMyAdmin.
 
 <img width="1105" height="248" alt="image" src="https://github.com/user-attachments/assets/4685a767-fda7-4a63-a158-1723c72fb680" />
-
-### Habilitando los servicios LAMP
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Habilitando servicios LAMP
 
 Tras instalar la pila LAMP, es conveniente habilitar los servicios para que se inicien al arrancar el servidor ```sudo systemctl enable ...```, iniciarlos en la propia sesión con ```sudo systemctl start ...```y comprobar su estado con ```sudo systemctl status ...```, en este caso he habilitado e iniciado tanto apache2 como mariadb.
 
 <img width="1284" height="487" alt="image" src="https://github.com/user-attachments/assets/6a161ac4-9e0a-4231-9915-69e0468b3e6b" />
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### 1.4 Instalación de FTP
 
 Para hacer uso del servicio FTP, instalaré el paquete "vsftpd" con el comando ```sudo apt install vsftpd```.
@@ -136,32 +136,31 @@ Lo mismo pasa con este, aplicamos ```upload_max_size = 20M``` que aunque no lo v
 
 ### 2.3 MariaDB
 
-Este paso es muy importante de cumplir, ya que es una medida de seguridad bastante potente. Vamos a acceder a la configuración de la base de datos con ```sudo mariadb``` como root. Dentro vamos a crear un usuario llamado "rafael" apuntando a la instancia local (localhost) con una contraseña segura ```CREATE USER 'rafael'@'localhost' IDENTIFIED BY '........';```. Posteriormente le concedemos privilegios sobre toda la instancia y todas las bases de datos (administrador) con ```GRANT ALL PRIVILEGES ON *.* TO 'rafael'@'localhost' WITH GRANT OPTION;```, por último aplicamos / refrescamos los privilegios con ```FLUSH PRIVILEGES;```. 
+Este paso es muy importante de cumplir, ya que es una medida de seguridad bastante importante. Vamos a acceder a la configuración de la base de datos con ```sudo mariadb``` como root. Dentro vamos a crear un usuario llamado "rafael" apuntando a la instancia local (localhost) con una contraseña segura ```CREATE USER 'rafael'@'localhost' IDENTIFIED BY '........';```. Posteriormente le concedemos privilegios sobre toda la instancia y todas las bases de datos (administrador) con ```GRANT ALL PRIVILEGES ON *.* TO 'rafael'@'localhost' WITH GRANT OPTION;```, por último aplicamos / refrescamos los privilegios con ```FLUSH PRIVILEGES;```. 
 
 <img width="723" height="285" alt="image" src="https://github.com/user-attachments/assets/437098a7-1b84-4796-b0c8-5645f90dce93" />
 
 ### 2.4 PHPMyadmin
 
-wasd
+La configuración de phpMyAdmin no es compleja, solo debemos acceder al archivo de configuración con ```sudo nano /etc/apache2/conf-avaliable/phpmyadmin.conf``` y deshabilitar el acceso a directorios que los usuarios no tienen porque tener, básicamente aplicando la directiva ```Require all denied``` en los directorios /usr/share/phpmyadmin/templates y /usr/share/phpmyadmin/libraries.
 
 <img width="1281" height="493" alt="image" src="https://github.com/user-attachments/assets/08c4281b-98ab-4691-aa66-dd6f2a6f036e" />
 
-wasd
+Ya que estamos, vamos a probar si phpMyAdmin está operativo en el servidor web, para ello, desde una máquina cliente que tengo de la [Práctica 8 - Subdominios](TEMA_2_DNS/Actividad_8_Subdominios), donde tengo ya previamente un nameserver del servidor que estuve configurando, no obstante, voy a poner como servidor DNS primario la IP del de esta práctica (192.168.195.5) dentro de ```/etc/resolv.conf``` para que resuelva las peticiones del dominio local hosting2asir.intranet.
 
 <img width="1067" height="116" alt="image" src="https://github.com/user-attachments/assets/b67ea7c4-f574-4a92-9b9b-ee54319b5db0" />
 
-wasd
+Tras aplicar la configuración para la resolución DNS podemos acceder al navegador e introducir la URL http://hosting2asir.intranet/phpmyadmin, donde he introducido las credenciales de acceso del usuario "rafael", justo creado anteriormente en la configuración de MariaDB. Vemos el Dashboard o página de inicio de phpMyAdmin correctamente.
 
 <img width="1070" height="676" alt="image" src="https://github.com/user-attachments/assets/88ecffce-4775-4ddb-a4b9-dbffa114f83d" />
 
-
 ### 2.5 FTP + TLS
 
-wasd
+Antes de realizar modificaciones sobre el fichero de configuración principal, debemos hacer una copia de este con el comando ```sudo cp /etc/vsftpd.conf /etc/vsftpd_copy.conf```, por si realizamos alguna configuración errónea que no podamos solventar, restablecer dicho archivo y dejar el servicio nuevamente funcional, pero haremos que eso no pase.
 
 <img width="552" height="24" alt="image" src="https://github.com/user-attachments/assets/b2c45bce-b8e2-4317-b5b6-702d88d54c1d" />
 
-wasd
+Una vez que hemos hecho la copia, podemos trabajar sobre el archivo original, voy a empezar elimintando todas las líneas que empiecen por "#", es decir, todos los comentarios del archivo, para trabajar con texto plano y no tener que estar buscando configuraciones en tantas líneas. Para ello usé el comando ```sudo sed -i /^#/d /etc/vsftpd.conf```, ¿Cómo funciona internamente el comando? Con ```sed -i``` indicamos que reemplace, con ```/^#/d``` indicamos que todo lo que empiece por "#" sea ```d (eliminado)```.
 
 <img width="454" height="21" alt="image" src="https://github.com/user-attachments/assets/2c551fbe-c2f4-4614-bae5-2b0bed594620" />
 
