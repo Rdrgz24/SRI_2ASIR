@@ -146,7 +146,7 @@ La configuración de phpMyAdmin no es compleja, solo debemos acceder al archivo 
 
 <img width="1281" height="493" alt="image" src="https://github.com/user-attachments/assets/08c4281b-98ab-4691-aa66-dd6f2a6f036e" />
 
-Ya que estamos, vamos a probar si phpMyAdmin está operativo en el servidor web, para ello, desde una máquina cliente que tengo de la [Práctica 8 - Subdominios](../../TEMA_2_DNS/Actividad_8_Subdominios), donde tengo ya previamente un nameserver del servidor que estuve configurando, no obstante, voy a poner como servidor DNS primario la IP del de esta práctica (192.168.195.5) dentro de ```/etc/resolv.conf``` para que resuelva las peticiones del dominio local hosting2asir.intranet.
+Ya que estamos, vamos a probar si phpMyAdmin está operativo en el servidor web, para ello, desde una máquina cliente que tengo de la [Práctica 8 - Subdominios](../TEMA_2_DNS/Actividad_8_Subdominios), donde tengo ya previamente un nameserver del servidor que estuve configurando, no obstante, voy a poner como servidor DNS primario la IP del de esta práctica (192.168.195.5) dentro de ```/etc/resolv.conf``` para que resuelva las peticiones del dominio local hosting2asir.intranet.
 
 <img width="1067" height="116" alt="image" src="https://github.com/user-attachments/assets/b67ea7c4-f574-4a92-9b9b-ee54319b5db0" />
 
