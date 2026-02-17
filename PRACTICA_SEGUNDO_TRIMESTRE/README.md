@@ -184,14 +184,38 @@ wasd
 
 wasd
 
-<img width="774" height="156" alt="image" src="https://github.com/user-attachments/assets/562551d0-2da2-4099-bc89-4d8ba1e1143e" />
+<img width="779" height="226" alt="image" src="https://github.com/user-attachments/assets/8e19ed03-dbd1-412f-8e10-a1d6b31fccf0" />
 
 wasd
 
-<img width="733" height="262" alt="image" src="https://github.com/user-attachments/assets/31bd6387-2e30-4457-bb6f-0eb3fd594dc0" />
+<img width="681" height="25" alt="image" src="https://github.com/user-attachments/assets/2671b5d7-bb67-45bf-af1e-fd91086d5644" />
 
 wasd
 
-<img width="800" height="198" alt="image" src="https://github.com/user-attachments/assets/336cba40-4560-4dee-b1b4-c4ca641964a2" />
+<img width="808" height="221" alt="image" src="https://github.com/user-attachments/assets/7c768f40-8807-4a4d-8b00-b9b1ac6cdc2a" />
 
 
+wasd
+
+<img width="994" height="457" alt="image" src="https://github.com/user-attachments/assets/0c2a0aad-eebf-45d3-92e8-24912df231fd" />
+
+wasd
+
+<img width="760" height="589" alt="image" src="https://github.com/user-attachments/assets/1a9cc1a2-4ff2-4462-826c-afd18489404e" />
+
+wasd
+
+### 2.8 Configuración de soporte Python (WSGI)
+
+wasd
+
+<img width="549" height="23" alt="image" src="https://github.com/user-attachments/assets/5635768c-5f0a-4c76-9eb9-414b70cf00dd" />
+
+wasd
+
+<img width="810" height="157" alt="image" src="https://github.com/user-attachments/assets/57a8e486-51ac-4ba3-8c63-95e41e8abb5b" />
+
+
+wasd
+
+<img width="870" height="376" alt="image" src="https://github.com/user-attachments/assets/0f564fa9-974e-463f-bd3e-d35811b8dde0" />
