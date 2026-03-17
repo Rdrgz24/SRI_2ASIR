@@ -62,4 +62,14 @@ Comenzamos creando una carpeta para los scripts con el comando ```mkdir scripts`
 
 <img width="518" height="201" alt="image" src="https://github.com/user-attachments/assets/9377dfb7-f70f-42b8-844f-09cd38fe1ead" />
 
+Script en funcionamiento:
 
+<img width="1639" height="454" alt="image" src="https://github.com/user-attachments/assets/3eef530b-6c24-432f-bfe2-e7f5d9439bdd" />
+
+wasd
+
+<img width="1636" height="880" alt="image" src="https://github.com/user-attachments/assets/10223bed-506d-40d0-8ec0-0b504629797a" />
+
+wasd
+
+<img width="1635" height="873" alt="image" src="https://github.com/user-attachments/assets/7afffd0b-5fe3-48e6-94f5-589737fbbf1f" />
