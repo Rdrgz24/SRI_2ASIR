@@ -80,10 +80,9 @@ Tras definir todas las variables, creamos el archivo "include", llamado así en 
 
 <img width="1628" height="421" alt="image" src="https://github.com/user-attachments/assets/799caa80-6b83-42ba-a15e-0ea4e4a503ea" />
 
+Por último, el paso más importante, hacemos una comprobación de que el nombre del subdominio junto a la directiva include no existe dentro del archivo de zona. Hacemos las excepciones, si existe, lo indicamos, de lo contrario, lo crea. La sentencia ```$INCLUDE``` permite asignar el contenido del archivo del subdominio dentro del archivo de la zona principal, hace una especie de enlace para que lo tenga en consideración.
 
-Por último, y por supuesto, el paso más importante, hacemos una comprobación de que el nombre del subdominio junto a la directiva include no existe dentro del archivo de zona. Hacemos las excepciones, si existe, lo indicamos, de lo contrario, lo crea. La sentencia ```$INCLUDE``` permite asignar el contenido del archivo del subdominio dentro del archivo de la zona principal, hace una especie de enlace para que lo tenga en consideración.
-
-<img width="1636" height="459" alt="image" src="https://github.com/user-attachments/assets/ebf89971-e446-4075-b620-8fce428bdae0" />
+<img width="1631" height="393" alt="image" src="https://github.com/user-attachments/assets/8b397244-c9c5-4b90-aba5-2806d44efe87" />
 
 #### Comprobación
 
@@ -91,15 +90,26 @@ Vamos a probar el script para ver que tal funciona, para ello usamos el comando 
 
 <img width="1639" height="454" alt="image" src="https://github.com/user-attachments/assets/3eef530b-6c24-432f-bfe2-e7f5d9439bdd" />
 
-Si comprobamos 
+Si comprobamos dentro del archivo de zona principal con ```cat /etc/bind/db.marisma.intranet```, vemos que se ha incluido el fichero "prueba2026", obviaremos el archivo incluido "prueba", ya que este ha sido creado mientras estaba realizando un análisis antes de realizar las capturas. Esto es gracias a la directiva ```$INCLUDE```.
 
 <img width="1634" height="871" alt="image" src="https://github.com/user-attachments/assets/6775d66b-8175-40f0-b47a-57c22d99d010" />
 
-
-wasd
+Desde el equipo cliente, hacemos comprobaciones con el comando dig hacia todos los registros disponibles ```dig prueba2026.marisma.intranet```, ```dig www.prueba2026.marisma.intranet```
 
 <img width="1636" height="880" alt="image" src="https://github.com/user-attachments/assets/10223bed-506d-40d0-8ec0-0b504629797a" />
 
-wasd
+Seguimos realizando comprobaciones con ```dig ftp.prueba2026.marisma.intranet``` y ```dig smtp.prueba2026.marisma.intranet```. Tal y como podemos ver, el subdominio ha sido correctamente creado y resuelve tanto este como sus registros, por lo que todo queda OK.
 
 <img width="1635" height="873" alt="image" src="https://github.com/user-attachments/assets/7afffd0b-5fe3-48e6-94f5-589737fbbf1f" />
+
+Si comprobamos a insertar el mismo dominio nos indica que este ya existe, por lo que la comprobación está funcionando OK:
+
+<img width="1635" height="249" alt="image" src="https://github.com/user-attachments/assets/2f70e9bf-4cd0-4978-b8a4-c4f8d24f6a0b" />
+
+### 4.1 Script en Python
+
+#### Creación
+
+#### Explicación
+
+#### Comprobación
