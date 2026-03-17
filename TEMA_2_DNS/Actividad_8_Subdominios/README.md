@@ -58,13 +58,43 @@ Como hemos podido comprobar, todos los host (registros A) han sido resueltos cor
 
 ### 4.1 Script en bash
 
+#### Creación
+
 Comenzamos creando una carpeta para los scripts con el comando ```mkdir scripts``` dentro de /home/rafael por ejemplo, creamos el fichero "crear_subdominio.sh" vacío y asignamos los permisos con el comando ```sudo chmod 755 crear_subdominio.sh```, y por último hacemos uso de ```nano crear_subdominio.sh``` para editar el archivo e insertar el contenido del script.
 
 <img width="518" height="201" alt="image" src="https://github.com/user-attachments/assets/9377dfb7-f70f-42b8-844f-09cd38fe1ead" />
 
-Script en funcionamiento:
+#### Explicación
+
+Vamos a desglosar el script por partes:
+
+Primero, validamos con -z, que comprueba si el parámetro $1 es nulo y devuelve un booleano. Una excepción simple, si es nulo, informar y parar scrip, de lo contrario, seguir ejecutando las siguientes líneas.
+
+<img width="1628" height="304" alt="image" src="https://github.com/user-attachments/assets/5dc696ec-57b4-4b0e-b8b6-0d711de016ff" />
+
+Definimos las variables fijas, tales como son el dominio, la ruta del servidor bind, la dirección IP de nuestro servidor que aloja los dominios y subdominios, y por último el archivo de la zona padre. Posteriormente añadimos las variables dinámicas, en este caso el subdominio que pasa el usuario y el archivo de configuración de este. La terminación "hosts" permite tener más claro si es un subdominio o no, por lo que el mantenimiento de múltiples archivos es más limpio.
+
+<img width="1629" height="373" alt="image" src="https://github.com/user-attachments/assets/8560483d-23d5-4609-8f08-35c192073738" />
+
+Tras definir todas las variables, creamos el archivo "include", llamado así en el script para identificarlo. Evkdentemente, asignamos el nombre definido en la ruta específica y asignamos los registros apuntando a una IP. Como dato curioso de esta configuración, hemos implementado ```cat <<EOF > ...... EOF``` para insertar contenido multilínea. ```$ORIGIN``` está indicando el origen del dominio base que contendrá dichos registros.
+
+<img width="1628" height="421" alt="image" src="https://github.com/user-attachments/assets/799caa80-6b83-42ba-a15e-0ea4e4a503ea" />
+
+
+Por último, y por supuesto, el paso más importante, hacemos una comprobación de que el nombre del subdominio junto a la directiva include no existe dentro del archivo de zona. Hacemos las excepciones, si existe, lo indicamos, de lo contrario, lo crea. La sentencia ```$INCLUDE``` permite asignar el contenido del archivo del subdominio dentro del archivo de la zona principal, hace una especie de enlace para que lo tenga en consideración.
+
+<img width="1636" height="459" alt="image" src="https://github.com/user-attachments/assets/ebf89971-e446-4075-b620-8fce428bdae0" />
+
+#### Comprobación
+
+Vamos a probar el script para ver que tal funciona, para ello usamos el comando ```sudo bash crear_subdominio.sh nombresubdominio```, tras crearlo, comprobamos con ```cat /etc/bind/db.prueba2026.marisma.intranet.hosts``` y vemos el contenido de los registros correctamente añadido.
 
 <img width="1639" height="454" alt="image" src="https://github.com/user-attachments/assets/3eef530b-6c24-432f-bfe2-e7f5d9439bdd" />
+
+Si comprobamos 
+
+<img width="1634" height="871" alt="image" src="https://github.com/user-attachments/assets/6775d66b-8175-40f0-b47a-57c22d99d010" />
+
 
 wasd
 
