@@ -110,6 +110,32 @@ Si comprobamos a insertar el mismo dominio nos indica que este ya existe, por lo
 
 #### Creación
 
+wasd
+
+<img width="1639" height="279" alt="image" src="https://github.com/user-attachments/assets/7d0d7a0b-c44e-40dc-bfe0-4a67932d5457" />
+
+wasd
+
+<img width="1634" height="343" alt="image" src="https://github.com/user-attachments/assets/c6bd58c1-3ff1-4312-b76f-135c3be6c8e6" />
+
 #### Explicación
 
+wasd
+
+
+
 #### Comprobación
+
+wasd
+
+<img width="1633" height="543" alt="image" src="https://github.com/user-attachments/assets/8632fa27-8ebf-4d75-a85c-47dc5fe54e2b" />
+
+wasd
+
+<img width="1637" height="1036" alt="image" src="https://github.com/user-attachments/assets/10c94818-46ff-457c-b6a2-f1dbef59667b" />
+
+wasd
+
+<img width="1479" height="934" alt="image" src="https://github.com/user-attachments/assets/1dddc75a-7a8f-4013-9a40-9e4e4850262b" />
+
+
