@@ -53,3 +53,13 @@ Como último registro, comprobamos sobre el host "smtp" con el comando ```dig sm
 <img width="1347" height="633" alt="image" src="https://github.com/user-attachments/assets/4d333814-47fd-47e6-8049-c9dd706857b6" />
 
 Como hemos podido comprobar, todos los host (registros A) han sido resueltos correctamente en el subdominio delegado.
+
+## 4. Creación y configuración de scripts
+
+### 4.1 Script en bash
+
+Comenzamos creando una carpeta para los scripts con el comando ```mkdir scripts``` dentro de /home/rafael por ejemplo, creamos el fichero "crear_subdominio.sh" vacío y asignamos los permisos con el comando ```sudo chmod 755 crear_subdominio.sh```, y por último hacemos uso de ```nano crear_subdominio.sh``` para editar el archivo e insertar el contenido del script.
+
+<img width="518" height="201" alt="image" src="https://github.com/user-attachments/assets/9377dfb7-f70f-42b8-844f-09cd38fe1ead" />
+
+
