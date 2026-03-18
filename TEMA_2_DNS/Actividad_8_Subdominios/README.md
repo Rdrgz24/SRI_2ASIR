@@ -58,6 +58,8 @@ Como hemos podido comprobar, todos los host (registros A) han sido resueltos cor
 
 ### 4.1 Script en bash
 
+[Acceso a Script Bash](TEMA_2_DNS/Actividad_8_Subdominios/crear_subdominio.sh) 
+
 #### Creación
 
 Comenzamos creando una carpeta para los scripts con el comando ```mkdir scripts``` dentro de /home/rafael por ejemplo, creamos el fichero "crear_subdominio.sh" vacío y asignamos los permisos con el comando ```sudo chmod 755 crear_subdominio.sh```, y por último hacemos uso de ```nano crear_subdominio.sh``` para editar el archivo e insertar el contenido del script.
@@ -107,6 +109,8 @@ Si comprobamos a insertar el mismo dominio nos indica que este ya existe, por lo
 <img width="1635" height="249" alt="image" src="https://github.com/user-attachments/assets/2f70e9bf-4cd0-4978-b8a4-c4f8d24f6a0b" />
 
 ### 4.1 Script en Python
+
+[Acceso a Script Python](TEMA_2_DNS/Actividad_8_Subdominios/crear_subdominio.py) 
 
 #### Creación
 
