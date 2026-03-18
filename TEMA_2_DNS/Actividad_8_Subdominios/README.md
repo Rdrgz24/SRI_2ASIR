@@ -132,18 +132,17 @@ Por último, en base a la comprobación, realizamos unas acciones u otras, por e
 
 <img width="1283" height="336" alt="image" src="https://github.com/user-attachments/assets/b69cd307-33a5-4619-ab1b-76e56e741615" />
 
-
 #### Comprobación
 
-wasd
+Creamos el subdominio "prueba2" con el comando ```sudo ./crear_subdominio.py prueba2``` e indica que se ha creado correctamente, vamos a comprobar con ```ls /etc/bind | grep prueba2```, vemos que está dentro creado, comprobamos los registros con ```cat /etc/bind/db.prueba2.hosts```, todos dentro.
 
 <img width="1633" height="543" alt="image" src="https://github.com/user-attachments/assets/8632fa27-8ebf-4d75-a85c-47dc5fe54e2b" />
 
-wasd
+En la ventana de la izquierda, podemos ver como dentro del archivo de zona principal, usando ```cat /etc/bind/db.marisma.intranet``` se ha insertado la variable INCLUDE del archivo python. En la ventana de la derecha, podemos verificar que desde el equipo cliente, se resuelven los registros de tipo A del nuevo subdominio, tanto con el subdominio base como con www. de prefijo usando el comando ```dig```.
 
 <img width="1637" height="1036" alt="image" src="https://github.com/user-attachments/assets/10c94818-46ff-457c-b6a2-f1dbef59667b" />
 
-wasd
+Por último, la ventana de la derecha, verificamos que tanto el prefijo del subdominio ftp como smtp funcionan correctamente con ```dig```, resolviendo registros de tipo A. En la ventana de la izquierda se intenta crear el subdominio prueba2, con ```sudo ./crear_subdominio.py prueba2``` y eviendetemente, indica que el subdominio prueba2 ya está creado. En cambio, si probamos con ```sudo ./crear_subdominio.py prueba3``` se crea perfectamente.
 
 <img width="1479" height="934" alt="image" src="https://github.com/user-attachments/assets/1dddc75a-7a8f-4013-9a40-9e4e4850262b" />
 
