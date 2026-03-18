@@ -128,6 +128,10 @@ En este caso, la mayoría de explicaciones están en la imagen, no obstante, vem
 
 <img width="1629" height="790" alt="image" src="https://github.com/user-attachments/assets/6cf3fad4-2746-4552-9b36-83296d76fdd0" />
 
+Por último, en base a la comprobación, realizamos unas acciones u otras, por ejemplo, si no existe, añadimos dentro del fichero de zona principal el subdominio con la directiva INCLUDE, de lo contrario, lo indicamos. Como paso final, debemos llamar a la función pasando el argumento 1 como parámetro de la función usando ```crear_subdominio(sys.argv[1])```.
+
+<img width="1283" height="336" alt="image" src="https://github.com/user-attachments/assets/b69cd307-33a5-4619-ab1b-76e56e741615" />
+
 
 #### Comprobación
 
