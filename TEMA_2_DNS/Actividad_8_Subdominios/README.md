@@ -110,7 +110,7 @@ Si comprobamos a insertar el mismo dominio nos indica que este ya existe, por lo
 
 ### 4.1 Script en Python
 
-[Acceso a Script Python](TEMA_2_DNS/Actividad_8_Subdominios/crear_subdominio.py) 
+[Acceso a Script Python](./crear_subdominio.py) 
 
 #### Creación
 
