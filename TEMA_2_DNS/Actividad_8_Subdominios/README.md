@@ -110,18 +110,23 @@ Si comprobamos a insertar el mismo dominio nos indica que este ya existe, por lo
 
 #### Creación
 
-wasd
+Empezamos actualizando los paquetes e instalando python3 junto a su librería, con el comando ```sudo apt update && sudo apt install python3 python3-pip -y```.
 
 <img width="1639" height="279" alt="image" src="https://github.com/user-attachments/assets/7d0d7a0b-c44e-40dc-bfe0-4a67932d5457" />
 
-wasd
+Creamos dentro de la carpeta scripts el archivo python con ```echo > crear_subdominio.py``` y asignamos los permisos adecuados con ```sudo chmod 755 crear_subdominio.py```, luego lo abrimos con el comando ```nano```.
 
 <img width="1634" height="343" alt="image" src="https://github.com/user-attachments/assets/c6bd58c1-3ff1-4312-b76f-135c3be6c8e6" />
 
 #### Explicación
 
-wasd
+Comenzamos importando las librerías sys y os, que nos permitirán trabajar con servicios y ficheros del sistema. Realizamos comprobación indicando que el número de argumentos pasados al ejecutar el script sea de 2, indicando como sea usa. Por último definimos variables fijas, muy similar al script en bash. 
 
+<img width="1624" height="435" alt="image" src="https://github.com/user-attachments/assets/d458eace-6464-4d71-b16b-c26f836c0e2e" />
+
+En este caso, la mayoría de explicaciones están en la imagen, no obstante, vemos que definimos la función con el subdominio que recoge el valor de la inserción, creamos registros y el archivo en base a estos, definimos una variable include y comprobamos si existe dentro del fichero de zona.
+
+<img width="1629" height="790" alt="image" src="https://github.com/user-attachments/assets/6cf3fad4-2746-4552-9b36-83296d76fdd0" />
 
 
 #### Comprobación
