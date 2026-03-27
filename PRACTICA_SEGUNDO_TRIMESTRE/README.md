@@ -188,11 +188,13 @@ Tras aplicar la configuración, reiniciamos el servicio con ```sudo systemctl re
 
 ### 2.7 Configuración del DNS BIND9
 
+#### Zona directa
+
 Esta configuración es importante y crítica, ya que el servicio DNS se encargará de alojar el sitio web principal (hosting2asir.intranet) y los subdominios (usuario1.hosting2asir.intranet, usuario2.hosting2asir.intranet, etc...). Empezamos editando el archivo de configuración local con ```sudo nano /etc/bind/named.conf.local``` donde añadiremos las líneas ```zone "hosting2asir.intranet"``` como tipo de zona maestra e indicamos el archivo de configuración de esta zona ```file /etc/bind/db.hosting2asir.intranet```.
 
 <img width="779" height="226" alt="image" src="https://github.com/user-attachments/assets/8e19ed03-dbd1-412f-8e10-a1d6b31fccf0" />
 
-En base al archivo original "db.local", haremos una copia para solo modificarlo con la zona que queremos y así evitar tener que escribir todo el texto, para ello usamos el comando ```sudo ctp /etc/bind/db.local /etc/bind/db.hosting2asir.intranet```.
+En base al archivo original "db.local", haremos una copia para solo modificarlo con la zona que queremos y así evitar tener que escribir todo el texto, para ello usamos el comando ```sudo cp /etc/bind/db.local /etc/bind/db.hosting2asir.intranet```.
 
 <img width="683" height="31" alt="image" src="https://github.com/user-attachments/assets/8809f0a7-4184-48cf-a50b-c73029a76131" />
 
@@ -208,15 +210,9 @@ Para comprobar y verificar que el servidor DNS funciona, vamos a usar múltiples
 
 <img width="760" height="589" alt="image" src="https://github.com/user-attachments/assets/1a9cc1a2-4ff2-4462-826c-afd18489404e" />
 
-### 2.8 Configuración de soporte Python (WSGI)
+#### Zona inversa
 
-En realidad, aquí vamos a crear un VirtualHost "temporal" para apuntar a las aplicaciones Python del usuario, para ello usaremos el comando ```sudo nano /etc/apache2/sites-avaliable/py.conf```.
-<img width="549" height="23" alt="image" src="https://github.com/user-attachments/assets/5635768c-5f0a-4c76-9eb9-414b70cf00dd" />
+wasd
 
-Insertamos toda la estructura de un VirtualHost en Apache junto a la directiva ```WSGIScriptAlias``` apuntando hacia /var/www/py/app.wsgi.
+<img width="1271" height="307" alt="image" src="https://github.com/user-attachments/assets/9435d123-8e1a-4978-9cf3-70eabd59d5ff" />
 
-<img width="810" height="157" alt="image" src="https://github.com/user-attachments/assets/57a8e486-51ac-4ba3-8c63-95e41e8abb5b" />
-
-Por último, habilitamos el sitio "py" en nuestro Apache con el comando ```sudo a2ensite py```.
-
-<img width="870" height="376" alt="image" src="https://github.com/user-attachments/assets/0f564fa9-974e-463f-bd3e-d35811b8dde0" />
