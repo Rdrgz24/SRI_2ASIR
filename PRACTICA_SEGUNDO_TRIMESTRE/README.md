@@ -212,7 +212,7 @@ Para comprobar y verificar que el servidor DNS funciona, vamos a usar múltiples
 
 #### Zona inversa
 
-wasd
+Editamos el archivo de configuración local con ```sudo nano /etc/bind/named.conf.local``` donde añadiremos las líneas ```zone "195.168.192.in-addr.arpa"``` como tipo de zona maestra e indicamos el archivo de configuración de esta zona file /etc/bind/db.hosting2asir.intranet.
 
 <img width="1271" height="307" alt="image" src="https://github.com/user-attachments/assets/9435d123-8e1a-4978-9cf3-70eabd59d5ff" />
 
