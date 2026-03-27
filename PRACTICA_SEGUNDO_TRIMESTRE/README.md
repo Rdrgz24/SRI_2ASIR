@@ -212,14 +212,16 @@ Para comprobar y verificar que el servidor DNS funciona, vamos a usar múltiples
 
 #### Zona inversa
 
-Editamos el archivo de configuración local con ```sudo nano /etc/bind/named.conf.local``` donde añadiremos las líneas ```zone "195.168.192.in-addr.arpa"``` como tipo de zona maestra e indicamos el archivo de configuración de esta zona file /etc/bind/db.hosting2asir.intranet.
+Editamos el archivo de configuración local con ```sudo nano /etc/bind/named.conf.local``` donde añadiremos las líneas ```zone "195.168.192.in-addr.arpa"``` como tipo de zona maestra e indicamos el archivo de configuración de esta zona ```file /etc/bind/db.192.168.195```.
 
 <img width="1271" height="307" alt="image" src="https://github.com/user-attachments/assets/9435d123-8e1a-4978-9cf3-70eabd59d5ff" />
 
-wasd
+Creamos el archivo de configuración de zona inversa con el comando ```sudo nano /etc/bind/db.192.168.195``` y añadimos el contenido correspondiente, en este caso registros de tipo NS y PTR, con SOA indicamos la autoridad.
 
 <img width="1277" height="231" alt="image" src="https://github.com/user-attachments/assets/6cc2302a-41ba-477c-b542-5d1144b5a868" />
 
-wasd
+Comprobamos la sintaxis del archivo de zona principal con ```sudo named-checkconf```, el archivo de la zona inversa con ```sudo named-checkzone 192.168.195 /etc/bind/db.192.168.195``` nos da OK y restablecemos el servicio BIND9 con el comando ```sudo systemctl restart bind9```. Cuando comprobamos el estado, todo está correcto, servicio ejecutándose.
 
 <img width="1280" height="479" alt="image" src="https://github.com/user-attachments/assets/de1fda66-58b2-4ed5-aef2-428a6b12ba36" />
+
+
