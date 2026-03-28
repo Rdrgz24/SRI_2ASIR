@@ -168,7 +168,7 @@ Posteriormente, edité las variables del archivo de configuración, de tal maner
 
 <img width="1209" height="505" alt="image" src="https://github.com/user-attachments/assets/07cd1f75-098d-4713-a3e1-417c5f58dc32" />
 
-Creamos la ruta para los chroot como técnica de seguridad, donde cambiamos el directorio raíz (/) para un usuario específico. Esto, enjaula al cliente en su propia carpeta de hosting, impidiéndole navegar por el resto del servidor. Garantizando que cada usuario no pueda ver ni modificar archivos de otros o del sistema operativo.
+Creamos la ruta para los chroot como técnica de seguridad, donde cambiamos el directorio raíz (/) para un usuario específico. Garantizando que cada usuario no pueda modificar archivos de otros.
 
 <img width="1216" height="104" alt="image" src="https://github.com/user-attachments/assets/56ba287c-6923-4303-bbb0-b029e8755e6c" />
 
@@ -271,5 +271,33 @@ wasd MySQL
 
 <img width="1213" height="671" alt="image" src="https://github.com/user-attachments/assets/22b5777f-64cf-48e5-93e8-9b90a0757f85" />
 
+wasd SFTP y SSH
+
+SSH
+<img width="1201" height="703" alt="image" src="https://github.com/user-attachments/assets/6c897a37-a390-4004-b99b-2e43aa278089" />
+
 wasd
 
+<img width="1203" height="280" alt="image" src="https://github.com/user-attachments/assets/6ce516bc-5172-4ad4-a53f-e1597e57278e" />
+
+SFTP
+
+Descargamos imagen de prueba:
+
+<img width="564" height="196" alt="image" src="https://github.com/user-attachments/assets/32837b86-6408-4f19-9546-3a8f541db0c3" />
+
+wasd
+
+<img width="1213" height="401" alt="image" src="https://github.com/user-attachments/assets/366173bf-8067-4073-9a2e-564694ceda01" />
+
+wasd
+
+<img width="888" height="544" alt="image" src="https://github.com/user-attachments/assets/f70a3e76-fb78-4995-9943-53c9ad080ed9" />
+
+wasd
+
+<img width="407" height="299" alt="image" src="https://github.com/user-attachments/assets/5ff690e5-f855-4ada-adc3-87bbd136a8e4" />
+
+wasd
+
+<img width="890" height="542" alt="image" src="https://github.com/user-attachments/assets/157180bb-2e9c-43dd-be01-4d52989045d7" />
