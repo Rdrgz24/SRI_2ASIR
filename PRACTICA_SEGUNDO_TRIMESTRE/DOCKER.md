@@ -50,3 +50,10 @@ Docker-compose.yml
 
 setup_docker.sh
 
+<img width="1201" height="398" alt="image" src="https://github.com/user-attachments/assets/a26b6824-0507-4281-a26e-ace94cbb2cdf" />
+
+wasd
+
+wasd
+
+<img width="1217" height="652" alt="image" src="https://github.com/user-attachments/assets/d266349c-dde5-43d6-8a57-d21e8dcfb453" />
