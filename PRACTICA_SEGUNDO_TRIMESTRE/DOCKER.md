@@ -12,7 +12,7 @@ En base a lo que pide la actividad, he pensado que podría montar la siguiente i
  
  · Server Web con puerto 8080 en Host y 80 en Contenedor Docker.
 
-Así no "pisamos" los puertos que usa nuestro script en bash con los que usará el script que ejecute el compose de docker.
+Así no "pisamos" los puertos que usa nuestro script en bash, con respecto a los que usará el script que ejecute el compose de docker.
 
 Tendré toda la infra guardada dentro del directorio /home/rafael del servidor, en una carpeta llamada "parte_docker", donde dentro contendrá:
 
