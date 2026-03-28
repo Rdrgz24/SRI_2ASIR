@@ -1,4 +1,4 @@
-<img width="683" height="31" alt="image" src="https://github.com/user-attachments/assets/2409ecf3-910b-4444-9993-6de30083581d" /># Práctica Segundo Trimestre - Servidor de alojamiento web
+# Práctica Segundo Trimestre - Servidor de alojamiento web
 
 ## 0. Pasos previos
 
