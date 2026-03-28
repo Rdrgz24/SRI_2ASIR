@@ -48,3 +48,5 @@ Docker-compose.yml
 
 <img width="1202" height="626" alt="image" src="https://github.com/user-attachments/assets/238cc44f-d8cb-4f57-b001-08fcf990c480" />
 
+setup_docker.sh
+
