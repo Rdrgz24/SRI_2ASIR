@@ -240,15 +240,17 @@ Editamos el script con ```nano crear_hosting.sh``` sin "sudo", porque lo hemos c
 
 <img width="1280" height="61" alt="image" src="https://github.com/user-attachments/assets/47f903ac-9296-418a-a736-0e69b41719c9" />
 
-wasd
+### 3.2 Comprobaciones de funcionamiento del script
+
+#### Ejecutando
 
 <img width="1211" height="195" alt="image" src="https://github.com/user-attachments/assets/537cd9dd-b885-4be0-83fa-2284f58de016" />
 
-wasd DNS
+#### DNS
 
 <img width="1210" height="332" alt="image" src="https://github.com/user-attachments/assets/a97fddf6-f614-4c6a-9a78-2e9e3c64f865" />
 
-wasd
+#### Web y TLS
 
 <img width="1213" height="268" alt="image" src="https://github.com/user-attachments/assets/8ac17492-bf24-4aa9-99df-d0026dfd98b0" />
 
@@ -256,31 +258,35 @@ wasd
 
 <img width="715" height="583" alt="image" src="https://github.com/user-attachments/assets/318c7e55-4533-40e0-847b-dffe026d19bf" />
 
-
-
-wasd
+#### Python WSGI
 
 <img width="1216" height="155" alt="image" src="https://github.com/user-attachments/assets/f5775fbc-9399-44cd-96ff-c2a8ee08142b" />
 
-
-wasd
+#### PHP
 
 <img width="1213" height="767" alt="image" src="https://github.com/user-attachments/assets/c185b27a-819e-4eb2-96a0-17898c2883c1" />
 
-wasd MySQL
+#### MySQL
 
 <img width="1213" height="671" alt="image" src="https://github.com/user-attachments/assets/22b5777f-64cf-48e5-93e8-9b90a0757f85" />
 
-wasd SFTP y SSH
+#### PHPMyAdmin
 
-SSH
+<img width="1216" height="586" alt="image" src="https://github.com/user-attachments/assets/c50465cf-b331-4e55-8726-0f31c7e95277" />
+
+Tras inicio de sesión: 
+
+<img width="1213" height="769" alt="image" src="https://github.com/user-attachments/assets/0a16e9d3-224a-49ab-aac5-cbfebb5c40a1" />
+
+#### SSH
+
 <img width="1201" height="703" alt="image" src="https://github.com/user-attachments/assets/6c897a37-a390-4004-b99b-2e43aa278089" />
 
 wasd
 
 <img width="1203" height="280" alt="image" src="https://github.com/user-attachments/assets/6ce516bc-5172-4ad4-a53f-e1597e57278e" />
 
-SFTP
+#### SFTP
 
 Descargamos imagen de prueba:
 
@@ -301,3 +307,7 @@ wasd
 wasd
 
 <img width="890" height="542" alt="image" src="https://github.com/user-attachments/assets/157180bb-2e9c-43dd-be01-4d52989045d7" />
+
+wasd
+
+<img width="889" height="547" alt="image" src="https://github.com/user-attachments/assets/d7d70897-37e5-43e0-96dc-9b4cb6e58b3b" />
