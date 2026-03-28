@@ -224,4 +224,14 @@ Comprobamos la sintaxis del archivo de zona principal con ```sudo named-checkcon
 
 <img width="1280" height="479" alt="image" src="https://github.com/user-attachments/assets/de1fda66-58b2-4ed5-aef2-428a6b12ba36" />
 
+## 3. Creación, configuración y uso del script
 
+### 3.1 Creación del script
+
+wasd
+
+<img width="1278" height="231" alt="image" src="https://github.com/user-attachments/assets/80912d7a-9ddd-4c6e-a918-a65bb0932196" />
+
+wasd
+
+<img width="1280" height="61" alt="image" src="https://github.com/user-attachments/assets/47f903ac-9296-418a-a736-0e69b41719c9" />
