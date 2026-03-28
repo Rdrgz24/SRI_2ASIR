@@ -232,6 +232,6 @@ Creamos una carpeta llamada "script" con el comando ```mkdir script```, accedemo
 
 <img width="1278" height="231" alt="image" src="https://github.com/user-attachments/assets/80912d7a-9ddd-4c6e-a918-a65bb0932196" />
 
-Editamos el script con ```nano crear_hosting.sh``` sin "sudo", porque lo hemos creado como usuario "rafael", por lo que no son necesarios permisos de super usuario.
+Editamos el script con ```nano crear_hosting.sh``` sin "sudo", porque lo hemos creado como usuario "rafael", por lo que no son necesarios permisos de super usuario. Dentro, añadimos la línea ```#!/bin/bash```.
 
 <img width="1280" height="61" alt="image" src="https://github.com/user-attachments/assets/47f903ac-9296-418a-a736-0e69b41719c9" />
