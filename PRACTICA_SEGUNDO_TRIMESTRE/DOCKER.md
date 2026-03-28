@@ -14,7 +14,7 @@ En base a lo que pide la actividad, he pensado que podría montar la siguiente i
 
 Así no "pisamos" los puertos que usa nuestro script en bash con los que usará el script que ejecute el compose de docker.
 
-Tendremos toda la infra guardada dentro del directorio /home/rafael del servidor, en una carpeta llamada "parte_docker", donde dentro contendrá:
+Tendré toda la infra guardada dentro del directorio /home/rafael del servidor, en una carpeta llamada "parte_docker", donde dentro contendrá:
 
  · Directorio: bind_config
  
@@ -25,4 +25,16 @@ Tendremos toda la infra guardada dentro del directorio /home/rafael del servidor
  · Archivo: docker-compose.yml
 
 # 2. Implementación
+
+Actualizamos los repositorios apt e isntalamos docker junto a docker-compose con el comando ```sudo apt update && sudo apt install docker.io docker-compose -y```
+
+<img width="1212" height="385" alt="image" src="https://github.com/user-attachments/assets/5920c5c0-5400-45fa-b252-ebf879633f6f" />
+
+Habilitamos el servicio de Docker con ```sudo systemctl enable docker``` para que se inicie con el arranque del servidor, lo iniciamos con ```sudo systemctl start docker``` y comprobamos su estado actual con ```sudo systemctl status docker```.
+
+<img width="1208" height="401" alt="image" src="https://github.com/user-attachments/assets/215a7512-99b3-4a12-bfb9-206694c79da9" />
+
+Añadimos nuestro usuario al grupo docker con ```sudo usermod -aG docker rafael```, creamos las carpetas dentro de "/home/rafael" con el comando ```mkdir parte_docker``` y ```mkdir bind_config bind_zones web_data```, por último creamos el archivo "docker-compose.yml" vacío con el comando ```echo "" > docker-compose.yml```.
+
+<img width="1207" height="320" alt="image" src="https://github.com/user-attachments/assets/51425b8d-7b53-403b-840b-ae5dc888e094" />
 
