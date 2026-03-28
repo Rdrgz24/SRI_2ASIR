@@ -308,48 +308,52 @@ Tras iniciar sesión, vemos que el usuario "probando" tiene solo acceso a su BD 
 
 <img width="1213" height="769" alt="image" src="https://github.com/user-attachments/assets/0a16e9d3-224a-49ab-aac5-cbfebb5c40a1" />
 
-Creamos la tabla con:
+Creamos la tabla "clientes" para verificar que podemos hacer operaciones de inserción, con 3 columnas, por ejemplo.
 
 <img width="1211" height="368" alt="image" src="https://github.com/user-attachments/assets/49526bb9-738c-474c-9e85-5c73f4dcf78c" />
 
-wasd
+Creamos la primera columna "id" INT, segunda "Nombre" VARCHAR 45, tercera "Apellidos" VARCHAR 45, pulsamos sobre "Save".
 
 <img width="1210" height="746" alt="image" src="https://github.com/user-attachments/assets/61afcbc0-debe-4f03-8734-0653ba6edd10" />
 
-wasd
+Tabla con sus campos correspondientes creada, podemos realizar operaciones de inserción, todo OK.
 
 <img width="1211" height="383" alt="image" src="https://github.com/user-attachments/assets/28ef6acc-6abc-4214-bacc-aa2b633ba7b2" />
 
 #### SSH
 
+Nos conectamos por SSH desde el equipo cliente con el comando ```ssh probando@hosting2asir.intranet```, también valdría con ```ssh probando@probando.hosting2asir.intranet```, insertamos la contraseña y vemos el contenido con ```ls -l``` de nuestro directorio "home", que pertenece en el servidor a "/var/www/html/probando/". Comprobamos con ```whoami``` el usuario con el que estamos conectados.
+
 <img width="1201" height="703" alt="image" src="https://github.com/user-attachments/assets/6c897a37-a390-4004-b99b-2e43aa278089" />
 
-wasd
+Vemos que dentro de nuestro directorio "home" tenemos todos los directorios y archivos creados por el script, para ello hicimos uso del comando ```ls -l``` y ```cd```. 
 
 <img width="1203" height="280" alt="image" src="https://github.com/user-attachments/assets/6ce516bc-5172-4ad4-a53f-e1597e57278e" />
 
 #### SFTP
 
-Descargamos imagen de prueba:
+Vamos a hacer una dinámica para probar lo que sería un entorno real, vamos a Internet y nos descargamos cualquier imagen:
 
 <img width="564" height="196" alt="image" src="https://github.com/user-attachments/assets/32837b86-6408-4f19-9546-3a8f541db0c3" />
 
-wasd
+Nos conectamos por sftp hacia el hosting desde el cliente con el comando ```sftp probando@probando.hosting2asir.intranet```, insertamos la contraseña correcta (por favor) y dentro, podemos ver que tenemos los mismo directorios que en "home", creamos la carpeta "recursos" con ```mkdir recursos```, accedemos a esta con ```cd``` y subimos la imagen con "put", utilidad de ftp, ```put /home/rafael/Downloads/imagen_prueba.webp```, comprobamos que se ha subido correctamente con ```ls -l```.
 
 <img width="1213" height="401" alt="image" src="https://github.com/user-attachments/assets/366173bf-8067-4073-9a2e-564694ceda01" />
 
-wasd
+Una forma de ver todo esto más gráfico, sería desde el explorador "Files" de Ubuntu, donde dentro de "Other Locations" podemos añadir ubicaciones por FTP, SFTP, SMB, NFS, etc... Para ello insertamos la línea "sftp://probando@probando.hosting2asir.intranet".  
 
-<img width="888" height="544" alt="image" src="https://github.com/user-attachments/assets/f70a3e76-fb78-4995-9943-53c9ad080ed9" />
+<img width="1101" height="546" alt="image" src="https://github.com/user-attachments/assets/570af61e-79da-420c-aa0a-ba4350428a73" />
 
-wasd
+Insertamos las credenciales de acceso, mismas que anteriormente: usuario: probando, contraseña: probando y pulsamos sobre "Unlock".
 
-<img width="407" height="299" alt="image" src="https://github.com/user-attachments/assets/5ff690e5-f855-4ada-adc3-87bbd136a8e4" />
+<img width="412" height="299" alt="image" src="https://github.com/user-attachments/assets/c9409a1f-6169-40fe-8f39-53fdd5ff53e9" />
 
-wasd
+Dentro, podemos ver toda la estructura de directorios que hemos visualizado anteriormente con ssh y sftp por consola, pero de manera gráfica. Accedemos a "recursos" para comprobar que está aquí la foto descargada en local.
 
-<img width="890" height="542" alt="image" src="https://github.com/user-attachments/assets/157180bb-2e9c-43dd-be01-4d52989045d7" />
+<img width="1150" height="541" alt="image" src="https://github.com/user-attachments/assets/b12b9363-8e6c-45a7-b0fa-18a399ff27d5" />
 
-wasd
+Vemos como, la foto que descargamos en nuestra máquina cliente, se ha mandado exitosamente con sftp por terminal usando "put" hacia nuestro servidor de alojamiento.
 
-<img width="889" height="547" alt="image" src="https://github.com/user-attachments/assets/d7d70897-37e5-43e0-96dc-9b4cb6e58b3b" />
+<img width="1098" height="552" alt="image" src="https://github.com/user-attachments/assets/6c94d1bc-58f8-4e29-9121-605b44c34972" />
+
+ACCESO AL APARTADO OPCIONAL -> DOCKER
