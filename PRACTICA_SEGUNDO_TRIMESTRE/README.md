@@ -252,6 +252,7 @@ wasd
 
 <img width="1205" height="628" alt="image" src="https://github.com/user-attachments/assets/19f24c0a-a9a9-4aee-9546-64b1d57c814f" />
 
+Acceso al script -> [Clic aquí](./crear_hosting.sh)
 
 ### 3.2 Comprobaciones de funcionamiento del script
 
