@@ -240,6 +240,8 @@ Editamos el script con ```nano crear_hosting.sh``` sin "sudo", porque lo hemos c
 
 <img width="1280" height="61" alt="image" src="https://github.com/user-attachments/assets/47f903ac-9296-418a-a736-0e69b41719c9" />
 
+Acceso al script ya creado -> [Clic aquí](./crear_hosting.sh)
+
 A partir de aquí cambié de máquina y me conecté con el cliente por ssh al servidor con el comando ```ssh rafael@192.168.195.5```.
 
 <img width="1207" height="684" alt="image" src="https://github.com/user-attachments/assets/1a1d6f98-a6a0-44a0-ac34-5bfe8fbe43a4" />
@@ -252,7 +254,7 @@ wasd
 
 <img width="1205" height="628" alt="image" src="https://github.com/user-attachments/assets/19f24c0a-a9a9-4aee-9546-64b1d57c814f" />
 
-Acceso al script -> [Clic aquí](./crear_hosting.sh)
+
 
 ### 3.2 Comprobaciones de funcionamiento del script
 
