@@ -166,7 +166,11 @@ Una vez que hemos hecho la copia, podemos trabajar sobre el archivo original, vo
 
 Posteriormente, edité las variables del archivo de configuración, de tal manera que el servicio usara TLS con los pre firmados que asigna Ubuntu, quitamos el acceso anónimo, permitimos el acceso local, la estrictura e indicamos el tipo de certificado TLS a usar.
 
-<img width="744" height="306" alt="image" src="https://github.com/user-attachments/assets/90458bab-af59-4bca-bfea-fb8dd4f6b199" />
+<img width="1209" height="505" alt="image" src="https://github.com/user-attachments/assets/07cd1f75-098d-4713-a3e1-417c5f58dc32" />
+
+Creamos la ruta para los chroot como técnica de seguridad, donde cambiamos el directorio raíz (/) para un usuario específico. Esto, enjaula al cliente en su propia carpeta de hosting, impidiéndole navegar por el resto del servidor. Garantizando que cada usuario no pueda ver ni modificar archivos de otros o del sistema operativo.
+
+<img width="1216" height="104" alt="image" src="https://github.com/user-attachments/assets/56ba287c-6923-4303-bbb0-b029e8755e6c" />
 
 Tras editar el archivo de configuración, debemos reiniciar el servicio con ```sudo systemctl restart vsftpd.service``` y comprobar el estado con ```sudo systemctl status vsftpd.service```.
 
