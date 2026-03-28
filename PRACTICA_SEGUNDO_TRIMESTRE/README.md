@@ -240,49 +240,61 @@ Editamos el script con ```nano crear_hosting.sh``` sin "sudo", porque lo hemos c
 
 <img width="1280" height="61" alt="image" src="https://github.com/user-attachments/assets/47f903ac-9296-418a-a736-0e69b41719c9" />
 
-##### ACCESO AL SCRIPT YA CREADO -> [CLICK AQUÍ](./crear_hosting.sh)
+##### ACCESO AL SCRIPT YA CREADO Y EXPLICADO CON COMENTARIOS-> [CLICK AQUÍ](./crear_hosting.sh)
 
-A partir de aquí cambié de máquina y me conecté con el cliente por ssh al servidor con el comando ```ssh rafael@192.168.195.5```.
+A partir de aquí cambié de máquina y me conecté con el cliente por ssh al servidor con el comando ```ssh rafael@192.168.195.5```, ya que me resultaba más sencillo para escribir el script.
+
+Primera parte del script, donde comprobamos la sintaxis, definimos variables dinámicas y fijas, creamos el usuario para el hosting con su directorio home, asignamos contraseña y creamos las carpetas pública y de logs.
 
 <img width="1207" height="684" alt="image" src="https://github.com/user-attachments/assets/1a1d6f98-a6a0-44a0-ac34-5bfe8fbe43a4" />
 
-wasd
+Segunda parte del script, donde creamos los tres ficheros (HTML, PHP y Python) para el usuario, asignamos propietario y permisos, configuramos el DNS y creamos el VirtualHost para el puerto 80 (solo para redirigir al 443). 
 
 <img width="1206" height="689" alt="image" src="https://github.com/user-attachments/assets/8af688cd-3824-42d1-963e-e1d3f80f6199" />
 
-wasd
+Tercera parte del script, donde creamos el VirtualHost para el puerto 443, asignando los certificados SSL predeterminados (snakeoil) con clave pública y privada, añadimos el WSGI Script de Python y habilitamos la sobreescritura y acceso predeterminado. Luego, se habilita el módulo rewrite, el sitio del usuario recientemente configurado y se reinicia el servicio de Apache. Por último creamos la base de datos, el usuario y brindamos permisos totales sobre dicha base de datos (esto dará acceso a PHPMyAdmin). Tras terminar, lo indicamos por pantalla. (Se muestra la password de acceso a la DB porque es local en la VM dentro del servidor de Proxmox).
 
 <img width="1205" height="628" alt="image" src="https://github.com/user-attachments/assets/19f24c0a-a9a9-4aee-9546-64b1d57c814f" />
-
-
 
 ### 3.2 Comprobaciones de funcionamiento del script
 
 #### Ejecutando
 
+Ejecutamos el script con el comando ```sudo bash crear_hosting.sh probando probando```, donde ejecutamos el script y pasamos como primer parámetro el usuario y segundo parámetro la contraseña. Vemos que todos los "echo" que hemos insertado en el comando se muestran y además muestra la URL del subdominio para acceder directamente desde el terminal hacia el navegador.
+
 <img width="1211" height="195" alt="image" src="https://github.com/user-attachments/assets/537cd9dd-b885-4be0-83fa-2284f58de016" />
 
 #### DNS
+
+Una vez ejecutado el script y creado el subdominio, probamos que la resolución DNS funcione correctamente con el comando ```dig probando.hosting2asir.intranet```, vemos que resuelve correctamente con registros IN A.
 
 <img width="1210" height="332" alt="image" src="https://github.com/user-attachments/assets/a97fddf6-f614-4c6a-9a78-2e9e3c64f865" />
 
 #### Web y TLS
 
+Accedemos a la URL del subdominio creado desde el navegador, en este caso "https://probando.hosting2asir.intranet" y vemos el encabezado que crea el script automáticamente.
+
 <img width="1213" height="268" alt="image" src="https://github.com/user-attachments/assets/8ac17492-bf24-4aa9-99df-d0026dfd98b0" />
 
-wasd
+Además, comprobamos el certificado SSL, que tal y como podemos ver, aún así muestra que no es seguro porque no está validad por agencias certificadoras, está directamente certificado por el servidor. Pero vemos que muestra que es una conexión encriptada con TLS_AES_128_GCM (TLS 1.3).
 
 <img width="715" height="583" alt="image" src="https://github.com/user-attachments/assets/318c7e55-4533-40e0-847b-dffe026d19bf" />
 
 #### Python WSGI
 
-<img width="1216" height="155" alt="image" src="https://github.com/user-attachments/assets/f5775fbc-9399-44cd-96ff-c2a8ee08142b" />
+Accedemos a la aplicación de Python, que tal y como acordamos en el script sería la dirección del subdominio /py, que aloja el contenido de la aplicación app.wsgi, dentro del directorio del usuario.
+
+<img width="1216" height="766" alt="image" src="https://github.com/user-attachments/assets/3a4ba44c-d31e-4145-8ffb-1f5e28e24805" />
 
 #### PHP
+
+Si accedemos a la dirección del subdominio al recurso /info.php nos muestra toda la información del servidor PHP que está alojando el servidor tras ejecutar el script del subdominio en el hosting.
 
 <img width="1213" height="767" alt="image" src="https://github.com/user-attachments/assets/c185b27a-819e-4eb2-96a0-17898c2883c1" />
 
 #### MySQL
+
+Accedemos con nuestro usuario "rafael" y su correspondiente contraseña con ```mysql -u rafael -p```, comprobamos las bases de datos creadas hasta la fecha con el comando ```SHOW DATABASES;```, en este caso "probando_db" es la actual. Comprobamos con el comando ```SELECT user, host FROM mysql.user WHERE user='probando';``` que el usuario esté creado. Y por último, usando ```SHOW GRANTS FOR 'probando'@'localhost';``` vemos que los permisos corresponden a los asignados en el script.
 
 <img width="1213" height="671" alt="image" src="https://github.com/user-attachments/assets/22b5777f-64cf-48e5-93e8-9b90a0757f85" />
 
