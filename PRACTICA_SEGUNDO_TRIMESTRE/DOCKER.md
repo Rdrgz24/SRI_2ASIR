@@ -24,6 +24,8 @@ Tendré toda la infra guardada dentro del directorio /home/rafael del servidor, 
  
  · Archivo: docker-compose.yml
 
+ · Archivo: setup_docker.sh
+
 # 2. Implementación
 
 Actualizamos los repositorios apt e isntalamos docker junto a docker-compose con el comando ```sudo apt update && sudo apt install docker.io docker-compose -y```
@@ -37,4 +39,12 @@ Habilitamos el servicio de Docker con ```sudo systemctl enable docker``` para qu
 Añadimos nuestro usuario al grupo docker con ```sudo usermod -aG docker rafael```, creamos las carpetas dentro de "/home/rafael" con el comando ```mkdir parte_docker``` y ```mkdir bind_config bind_zones web_data```, por último creamos el archivo "docker-compose.yml" vacío con el comando ```echo "" > docker-compose.yml```.
 
 <img width="1207" height="320" alt="image" src="https://github.com/user-attachments/assets/51425b8d-7b53-403b-840b-ae5dc888e094" />
+
+Creamos el archivo "setup_docker.sh" con el comando ```echo "" > setup_docker.sh``` y asignamos permisos de ejecución con ```chmod +x setup_docker.sh```.
+
+<img width="1213" height="149" alt="image" src="https://github.com/user-attachments/assets/0e197f90-fe27-4383-b2ec-8441881060f8" />
+
+Docker-compose.yml
+
+<img width="1202" height="626" alt="image" src="https://github.com/user-attachments/assets/238cc44f-d8cb-4f57-b001-08fcf990c480" />
 
