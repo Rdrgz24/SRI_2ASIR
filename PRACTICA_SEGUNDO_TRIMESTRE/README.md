@@ -284,7 +284,7 @@ Además, comprobamos el certificado SSL, que tal y como podemos ver, aún así m
 
 Accedemos a la aplicación de Python, que tal y como acordamos en el script sería la dirección del subdominio /py, que aloja el contenido de la aplicación app.wsgi, dentro del directorio del usuario.
 
-<img width="1216" height="766" alt="image" src="https://github.com/user-attachments/assets/3a4ba44c-d31e-4145-8ffb-1f5e28e24805" />
+<img width="1213" height="766" alt="image" src="https://github.com/user-attachments/assets/4439a84a-2fab-47fc-b32c-2a524a26af0e" />
 
 #### PHP
 
@@ -300,11 +300,25 @@ Accedemos con nuestro usuario "rafael" y su correspondiente contraseña con ```m
 
 #### PHPMyAdmin
 
+Evidentemente, el usuario tendrá acceso para modificar la base de datos que se ha creado, para ello, tendrá acceso a PHPMyAdmin vía web. Accedemos a la URL "https://probando.hosting2asir.intranet/phpmyadmin" e insertamos las credenciales del script, tales como son usuario: "probando", contraseña "probando" y pulsamos sobre "Log in". 
+
 <img width="1216" height="586" alt="image" src="https://github.com/user-attachments/assets/c50465cf-b331-4e55-8726-0f31c7e95277" />
 
-Tras inicio de sesión: 
+Tras iniciar sesión, vemos que el usuario "probando" tiene solo acceso a su BD "probando_db", tal y como debe ser, aquí, tendría acceso a operaciones DML, DDL y DCL: 
 
 <img width="1213" height="769" alt="image" src="https://github.com/user-attachments/assets/0a16e9d3-224a-49ab-aac5-cbfebb5c40a1" />
+
+Creamos la tabla con:
+
+<img width="1211" height="368" alt="image" src="https://github.com/user-attachments/assets/49526bb9-738c-474c-9e85-5c73f4dcf78c" />
+
+wasd
+
+<img width="1210" height="746" alt="image" src="https://github.com/user-attachments/assets/61afcbc0-debe-4f03-8734-0653ba6edd10" />
+
+wasd
+
+<img width="1211" height="383" alt="image" src="https://github.com/user-attachments/assets/28ef6acc-6abc-4214-bacc-aa2b633ba7b2" />
 
 #### SSH
 
