@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  # Servidor DNS bind9
+  dns-extra:
+    image: ubuntu/bind9:latest
+    container_name: dns_docker_extra
+    ports:
+      - "5353:53/tcp"
+      - "5353:53/udp"
+    volumes:
+      - ./bind_config:/etc/bind/local
+      - ./bind_zones:/var/lib/bind
+    networks:
+      - red_docker
+
+  # Servidor MySQL (MariaDB)
+  mysql-extra:
+    image: mariadb:latest
+    container_name: mysql_docker_extra
+    environment:
+      MYSQL_ROOT_PASSWORD: 'PWD5QL5€CURe'
+      MYSQL_DATABASES: 'db_docker_extra'
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data_extra:/var/lib/mysql
+    networks:
+      - red_docker
+
+  web-extra:
+    image: php:8.2-apache
+    container_name: web_docker_extra
+    ports:
+      - "8080:80"
+    volumes:
+      - ./web_data:/var/www/html
+    networks:
+      - red_docker
+
+networks:
+   red_docker:
+    driver: bridge
+
+volumes:
+   db_data_extra:
