@@ -33,7 +33,13 @@ Ejercicio | Descripción
 ----------|------------
 [Práctica Instancia EC2 con WordPress](AMAZON_WEB_SERVICES_(AWS)/S5_Instalacion_Wordpress_en_Instancia_EC2/) | Configuración de VPC, Instancia EC2, EFS, RDS y grupos de seguridad - Uso de Apache, PHP, WordPress, MySQL...
 
-# Segundo Trimestre - Actividades
+# Segundo Trimestre - Actividades y Práctica
+
+## Práctica Segundo Trimestre - Servidor de Alojamiento (Hosting) automatizado
+Ejercicio | Descripción
+----------|------------
+[Documentación Práctica Segundo Trimestre](PRACTICA_SEGUNDO_TRIMESTRE/) | Uso de script en bash que automatiza la creación de un subdominio con su web, db, etc...
+[Documentación Docker Práctica Segundo Trimestre](PRACTICA_SEGUNDO_TRIMESTRE/DOCKER.md) | Parte opcional de la práctica, donde desplegamos con Docker varios contenedores, sus redes y volúmenes.
 
 ## Tema 2 - DNS
 Ejercicio | Descripción
