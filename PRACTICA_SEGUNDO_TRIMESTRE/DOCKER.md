@@ -46,14 +46,15 @@ Creamos el archivo "setup_docker.sh" con el comando ```echo "" > setup_docker.sh
 
 Docker-compose.yml
 
-<img width="1202" height="626" alt="image" src="https://github.com/user-attachments/assets/238cc44f-d8cb-4f57-b001-08fcf990c480" />
+<img width="1201" height="629" alt="image" src="https://github.com/user-attachments/assets/94d7ba4a-753e-4265-a803-6ed2a3efd212" />
 
 setup_docker.sh
 
-<img width="1201" height="398" alt="image" src="https://github.com/user-attachments/assets/a26b6824-0507-4281-a26e-ace94cbb2cdf" />
+<img width="1207" height="331" alt="image" src="https://github.com/user-attachments/assets/4f5acea4-9eda-43cd-8512-2120cb28b985" />
 
 wasd
 
 wasd
 
-<img width="1217" height="652" alt="image" src="https://github.com/user-attachments/assets/d266349c-dde5-43d6-8a57-d21e8dcfb453" />
+<img width="1214" height="666" alt="image" src="https://github.com/user-attachments/assets/f6fa2e52-c9c4-4022-9f1e-4f77c3061aa8" />
+
