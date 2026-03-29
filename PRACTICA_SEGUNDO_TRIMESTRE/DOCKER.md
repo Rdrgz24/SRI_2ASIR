@@ -46,9 +46,13 @@ Creamos el archivo "setup_docker.sh" con el comando ```echo "" > setup_docker.sh
 
 Docker-compose.yml
 
+##### ACCESO AL ARCHIVO DOCKER-COMPOSE EN FORMATO YAML-> [CLICK AQUÍ](./docker-compose.yml)
+
 <img width="1201" height="629" alt="image" src="https://github.com/user-attachments/assets/94d7ba4a-753e-4265-a803-6ed2a3efd212" />
 
 setup_docker.sh
+
+##### ACCESO AL ARCHIVO QUE DESPLIEGA DOCKER Y HACE PRUEBAS EN FORMATO BASH-> [CLICK AQUÍ](./setup_docker.sh)
 
 <img width="1207" height="331" alt="image" src="https://github.com/user-attachments/assets/4f5acea4-9eda-43cd-8512-2120cb28b985" />
 
