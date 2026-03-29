@@ -58,11 +58,13 @@ setup_docker.sh
 
 wasd
 
+# 3. Ejecución
+
 wasd
 
 <img width="1214" height="666" alt="image" src="https://github.com/user-attachments/assets/f6fa2e52-c9c4-4022-9f1e-4f77c3061aa8" />
 
-# 3. Comprobaciones
+# 4. Comprobación
 
 En máquina principal y puertos
 
