@@ -58,3 +58,8 @@ wasd
 
 <img width="1214" height="666" alt="image" src="https://github.com/user-attachments/assets/f6fa2e52-c9c4-4022-9f1e-4f77c3061aa8" />
 
+# 3. Comprobaciones
+
+MySQL (MariaDB)
+
+<img width="1208" height="714" alt="image" src="https://github.com/user-attachments/assets/0a3262a5-915d-49a6-883f-1bdf3ffe3fa3" />
