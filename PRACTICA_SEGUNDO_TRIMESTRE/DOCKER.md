@@ -44,19 +44,37 @@ Creamos el archivo "setup_docker.sh" con el comando ```echo "" > setup_docker.sh
 
 <img width="1213" height="149" alt="image" src="https://github.com/user-attachments/assets/0e197f90-fe27-4383-b2ec-8441881060f8" />
 
-Docker-compose.yml
+## docker-compose.yml
 
-##### ACCESO AL ARCHIVO DOCKER-COMPOSE EN FORMATO YAML-> [CLICK AQUÍ](./docker-compose.yml)
+Dentro del archivo [docker-compose.yml](./docker-compose.yml) desplegamos los servicios DNS Bind9, MySQL con MariaDB y Apache2 con módulo PHP 8.2. Dentro encontramos:
+
+ · DNS Bind9 usando imagen latest. Puerto 5353 en host y 53 en contenedor por TCP y UDP. Volúmenes de configuración y zonas dentro de ./bind_config y ./bind_zones, dentro de red_docker.
+ 
+ · MariaDB usando imagen latest. Puerto 3307 en host y 3306 en contenedor. Volumen nombrado dentro de db_data_extra: (gestionado internamente por Docker, los ":" indica los valores por defecto), dentro de red_docker.
+ 
+ · Apache2 con mod PHP8.2. Puerto 8080 en host y 80 en contenedor. Volúmenes de datos web dentro de ./web_data y perteneciente a red_docker.
+ 
+ · Declaramos la red_dockekr de tipo bridge (los container se ven entre ellos).
+ 
+ · Declaramos el volumen nombrado para las DB con valores por defecto.
 
 <img width="1201" height="629" alt="image" src="https://github.com/user-attachments/assets/94d7ba4a-753e-4265-a803-6ed2a3efd212" />
 
-setup_docker.sh
+##### ACCESO AL ARCHIVO DOCKER-COMPOSE EN FORMATO YAML-> [CLICK AQUÍ](./docker-compose.yml)
 
-##### ACCESO AL ARCHIVO QUE DESPLIEGA DOCKER Y HACE PRUEBAS EN FORMATO BASH-> [CLICK AQUÍ](./setup_docker.sh)
+## setup_docker.sh
+
+Dentro del archivo [setup_docker.sh](./setup_docker.sh) ejecutamos el docker-compose en modo "detached" y mostramos varios mensajes informativos por pantalla. Dentro de este se ejecutan varias pruebas:
+
+ · Tras desplegar los contenedores, se crea dentro del volumen de la web (./web_data) un index.html con un encabezado h1 que servirá de prueba para ver que el servidor web funcione.
+
+ · Esperamos 15 segundos a que la DB cargue toda la configuración y tenga los servicios iniciados, luego creamos una DB, dentro de esta una tabla, y dentro de la tabla, un valor con un mensaje. Para ello usamos la siguiente estructura: ```docker exec mysql_docker_extra mariadb -u root -p'PASSWORD' -e "SENTENCIA A EJECUTAR DENTRO DE MARIADB"```.
+
+ · Por último, ejecutamos un ```docker ps``` para comprobar el estado de los contenedores e informamos con varios mensajes del acceso a estos contenedores y servicios.
 
 <img width="1207" height="331" alt="image" src="https://github.com/user-attachments/assets/4f5acea4-9eda-43cd-8512-2120cb28b985" />
 
-wasd
+##### ACCESO AL ARCHIVO QUE DESPLIEGA DOCKER Y HACE PRUEBAS EN FORMATO BASH-> [CLICK AQUÍ](./setup_docker.sh)
 
 # 3. Ejecución
 
