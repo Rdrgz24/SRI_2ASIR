@@ -54,7 +54,7 @@ Dentro del archivo [docker-compose.yml](./docker-compose.yml) desplegamos los se
  
  · Apache2 con mod PHP8.2. Puerto 8080 en host y 80 en contenedor. Volúmenes de datos web dentro de ./web_data y perteneciente a red_docker.
  
- · Declaramos la red_dockekr de tipo bridge (los container se ven entre ellos).
+ · Declaramos la red_docker de tipo bridge (los container se ven entre ellos).
  
  · Declaramos el volumen nombrado para las DB con valores por defecto.
 
@@ -78,25 +78,31 @@ Dentro del archivo [setup_docker.sh](./setup_docker.sh) ejecutamos el docker-com
 
 # 3. Ejecución
 
-wasd
+Para ejecutar el script en bash, que como ya sabemos, desplegará todo los contenedores llamado al docker-compose, y además realizará varias pruebas, ejecutamos el comando ```sudo bash setup_docker.sh```. Tal y como podemos ver, primero crea la red_docekr, luego hace un "pull" de todas las imágenes de los contenedores, los despliega y crea los volúmenes. Tras finalizar el despliegue, crea la página de prueba para la web (index.html), muestra los contenedores desplegados ejecutando internamente ```docker ps``` y muestra la configuración del despliegue.
 
 <img width="1214" height="666" alt="image" src="https://github.com/user-attachments/assets/f6fa2e52-c9c4-4022-9f1e-4f77c3061aa8" />
 
 # 4. Comprobación
 
-En máquina principal y puertos
+#### Red docker y puertos host
+
+En el servidor, tal y como hemos ejecutado en el compose, deberíamos tener: Puertos 5353, 8080 y 3007 abiertos dentro del host, es decir, el servidor hosting de la práctica.
+
+Para comprobar esto, usamos el comando ```sudo docker network ls```, donde podemos ver que "red_docker" está correctamente creada. Luego vemos los puertos con el comando ```sudo ss -tulnp | grep puerto``` y vemos que tanto el 5353, como el 8080 y el 3007 están escuchando por el proceso "docker-proxy".
 
 <img width="1209" height="426" alt="image" src="https://github.com/user-attachments/assets/e1c77b01-997a-47a8-8d28-978aba58876c" />
 
-DNS
+#### Resolución DNS
+
+Para realizar estas pruebas DNS usamos el comando ```dig @127.0.0.1 -p 5353 google.com``` y ```dig @127.0.0.1 -p 5353 8.8.8.8``` donde estaríamos diciendo -> Resuelve la dirección DNS indicada, de manera local por el 127.0.0.1 con el puerto 5353 y dame la respuesta que te brinda este. Vemos que en cada uno de los casos resuelve los registros IN A e IN SOA. Todo OK.
 
 <img width="1207" height="680" alt="image" src="https://github.com/user-attachments/assets/6376077d-2311-4f6f-93c0-b0199490bb6a" />
 
-Web
+#### Contenedor Web
 
 <img width="1213" height="769" alt="image" src="https://github.com/user-attachments/assets/1025dedb-e7e1-4dd8-b9a2-c80357363b01" />
 
 
-MySQL (MariaDB)
+#### Contenedor MySQL
 
 <img width="1208" height="714" alt="image" src="https://github.com/user-attachments/assets/0a3262a5-915d-49a6-883f-1bdf3ffe3fa3" />
