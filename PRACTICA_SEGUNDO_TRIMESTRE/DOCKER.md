@@ -60,6 +60,19 @@ wasd
 
 # 3. Comprobaciones
 
+En máquina principal y puertos
+
+<img width="1209" height="426" alt="image" src="https://github.com/user-attachments/assets/e1c77b01-997a-47a8-8d28-978aba58876c" />
+
+DNS
+
+<img width="1207" height="680" alt="image" src="https://github.com/user-attachments/assets/6376077d-2311-4f6f-93c0-b0199490bb6a" />
+
+Web
+
+<img width="1213" height="769" alt="image" src="https://github.com/user-attachments/assets/1025dedb-e7e1-4dd8-b9a2-c80357363b01" />
+
+
 MySQL (MariaDB)
 
 <img width="1208" height="714" alt="image" src="https://github.com/user-attachments/assets/0a3262a5-915d-49a6-883f-1bdf3ffe3fa3" />
