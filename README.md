@@ -38,7 +38,7 @@ Ejercicio | Descripción
 ## Práctica Segundo Trimestre - Servidor de Alojamiento (Hosting) automatizado
 Ejercicio | Descripción
 ----------|------------
-[Documentación Práctica Segundo Trimestre](PRACTICA_SEGUNDO_TRIMESTRE/) | Uso de script en bash que automatiza la creación de un subdominio con su web, db, etc...
+[Documentación Práctica Segundo Trimestre](PRACTICA_SEGUNDO_TRIMESTRE/) | Servidor de hosting, preparación del entorno y uso de script en bash que automatiza la creación de un subdominio con su web, db, etc...
 [Documentación Docker Práctica Segundo Trimestre](PRACTICA_SEGUNDO_TRIMESTRE/DOCKER.md) | Parte opcional de la práctica, donde desplegamos con Docker varios contenedores, sus redes y volúmenes.
 
 ## Tema 2 - DNS
