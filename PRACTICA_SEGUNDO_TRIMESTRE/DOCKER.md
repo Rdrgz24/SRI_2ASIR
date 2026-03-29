@@ -88,7 +88,7 @@ Para ejecutar el script en bash, que como ya sabemos, desplegará todo los conte
 
 En el servidor, tal y como hemos ejecutado en el compose, deberíamos tener: Puertos 5353, 8080 y 3007 abiertos dentro del host, es decir, el servidor hosting de la práctica.
 
-Para comprobar esto, usamos el comando ```sudo docker network ls```, donde podemos ver que "red_docker" está correctamente creada. Luego vemos los puertos con el comando ```sudo ss -tulnp | grep puerto``` y vemos que tanto el 5353, como el 8080 y el 3007 están escuchando por el proceso "docker-proxy".
+Para comprobar esto, usamos el comando ```sudo docker network ls```, donde podemos ver que "red_docker" está correctamente creada. Luego vemos los puertos con el comando ```sudo ss -tulnp | grep puerto``` y vemos que tanto el 5353, como el 8080 y el 3007 están escuchando por el proceso "docker-proxy". Todo OK.
 
 <img width="1209" height="426" alt="image" src="https://github.com/user-attachments/assets/e1c77b01-997a-47a8-8d28-978aba58876c" />
 
@@ -100,9 +100,22 @@ Para realizar estas pruebas DNS usamos el comando ```dig @127.0.0.1 -p 5353 goog
 
 #### Contenedor Web
 
-<img width="1213" height="769" alt="image" src="https://github.com/user-attachments/assets/1025dedb-e7e1-4dd8-b9a2-c80357363b01" />
+Esta pruebas es simple, accedemos al servidor web por el navegador con la dirección IP por el puerto 8080, en este caso "192.168.195.5:8080", vemos que nos responde el servidor web con el contenido del index.html, status 200 OK desde el servidor Apache2/2.4.66. Todo OK.
 
+<img width="1213" height="769" alt="image" src="https://github.com/user-attachments/assets/1025dedb-e7e1-4dd8-b9a2-c80357363b01" />
 
 #### Contenedor MySQL
 
+Usamos el comando ```sudo docker exec -it mysql_docker_extra mariadb -u root -p```, introducimos la contraseña y verificamos:
+
+ · ```SHOW DATABASES;``` -> Vemos DB "db_docker_extra" creada.
+
+ · ```USE db_docker_extra;``` -> Seleccionamos la base de datos para hacer operaciones o consultas sobre esta.
+
+ · ```SHOW TABLES;``` -> Vemos todas las tablas creadas dentro de la DB, está la tabla "prueba".
+
+ · ```SELECT * FROM prueba;``` -> Visualizar todo el contenido dentro de la tabla "prueba", vemos que el campo 1 con valor "DOCKER FUNCIONANDO!" está añadido.
+
 <img width="1208" height="714" alt="image" src="https://github.com/user-attachments/assets/0a3262a5-915d-49a6-883f-1bdf3ffe3fa3" />
+
+Con esto podemos verificar que se han creado todos los contenedores y nuestro script en bash ha realizado todas las pruebas correctamente.
