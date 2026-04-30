@@ -29,4 +29,5 @@ Y no, los datos no pertenecen al contenedor, están fuera de este, simplemente q
 Tenemos dos tipos de volúmenes (esto es importante diferenciar):
  
  · Volúmenes nombrados: Los gestiona docker y deciden dónde almacenarse físicamente, sin definición previa.
+ 
  · Bind mounts: Usan una carpeta específica del sistema, y nosotros controlamos exactamente la ruta donde se guarda (lo más recomendable porque tenemos más control).
