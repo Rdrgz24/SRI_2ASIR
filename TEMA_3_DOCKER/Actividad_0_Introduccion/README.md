@@ -2,7 +2,7 @@
 
 ## Objetivos de la actividad
 
-En general, familiarizarse con Docker y tener conocimiento, como mínimo, los siguientes conceptos:
+En general, familiarizarse con Docker y tener en conocimiento, como mínimo, los siguientes conceptos:
 
 ### 1. Conceptos básicos sobre Docker
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
