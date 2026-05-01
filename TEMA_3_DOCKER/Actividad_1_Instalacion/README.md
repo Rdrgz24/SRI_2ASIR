@@ -8,6 +8,8 @@
 
 Para instalar docker, usaré la documentación oficial: https://docs.docker.com/engine/install/ubuntu/
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Primero, comprobar la información de nuestros sistema con el comando ```uname -a``` y luego, borramos posibles paquetes conflictivos o instalaciones anteriores.
 
 <img width="1636" height="663" alt="image" src="https://github.com/user-attachments/assets/6d0d7a77-ed63-46f1-a3a7-de4296815f61" />
