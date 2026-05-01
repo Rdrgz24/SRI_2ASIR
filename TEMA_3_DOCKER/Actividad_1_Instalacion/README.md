@@ -31,3 +31,15 @@ Por último, usamos el comando para instalar todas las utilidades de Docker: ```
 Tras completar la instalación, comprobamos el estado del servicio Docker, para ello usamos el comando ```sudo systemctl status docker```, hay que ver que esté activo y habilitado (enabled) en ambos casos. A mí me aparece habilitado, pero en caso contrario, usamos el comando ```sudo systemctl enable docker```.
  
 <img width="1641" height="627" alt="image" src="https://github.com/user-attachments/assets/f8732b53-71d6-4ab0-9472-47dfa7145fbf" />
+
+Realizamos una comprobación básica corriendo el contenedor "hello-world" con el comando ```sudo docker run hello-world```.
+
+<img width="1639" height="769" alt="image" src="https://github.com/user-attachments/assets/5b5ea79b-4294-461f-b610-569b7d3a6161" />
+
+Esto, literalmente nos baja una imagen de docker, podemos visualizarlo con ```sudo docker image ls```. Donde "U" indica que la imagen está en uso.
+
+<img width="1635" height="168" alt="image" src="https://github.com/user-attachments/assets/6c089290-587d-49ca-bb65-4a554db8e9cc" />
+
+Por último, para evitar estar usando "sudo" en todo momento y tener que hacer las operaciones como superusuario, voy a añadir mi usuario al grupo de docker con el comando ```sudo usermod -aG docker rafael```, quizás se tenga que reiniciar la máquina o la sesión para aplicar los cambios, en mi caso no fue necesario. Compruebo con ```groups rafael``` que pertenezca a docker y uso el comando ```docker ps``` y ```sudo docker image ls``` sin tener que añadir sudo delante, lo que facilita y asegura el trabajo.
+
+<img width="1637" height="335" alt="image" src="https://github.com/user-attachments/assets/ac7b7a7c-6663-4666-9b0c-60a275ecd8b4" />
