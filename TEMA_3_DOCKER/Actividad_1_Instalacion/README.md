@@ -27,3 +27,7 @@ Tras insertar los repos de docker dentro de APT, debemos actualizar la lista den
 Por último, usamos el comando para instalar todas las utilidades de Docker: ```sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin```.
 
 <img width="1641" height="674" alt="image" src="https://github.com/user-attachments/assets/96c0271c-b158-4380-b4b1-a59cb3e7206f" />
+
+Tras completar la instalación, comprobamos el estado del servicio Docker, para ello usamos el comando ```sudo systemctl status docker```, hay que ver que esté activo y habilitado (enabled) en ambos casos. A mí me aparece habilitado, pero en caso contrario, usamos el comando ```sudo systemctl enable docker```.
+ 
+<img width="1641" height="627" alt="image" src="https://github.com/user-attachments/assets/f8732b53-71d6-4ab0-9472-47dfa7145fbf" />
