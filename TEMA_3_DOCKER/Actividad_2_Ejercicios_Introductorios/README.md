@@ -64,7 +64,7 @@ Efectivamente, la teoría es cierta, en este caso la imagen de Ubuntu ya contien
 
 Un contenedor demonio permite ejecutar comandos en segundo plano, en lugar de nosotros mandar un comando y que se ejecute una vez, al instante, podemos dejar un comando preestablecido y que se quede ejecutando el tiempo que indiquemos. Esto estaría bien, por ejemplo, para comprobar nuestra IP pública, si fuese dinámica, cada 2 o 5 minutos y si cambia, que lo actualice en "x" sitio que indiquemos.
 
-Voy a realizar el ejemplo de la guía para que se pueda ver visualmente como funciona esto.
+Voy a realizar el ejemplo de la guía para que se pueda ver visualmente como funciona esto. Se usa -d para ejecutar el comando del contenedor en segundo plano.
 
 <img width="1642" height="853" alt="image" src="https://github.com/user-attachments/assets/52543dad-b0f8-4834-9a13-65fbe2dbcad6" />
 
@@ -75,3 +75,7 @@ Tenemos dos formas de eliminar un contenedor:
 · Pero si un contenedor se resiste (no es lo común), podemos borrarlo a la fuerza con ```docker rm -f ubuntu_demonio```.
 
 ### Creando un contenedor con un servidor web
+
+Levantamos un contenedor con la image de apache versión 2.4:
+
+
