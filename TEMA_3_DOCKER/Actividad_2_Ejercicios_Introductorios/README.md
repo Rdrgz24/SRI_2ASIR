@@ -38,7 +38,26 @@ Comprobamos dentro del terminal de contenedor con ```uname -a``` que nos muestra
 
 <img width="1214" height="133" alt="image" src="https://github.com/user-attachments/assets/450b01dd-2a2a-43da-899e-572c4156de7a" />
 
-Una vez hemos finalizado la conexión con el contenedor, podemos volver a conectarnos usando el comando ```docker start ubuntu_interactivo``` para iniciarlo y ```docker attach ubuntu_interactivo``` para conectarnos a la terminal.
+Una vez hemos finalizado la conexión con el contenedor, podemos volver a conectarnos usando el comando ```docker start ubuntu_interactivo``` para iniciarlo y ```docker attach ubuntu_interactivo``` para conectarnos a la terminal. Si hacemos un "exit" y ejecutamos un ```docker ps``` no se muestra, porque una vez terminamos la sesión deja de ejecutarse. No se borra, solo se para.
 
 <img width="1217" height="290" alt="image" src="https://github.com/user-attachments/assets/7d67364f-a01b-4178-98be-6d3607dcd5a0" />
 
+También existe la posibilidad de mandar comandos con la sentencia ```docker exec ubuntu_interactivo COMANDO```. Tal y como podemos ver, aquí el contenedor no se para, podemos mandar los comandos que queramos y el contenedor sigue activo hasta orden de apagado o conexión / desconexión desde terminal.
+
+<img width="1636" height="802" alt="image" src="https://github.com/user-attachments/assets/c1b9e95a-340f-4a63-8205-233c6762ed01" />
+
+Por otra parte, tenemos las sentencias:
+
+```docker restart ubuntu_interactivo``` -> Nos permite reiniciar el contenedor, literalmente lo que hace es pararlo y volver a iniciarlo.
+
+```docker inspect ubuntu_interactivo``` -> Nos permite visualizar toda la información del contenedor que se indica.
+
+<img width="1639" height="1037" alt="image" src="https://github.com/user-attachments/assets/f26247af-a141-4cbf-9a02-3d00f17384db" />
+
+Según muestra la guía, si levantamos un contenedor de ubuntu, no es necesario indicar la terminal a usar, ya que tienen de manera preestablecida / por defecto el proceso bash o terminal que usará. Vamos a probar creando otro contenedor sin indicar "bash". Uso ```docker run -it --name ubuntu2 ubuntu```.
+
+<img width="1637" height="751" alt="image" src="https://github.com/user-attachments/assets/fbee2202-a69c-41c5-b00b-bb9934094bd1" />
+
+Efectivamente, la teoría es cierta, en este caso la imagen de Ubuntu ya contiene el proceso bash, y no tenemos que indicarlo. Bastante interesante.
+
+### Creando un contenedor demonio
