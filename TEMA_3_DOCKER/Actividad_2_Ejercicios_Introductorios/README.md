@@ -27,3 +27,6 @@ Tal y como se puede ver en la siguiente captura, se pueden ver los contenedores 
 Según indica la guia, podemos crear un contenedor para que ejecute un comando temporalmente y automáticamente se pare. Por ejemplo, podemos bajar la imagen de Ubuntu (al ser la primera vez lo descarga de Docker Hub), ejecutar un comando, y luego que el contenedor se pare.
 
 <img width="1644" height="660" alt="image" src="https://github.com/user-attachments/assets/53840bef-debb-4c49-8d49-3cc4bb197918" />
+
+### Ejecutando un contenedor interactivo
+
