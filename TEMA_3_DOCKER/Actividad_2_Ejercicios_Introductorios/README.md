@@ -124,4 +124,18 @@ Para ejecutar la base de datos, podemos entrar al contenedor con el comando ```d
 
 #### Accediendo a servidor de base de datos desde el exterior
 
+En el ejemplo anterior de configuración del contenedor, solo estaba abierto el puerto 3306 dentro del contenedor, pero no lo hacía desde el anfitrión.
 
+Vamos a cambiar esto, para ello, borramos el contenedor anterior e indicamos con la sentencia ```-p 3306:3306``` que use el puerto 3306 del anfitrión para conectarnos sin tener que hacer uso de bash en el contenedor.
+
+<img width="1213" height="362" alt="image" src="https://github.com/user-attachments/assets/8462bbac-bd3c-4c4a-a8b9-15ac05a0e799" />
+
+Instalamos el cliente de MariaDB en nuestro equipo anfitrión para conectarnos a la base de datos del contenedor. Hacemos uso del comando ```sudo apt update && sudo apt install mariadb-client```, insertamos "Y" para confirmar.
+
+<img width="1214" height="696" alt="image" src="https://github.com/user-attachments/assets/650aab1f-f484-40b0-b251-67cb1a295bcc" />
+
+Una vez instalado el cliente de MariaDB, hacemos uso del comando ```mysql -u root -p -h 127.0.0.1```. 
+
+Pero...¿Por qué estamos insertando el localhost como dirección si no tenemos un server de MariaDB instalado? Muy sencillo, no tenemos un server instalado, pero tenemos un contenedor docker alojando el server de MariaDB, y usa el puerto 3306 del equipo anfitrión, por lo que, al final de cuentas, está escuchando por el localhost.
+
+<img width="1212" height="577" alt="image" src="https://github.com/user-attachments/assets/ed665637-6833-4758-a866-76b027fae15b" />
