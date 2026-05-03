@@ -76,6 +76,35 @@ Tenemos dos formas de eliminar un contenedor:
 
 ### Creando un contenedor con un servidor web
 
-Levantamos un contenedor con la image de apache versión 2.4:
+Levantamos un contenedor con la imagen de apache versión 2.4, donde indicamos con la opción -p el puerto que usará el contenedor. aquí conviene detenernos un poco, ya que tiene su concepto: ```8080:80``` indica, usa el puerto de la izquierda dentro del host anfitrión ```8080``` y usa el puerto de la derecha internamente para el contenedor ```80```. Aunque aún no lo hayamos dado, pasa lo mismo con los volúmenes, parte izquierda host, parte derecha CT docker.
 
+<img width="1635" height="666" alt="image" src="https://github.com/user-attachments/assets/9235da99-20e8-4597-8e7e-d6203bba83f7" />
+
+Si comprobamos desde el navegador la dirección http://localhost:8080, encontramos Apache sirviendo una página de prueba predeterminada.
+
+<img width="1635" height="883" alt="image" src="https://github.com/user-attachments/assets/13c927f2-4699-4bc3-b3ff-8c3de8607c9d" />
+
+Con ```docker logs``` podemos visualizar los registros de acceso hacia el sitio web del contenedor, lo que aporta una información bastante útil. Si quiseramos ver los logs en tiempo real usaríamos ```docker logs -f ...```
+
+<img width="1636" height="456" alt="image" src="https://github.com/user-attachments/assets/fa58d899-cc17-4b77-a500-8c92f4e17a15" />
+
+Para cambiar el contenido de la página que se sirve, tenemos varias formas:
+
+1. O bien, entramos dentro del contenedor con ```docker exec -it apache_ct bash``` y dentro modificamos el contenido del index.html con un echo y redirección total (machacamos el contenido).
+
+<img width="1634" height="520" alt="image" src="https://github.com/user-attachments/assets/cc46275d-acfa-4fc2-bf9e-bb413d5bb439" />
+
+Resultado:
+
+<img width="740" height="243" alt="image" src="https://github.com/user-attachments/assets/14a8137d-379b-48ac-b77f-c0115e43ecc2" />
+
+2. O bien, modificamos desde fuera del contenedor mandando un comando compuesto con bash -c, por ejemplo: ```$ docker exec apache_ct bash -c 'echo "<h1>Curso Docker. Hecho por Rafael 2.</h1>" > /usr/local/apache2/htdocs/index.html'```
+
+<img width="1635" height="221" alt="image" src="https://github.com/user-attachments/assets/a44d9188-f8e3-4062-bd79-46d3aa9336ee" />
+
+Resultado:
+
+<img width="779" height="230" alt="image" src="https://github.com/user-attachments/assets/a0571c13-c038-4b65-8188-05c3eae0b97d" />
+
+### Configuración de contenedores con variables de entorno
 
