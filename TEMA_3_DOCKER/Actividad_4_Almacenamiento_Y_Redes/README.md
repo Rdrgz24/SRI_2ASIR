@@ -4,7 +4,7 @@
 
  · Llevar a cabo al menos tres de los ejemplos mostrados en el módulo.
 
-Dentro del Curso de Docker hay cuatro ejemplos. Yo voy a completar los que me parecen en realidad más útiles, ya sea por el stack que se despliegue o lo que se realiza con Docker.
+Dentro del Curso de Docker hay cuatro ejemplos. Yo voy a completar los que me parecen en realidad más útiles, ya sea por el stack que se despliega o lo que se realiza con Docker.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
