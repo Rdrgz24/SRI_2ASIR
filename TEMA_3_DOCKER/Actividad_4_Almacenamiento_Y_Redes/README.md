@@ -50,3 +50,6 @@ Tal y como podemos ver...
 
 ### Ejemplo 4: Despliegue de tomcat + nginx
 
+#### Desplegando tomcat
+
+#### Desplegando nginx como proxy inverso
