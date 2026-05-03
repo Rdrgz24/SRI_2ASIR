@@ -108,3 +108,20 @@ Resultado:
 
 ### Configuración de contenedores con variables de entorno
 
+También existe la posibilidad de crear contenedores con variables de entorno, por ejemplo, podemos crear un contenedor con la imagen de Ubuntu que guarde una variable "USUARIO" cuyo valor sea "prueba". Para ello, usamos la sentencia ```-e o --env```.
+
+<img width="1212" height="207" alt="image" src="https://github.com/user-attachments/assets/2d069161-e768-498a-8520-b10b0127013a" />
+
+#### Configuración de un contenedor con la imagen mariadb
+
+MariaDB es una imagen de Docker Hub que nos permite insertar variables de entorno durante su primera ejecución. Por ejemplo, podemos indicarle la contraseña de root para administrar las bases de datos. Esto, se haría con el comando ```docker run -d --name mariadb_ct -e MARIADB_ROOT_PASSWORD=root1234 mariadb```.
+
+<img width="1214" height="753" alt="image" src="https://github.com/user-attachments/assets/dce85e4a-d194-42da-ac99-de60cca60bff" />
+
+Para ejecutar la base de datos, podemos entrar al contenedor con el comando ```docker exec -it mariadb_ct bash``` y una vez estemos con su terminal, podemos ejecutar el comando ```mariadb -u root -p"$MARIADB_ROOT_PASSWORD"``` que literalmente sería lo mismo que si ponemos la contraseña. Como estamos pasando la variable que contiene el propio valor de la contraseña, pues todo funciona OK. 
+
+<img width="1214" height="580" alt="image" src="https://github.com/user-attachments/assets/4076d5e8-a5e5-4c29-831d-4ff3d6108b10" />
+
+#### Accediendo a servidor de base de datos desde el exterior
+
+
