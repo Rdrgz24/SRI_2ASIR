@@ -34,6 +34,10 @@ Luego, levantamos el contenedor del frontend, en este caso si indicamos el puert
 
 <img width="1637" height="490" alt="image" src="https://github.com/user-attachments/assets/3b23f658-0f41-47e0-9a7e-cce6f1e94462" />
 
+Ya de por sí, si entramos en el localhost:3000 la aplicación va a funcionar. De hecho, podemos ver la temperatura de Huelva, la aplicación es funcional y capaz de consultar el BackEnd.
+
+<img width="1626" height="828" alt="image" src="https://github.com/user-attachments/assets/03fae67e-c67b-4408-9b51-48fe899e5571" />
+
 Tal y como podemos ver...
 
 #### Configuración de la aplicación Temperaturas
