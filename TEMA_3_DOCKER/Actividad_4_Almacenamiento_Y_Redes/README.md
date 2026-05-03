@@ -6,6 +6,8 @@
 
 Dentro del Curso de Docker hay cuatro ejemplos. Yo voy a completar los que me parecen en realidad más útiles, ya sea por el stack que se despliegue o lo que se realiza con Docker.
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ### Ejemplo 2: Despliegue de la aplicación Temperaturas
 
 Esta aplicación permite consultar la temperatura mínima y máxima en todos los municipios de España. Y se forma de dos "microservicios":
