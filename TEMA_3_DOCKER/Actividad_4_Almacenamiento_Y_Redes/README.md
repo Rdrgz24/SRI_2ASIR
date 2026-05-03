@@ -32,7 +32,11 @@ Luego, levantamos el contenedor del frontend, en este caso si indicamos el puert
 
 <img width="1637" height="490" alt="image" src="https://github.com/user-attachments/assets/3b23f658-0f41-47e0-9a7e-cce6f1e94462" />
 
-#### Observaciones
+Tal y como podemos ver...
+
+#### Configuración de la aplicación Temperaturas
+
+
 
 ### Ejemplo 3: Despliegue de WordPress + MariaDB
 
