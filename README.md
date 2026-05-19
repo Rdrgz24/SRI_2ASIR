@@ -56,5 +56,7 @@ Ejercicio | Descripción
 [Actividad 2 - Ejercicios introductorios](TEMA_3_DOCKER/Actividad_2_Ejercicios_Introductorios/) | Ejecutamos primeros contenedores, demonios, webservers, empezamos a trabajar con variables de entorno y desplegamos container de MariaDB.
 [Actividad 3 - Imágenes y Contenedores](TEMA_3_DOCKER/Actividad_3_Imagenes_Y_Contenedores/) | Trabajamso con imágenes de Ubuntu, hello-world, nginx y aprendemos a gestionar containers (encendido, apagado, borrado...)
 [Actividad 4 - Almacenamiento y Redes](TEMA_3_DOCKER/Actividad_4_Almacenamiento_Y_Redes/) | Desplegamos tres ejemplos del módulo y trabajamos con redes, imágenes, contenedores, variables de entorno y vemos como se integran aplicaciones entre sí.
+[Actividad 5 - Docker Compose](TEMA_3_DOCKER/Actividad_5_Docker_Compose/) | Coming soon.
+[Actividad 6 - Creación de imágenes en Docker](TEMA_3_DOCKER/Actividad_6_Docker_Images/) | Coming soon.
 
 ### Rafael Rodríguez Cruz
