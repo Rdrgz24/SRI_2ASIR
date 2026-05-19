@@ -38,11 +38,19 @@ Ya de por sí, si entramos en el localhost:3000 la aplicación va a funcionar. D
 
 <img width="1626" height="828" alt="image" src="https://github.com/user-attachments/assets/03fae67e-c67b-4408-9b51-48fe899e5571" />
 
-Tal y como podemos ver...
+Tal y como podemos ver se muestra la temperatura de la ciudad que hemos indicado.
 
 #### Configuración de la aplicación Temperaturas
 
+En la documentación de la práctica, se indica que se puede crear un contenedor de Backend con un nombre distinto al predeterminado (temperaturas-backend) y se puede crear un container con nombre personalizado, para luego indicar al frontend que recoja las temperaturas desde "TEMP_SERVER" con el nombre del nuevo container del backend.
 
+En este caso, he creado un container llamado temp-api para el backend y temp-fe para el frontend, todo incluido dentro de la variable "TEMP_SERVER" para que apunte al que indico.
+
+<img width="1214" height="634" alt="image" src="https://github.com/user-attachments/assets/ad4368f7-cd28-4ee3-91a1-6c002e21fcc9" />
+
+Todo funcionando OK.
+
+<img width="1211" height="601" alt="image" src="https://github.com/user-attachments/assets/48264cdb-8162-48b0-815a-e9d6570fa181" />
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
