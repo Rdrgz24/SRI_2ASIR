@@ -48,4 +48,13 @@ Ejercicio | Descripción
 [Actividad 6 Master DNS - Autoritativo](TEMA_2_DNS/Actividad_6_Master_DNS/) | Configuración de zona directa e inversa en servidor DNS - Resolución de nombres en servidor autoritativo con registros y PTR.
 [Actividad 8 Subdominios - Scripts](TEMA_2_DNS/Actividad_8_Subdominios/) | Configuración de subdominios (virtual) y scripts para automatizar la creación de estos en bash y python.
 
+## Tema 3 - Docker
+Ejercicio | Descripción
+----------|------------
+[Actividad 0 - Introducción](TEMA_3_DOCKER/Actividad_0_Introduccion/) | Nos comenzamos a familizarizar con entornos de docker, contenerización, redes, volúmenes, imágenes, etc...
+[Actividad 1 - Instalación de Docker](TEMA_3_DOCKER/Actividad_1_Instalacion/) | Instalamos Docker en nuestra VM para realizar una serie de actividades posteriores y levantamos primer contenedor hello-world.
+[Actividad 2 - Ejercicios introductorios](TEMA_3_DOCKER/Actividad_2_Ejercicios_Introductorios/) | Ejecutamos primeros contenedores, demonios, webservers, empezamos a trabajar con variables de entorno y desplegamos container de MariaDB.
+[Actividad 3 - Imágenes y Contenedores](TEMA_3_DOCKER/Actividad_3_Imagenes_Y_Contenedores/) | Trabajamso con imágenes de Ubuntu, hello-world, nginx y aprendemos a gestionar containers (encendido, apagado, borrado...)
+[Actividad 4 - Almacenamiento y Redes](TEMA_3_DOCKER/Actividad_4_Almacenamiento_Y_Redes/) | Desplegamos tres ejemplos del módulo y trabajamos con redes, imágenes, contenedores, variables de entorno y vemos como se integran aplicaciones entre sí.
+
 ### Rafael Rodríguez Cruz
