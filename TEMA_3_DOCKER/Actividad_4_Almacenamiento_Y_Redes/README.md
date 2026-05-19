@@ -74,10 +74,49 @@ Levantamos contenedor de WP
 
 <img width="1207" height="768" alt="image" src="https://github.com/user-attachments/assets/bae9a7fc-68a4-4c41-a764-8e30bb759da5" />
 
+Resultado tras levantar containers:
+
+<img width="1211" height="764" alt="image" src="https://github.com/user-attachments/assets/e0f9a8b1-9f77-4158-9dcd-481476ae99fb" />
+
+Hago la config de instalación en 2 minutos y listo, contenedor de WP conectado a base de datos MariaDB y website llamado "WP-SRI-DOCKER" operativo.
+
+<img width="1210" height="597" alt="image" src="https://github.com/user-attachments/assets/d2b30e2b-a347-4aa1-b70e-49d1769b3f62" />
+
+Volúmenes de los containers creados 
+
+<img width="1214" height="439" alt="image" src="https://github.com/user-attachments/assets/5c446d10-90c4-45cf-81db-54ffeea30033" />
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### Ejemplo 4: Despliegue de tomcat + nginx
 
+#### Creando la red
+
+Creamos red....
+
+<img width="1213" height="230" alt="image" src="https://github.com/user-attachments/assets/186c140f-c7fe-4374-abad-c7d9d1953016" />
+
 #### Desplegando tomcat
 
+Git clone
+
+<img width="1217" height="544" alt="image" src="https://github.com/user-attachments/assets/bf50e306-243b-44f2-a7ea-ad408d792654" />
+
+Creando container
+
+<img width="1214" height="406" alt="image" src="https://github.com/user-attachments/assets/22360347-68bd-405f-9442-cce3215ab988" />
+
 #### Desplegando nginx como proxy inverso
+
+Edito default.conf
+
+<img width="1208" height="373" alt="image" src="https://github.com/user-attachments/assets/112d73ce-8fe4-4993-8a6b-0484e8503d2f" />
+
+Despliego nginx
+
+<img width="1219" height="178" alt="image" src="https://github.com/user-attachments/assets/2085ce2b-a258-4cf1-b411-5b6f1eb8cf76" />
+
+El gatito felino:
+
+<img width="1215" height="323" alt="image" src="https://github.com/user-attachments/assets/a929e852-a144-48a9-9d43-0df63c8d2343" />
+
