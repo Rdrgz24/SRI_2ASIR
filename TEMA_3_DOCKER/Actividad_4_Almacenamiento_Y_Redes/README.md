@@ -56,7 +56,23 @@ Todo funcionando OK.
 
 ### Ejemplo 3: Despliegue de WordPress + MariaDB
 
+Este despliegue es bastante simple, permite conectar una base de datos a un contenedor Wordpress dentro de una misma red y con resolución DNS.
 
+#### Creando la red
+
+Creamos la red con el comando ```docker network create red-wp-sri``` y verifico su creación con ```docker network ls```.
+
+<img width="1213" height="214" alt="image" src="https://github.com/user-attachments/assets/b0fdfb58-7118-45b1-8c55-ced16b57312c" />
+
+#### Ejecutando contenedores
+
+Tras crear la red, creo el primer contenedor con un comando multilínea donde abarco, el nombre del contenedor, red a la que va conectada, volumen de datos (para que se queden persistentes), nombre de la DB, usuario, contraseña del usuario y contraseña root de mariaDB, por último, se indica la imagen "mariadb", que, evidentemente se baja la versión latest. Por último, paro los contenedores del ejemplo anterior para que no los tenga consumiendo recursos a lo tonto.
+
+<img width="1218" height="456" alt="image" src="https://github.com/user-attachments/assets/c98a5bf4-2f0e-4165-afb5-714406a23868" />
+
+Levantamos contenedor de WP
+
+<img width="1207" height="768" alt="image" src="https://github.com/user-attachments/assets/bae9a7fc-68a4-4c41-a764-8e30bb759da5" />
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
