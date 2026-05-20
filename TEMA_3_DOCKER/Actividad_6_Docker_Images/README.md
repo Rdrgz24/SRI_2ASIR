@@ -206,3 +206,11 @@ Levantamos contenedor con la nueva imagen que sirva por P80 en anfitrión.
 <img width="1212" height="168" alt="image" src="https://github.com/user-attachments/assets/2bf160c7-f313-4474-8b98-4f9eea7dbc7e" />
 
 Esto funciona perfectamente! :)
+
+<img width="1218" height="445" alt="image" src="https://github.com/user-attachments/assets/ebe2993d-87a2-4ebc-8a25-dea5b2427c19" />
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Hablando claro, esta actividad entre las 6 es la que más me ha aportado. El ver como puedes crear imágenes usando algunas ya creadas, o creándolas tu mismo con repositorios APT, es increíble.
+
+Sabiendo esto, se abren un sin fin de posibilidades para hacer imágenes y distribuirlas. Ya tengo algo nuevo en lo que invertir el tiempo :)
