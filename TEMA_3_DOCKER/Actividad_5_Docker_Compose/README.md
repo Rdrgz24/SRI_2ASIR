@@ -92,6 +92,10 @@ Despliego entorno.
 
 Se pueden observar los contenedores correctamente creados. Además, los volúmenes están creados dentro de la carpeta del entorno, tal cuál se ha indicado en el compose.
 
+Instalador de WP Disponible en puerto 81 :)
+
+<img width="1210" height="722" alt="image" src="https://github.com/user-attachments/assets/581ae97e-d76b-463e-a3d5-8e4ab19ee808" />
+
 Para borrar todo el entorno, en este caso hay algo muy peculiar. Y es que, para borrar los volúmenes hay que usar el comando ```docker compose down -v```, donde, -v indica que también se borren volúmenes.
 
 <img width="1208" height="666" alt="image" src="https://github.com/user-attachments/assets/e6c51922-f44e-421c-ad35-6db244b2498d" />
