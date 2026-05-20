@@ -87,3 +87,122 @@ Si nos fijamos, se puede crear una imagen con mismo propietario, mismo nombre pe
 ### Ejemplo 2: Construcción de imágenes con una una aplicación PHP
 
 #### Versión 1: Desde una imagen base
+
+Para esta versión, se usará un Dockerfile y un directorio llamado app. Para evitar conflictos, desplegaré todas las versiones por el puerto 80, apagando el container cada vez que termine de explicarlo.
+
+Comienzo creando la estructura, con su Dockerfile y directorio "app".
+
+<img width="1211" height="139" alt="image" src="https://github.com/user-attachments/assets/c1d39c17-da1f-42f3-b2d9-526d11ecb570" />
+
+Luego es muy simple, dentro de la imagen de debian descargamos los paquetes de apache2, mod-php y php, limpiamos los paquetes y todo el contenido de /var/www/html se manda al dir app. Exponemos P80.
+
+<img width="1213" height="176" alt="image" src="https://github.com/user-attachments/assets/422d697f-c943-474a-8f21-f79679bd592b" />
+
+Epaa, error al crear la imagen. Se ve claro, no ha encontrado el paquete para 7.4.
+
+<img width="1200" height="628" alt="image" src="https://github.com/user-attachments/assets/8b62f7f4-4535-451c-b410-bf75129f92e2" />
+
+Vamos a modificar esto a la versión más reciente, basta con quitar 7.4 del nombre:
+
+<img width="1206" height="164" alt="image" src="https://github.com/user-attachments/assets/11bb5163-3756-49da-b5c5-62cc65133650" />
+
+Ahora sí que funcionó, ha descargado la última versión de PHP, así que sin problemas.
+
+<img width="1208" height="660" alt="image" src="https://github.com/user-attachments/assets/4302c258-26df-4d5d-8a96-e8a06eaa3de4" />
+
+Levanto container usando puerto 80 y la imagen recién creada.
+
+<img width="1209" height="158" alt="image" src="https://github.com/user-attachments/assets/f8f5421b-35bb-484e-9af6-1bb3326cb884" />
+
+Para hacer una dinámica distinta y corroborar que el container sirve por P80 sin problemas, contenido. He creado un pequeño index.html conectándome al ct recién creado.
+
+<img width="1216" height="170" alt="image" src="https://github.com/user-attachments/assets/bbef6abb-e39e-4d46-951b-0619cd438d94" />
+
+Luego creo el archivo info.php.
+
+<img width="1215" height="179" alt="image" src="https://github.com/user-attachments/assets/29b0e62c-c9ac-4185-a002-755a16d04b1b" />
+
+Reviso la página creada con HTML y la info de PHP. Todo concuerda.
+
+<img width="453" height="99" alt="image" src="https://github.com/user-attachments/assets/e47943c0-e170-44c1-935c-125bbe05a746" />
+<img width="1214" height="722" alt="image" src="https://github.com/user-attachments/assets/a6007d20-409a-4b34-b930-284ff16e14a3" />
+
+#### Versión 2: Desde imagen con PHP instalado
+
+Creo estructura, incluyendo Dockerfile y directorio app.
+
+<img width="1214" height="154" alt="image" src="https://github.com/user-attachments/assets/c3fe625e-ef70-4073-af90-75becffdf375" />
+
+En el dockerfile pongo la versión 8.2 de PHP que se que sí va a funcionar 100%.
+
+<img width="1203" height="149" alt="image" src="https://github.com/user-attachments/assets/507b053a-83fc-4bcf-84af-3e5da0d77dbc" />
+
+Creamos la imagen con ```docker build -t```, el log es demasiado grande, pero se ha creado OK ;)
+
+<img width="1210" height="584" alt="image" src="https://github.com/user-attachments/assets/1c99fb56-bd48-4b74-827a-36e99664d086" />
+
+Como se puede ver aquí...
+
+<img width="1213" height="355" alt="image" src="https://github.com/user-attachments/assets/9292d9bf-7702-4791-bc8c-682569c8b9c8" />
+
+Levanto container que use P80 y la imagen recién creada.
+
+<img width="1217" height="167" alt="image" src="https://github.com/user-attachments/assets/e396fef5-6950-4331-a00f-49108414bbf9" />
+
+Tenemos PHP 8.2 activo sirviendo por puerto 80 señores :)
+
+<img width="1214" height="724" alt="image" src="https://github.com/user-attachments/assets/ee26f915-d453-46be-a413-7d9794b075b4" />
+
+### Ejemplo 3: Construir imágenes con una aplicación Python
+
+Se supone que para este ejemplo, vamos a desplegar el framework flask, expuesto por el puerto 3000.
+
+Para ello, primero hay que bajarse el contenido del repo, yo lo tengo ya por aquí, así que simplemente me voy a copiar el contenido, ya que se la ruta, hacia la nueva carpeta del 
+
+<img width="1210" height="447" alt="image" src="https://github.com/user-attachments/assets/33ef7650-0b55-4ed2-8d2f-449834f53c9e" />
+
+Aquí se puede observar el contenido copiado, lo que hay dentro del Dockerfile y los permisos de los que dispone.
+
+<img width="1212" height="428" alt="image" src="https://github.com/user-attachments/assets/d2a57707-e641-43d9-8b38-72f1865caaf7" />
+
+Muy interesante antes de realizar el despliegue. En el dockerfile "WORKDIR" es donde se ejecutarán todas las instrucciones del Dockerfile, requeriments.txt guarda líneas con el contenido a instalar con pip. Y por último, dentro de app está "app.py", que contiene la app a desplegar. Guay :)
+
+Tenemos una facilidad, ya tenemos el Dockerfile y el directorio del contenido, así que, para lante como los de alicante, que creamos imagen directamente. (Cuidado que tarda, pip pesa...)
+
+<img width="1211" height="532" alt="image" src="https://github.com/user-attachments/assets/911124e7-6951-4600-b7d3-97d049dda37e" />
+
+Revisamos imagen creada. Todo OK.
+
+<img width="1215" height="367" alt="image" src="https://github.com/user-attachments/assets/31659c0c-80c9-44e3-a86f-6e0fcd2abbfd" />
+
+Desplegamos contenedor para que sirva por puerto 80 en el anfitrión y puerto 3000 en ct.
+
+<img width="1213" height="167" alt="image" src="https://github.com/user-attachments/assets/662bea1f-46b8-40c0-9bbc-092eee7d5397" />
+
+Página web funciona correctamente. Vamos a pulsar sobre "Click to scroll down" para ver que pasa.
+
+<img width="1212" height="441" alt="image" src="https://github.com/user-attachments/assets/a3dc9d79-3a83-44db-9000-f78cd967a7b5" />
+
+Muy simple, nos manda al About. Esto corrobora que Python funciona OK :)
+
+<img width="1211" height="312" alt="image" src="https://github.com/user-attachments/assets/84fcba94-b9b9-4ca8-b188-60942fd2dfa4" />
+
+#### Versión 2: Desde imagen con python instalado
+
+Voy a copiar el contenido de la versión 1 y modifico el Dockerfile. Para ello uso ```cp -R origen destino```.
+
+<img width="1214" height="155" alt="image" src="https://github.com/user-attachments/assets/2778a6b7-00ee-4d5a-a6ed-8a3e1a5d9e5a" />
+
+Tras modificarlo, quedaría tal que así.
+
+<img width="1212" height="188" alt="image" src="https://github.com/user-attachments/assets/71eb3410-3b2d-4d68-b354-49ddce3f4baf" />
+
+Creamos imagen usando la predefinida de python (v3.12.1) y finaliza correctamente.
+
+<img width="1213" height="369" alt="image" src="https://github.com/user-attachments/assets/55291f9f-f264-4be1-9119-0e1619846ad3" />
+
+Levantamos contenedor con la nueva imagen que sirva por P80 en anfitrión.
+
+<img width="1212" height="168" alt="image" src="https://github.com/user-attachments/assets/2bf160c7-f313-4474-8b98-4f9eea7dbc7e" />
+
+Esto funciona perfectamente! :)
